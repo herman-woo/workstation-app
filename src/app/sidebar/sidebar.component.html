@@ -1,0 +1,21 @@
+<div class="sidebar" [ngClass]="{ 'expanded': isExpanded }">
+    <button class="toggle-btn" (click)="toggleSidebar()">
+        {{ isExpanded ? '←' : '→' }}
+    </button>
+    <div class="profile-section" *ngIf="isExpanded">
+        <img class="profile-picture" src="/images/trees.jpg">
+        <div class="profile-info">
+            <h2 class="username"><a href="#">Herman Woo</a></h2>
+            <p class="team">Environmental</p>
+            <p class="team"><i>Underwriter</i></p>
+        </div>
+    </div>
+    <h3 *ngIf="isExpanded"> Reference 
+    </h3>
+    <ul class="sidebar-menu" *ngIf="isExpanded">
+        <li><a href="#">Berkley Environmental Team</a></li>
+        <li><a href="#">Named Insureds</a></li>
+        <li><a href="#">Broker Agents</a></li>
+        <li><a href="#">Broker Companies</a></li>
+    </ul>
+</div>

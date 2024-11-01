@@ -1,0 +1,37 @@
+.action-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%; /* Take full width of grid cell */
+  padding-top: 100%; /* Makes the height equal to the width, creating a square */
+  position: relative; /* For absolute positioning of inner content */
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.559);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-size: 67%;
+  background-position: top 0.5vh center;
+  background-repeat: no-repeat;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 70%;
+}
+
+
+.action-item-content {
+  position: absolute; /* Center content inside the square */
+  bottom: 5%;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Hover effect for interactivity */
+.action-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}

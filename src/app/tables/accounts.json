@@ -1,0 +1,95 @@
+{
+    "tasks": [
+        {
+            "policyId": "BC04123-2432",
+            "insured": "Kilmer Capital Partners",
+            "underwriter": "Herman Woo",
+            "product": "CPP",
+            "status": "Submitted",
+            "dateCreated": "2023-10-15",
+            "lastUpdated": "2023-10-20"
+        },
+        {
+            "policyId": "BC04513-2455",
+            "insured": "Fowler Construction",
+            "underwriter": "Herman Woo",
+            "product": "CPP",
+            "status": "Submitted",
+            "dateCreated": "2023-10-15",
+            "lastUpdated": "2023-10-20"
+        },
+        {
+            "policyId": "BC01263-2411",
+            "insured": "NorthWest Regional Service Commission",
+            "underwriter": "Herman Woo",
+            "product": "PPP",
+            "status": "Indicated",
+            "dateCreated": "2023-10-15",
+            "lastUpdated": "2023-10-20"
+        },
+        {
+            "policyId": "BC04173-2423",
+            "insured": "Hudbay Minerals",
+            "underwriter": "Herman Woo",
+            "product": "FSE",
+            "status": "Final Quote",
+            "dateCreated": "2023-10-15",
+            "lastUpdated": "2023-10-20"
+        },
+        {
+            "policyId": "BC04183-2434",
+            "insured": "Anyox Copper",
+            "underwriter": "Herman Woo",
+            "product": "CPP",
+            "status": "Submitted",
+            "dateCreated": "2023-10-15",
+            "lastUpdated": "2023-10-20"
+        },
+        {
+            "policyId": "BC04912-2484",
+            "insured": "Evolys Quebec",
+            "underwriter": "Herman Woo",
+            "product": "CPP",
+            "status": "Rating",
+            "dateCreated": "2023-10-15",
+            "lastUpdated": "2023-10-20"
+        },
+        {
+            "policyId": "BC08413-2450",
+            "insured": "Chinook Fuels Ltd",
+            "underwriter": "Herman Woo",
+            "product": "CPP",
+            "status": "Submitted",
+            "dateCreated": "2023-10-15",
+            "lastUpdated": "2023-10-20"
+        },
+        {
+            "policyId": "BC04413-2477",
+            "insured": "Ivanhoe Electric",
+            "underwriter": "Herman Woo",
+            "product": "CPP",
+            "status": "Quoting",
+            "dateCreated": "2023-10-15",
+            "lastUpdated": "2023-10-20"
+        },
+        {
+            "policyId": "BC04513-2409",
+            "insured": "Acadian Group",
+            "underwriter": "Herman Woo",
+            "product": "CPP",
+            "status": "Final Quote",
+            "dateCreated": "2023-10-15",
+            "lastUpdated": "2023-10-20"
+        },
+        {
+            "policyId": "BC04273-2425",
+            "insured": "Brampton Brick Limited",
+            "underwriter": "Herman Woo",
+            "product": "CPP",
+            "status": "Submitted",
+            "dateCreated": "2023-10-15",
+            "lastUpdated": "2023-10-20"
+        }
+        
+    ]
+}

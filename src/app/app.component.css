@@ -1,5 +1,24 @@
-body {
-    background-color: #f5f5f5; /* Light grey shade for a softer contrast with the banner */
-    margin: 0;
-    padding: 0;
-  }
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: auto;
+}
+
+/* Content wrapper for sidebar and main content */
+.content-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+.main-content {
+    margin-left: 60px;
+    /* Match contracted sidebar width */
+    transition: margin-left 0.3s ease;
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+.main-content.shrink {
+    margin-left: 15%;
+}
