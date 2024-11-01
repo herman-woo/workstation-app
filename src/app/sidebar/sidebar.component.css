@@ -24,7 +24,7 @@
 
 /* Expanded state */
 .sidebar.expanded {
-    width: 15%;
+    width: 200px;
     /* Width for expanded state */
     border-right: 1px solid #303030;
 }
@@ -42,7 +42,11 @@
 }
 
 .sidebar-menu li a {
-    color: white;
+    display: block; /* Ensures each item takes full width */
+    color: #fff;
+    background-color: #444;
+    padding: 10px;
+    font-weight: bold;
     text-decoration: none;
 }
 
@@ -93,6 +97,7 @@ img {
 .username {
     font-weight: bold;
     font-size: 1.1em;
+    text-decoration: none;
 }
 
 .team {
