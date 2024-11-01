@@ -1,0 +1,29 @@
+<div class="dashboard">
+    <div class="dashboard-item-title">
+        Underwriter Actions
+    </div>
+    <div class="actions-grid">
+        <action-item 
+            *ngFor="let item of underwriterActions"
+            [icon] = "item.icon"
+            [action]="item.action">
+        </action-item>
+    </div>
+    <div class="dashboard-item-title">
+        Your Accounts
+    </div>
+    <div class="notifications-grid">
+        <app-accounts-table></app-accounts-table>
+    </div>
+    <div class="dashboard-item-title">
+        History
+    </div>
+    <div class="actions-grid">
+        <div class="dashboard-item">
+            <div class="dashboard-item-content">Bound Tracking</div>
+        </div>
+        <div class="dashboard-item">
+            <div class="dashboard-item-content">Projects</div>
+        </div>
+    </div>
+</div>

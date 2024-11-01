@@ -1,0 +1,32 @@
+<div class="table-container">
+    <table class="task-table">
+        <thead>
+            <tr>
+                <th>PolicyID</th>
+                <th>Insured</th>
+                <th>Underwriter</th>
+                <th>Product</th>
+                <th>Status</th>
+                <th>Date Created</th>
+                <th>Last Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let task of tasks">
+                <td>
+                    <a href="#">{{ task.policyId }}</a>
+                </td>
+                <td>
+                    <a href="#">{{ task.insured }}</a>
+                </td>
+                <td>
+                    <a href="#">{{ task.underwriter }}</a>
+                </td>
+                <td>{{ task.product }}</td>
+                <td>{{ task.status }}</td>
+                <td>{{ task.dateCreated }}</td>
+                <td>{{ task.lastUpdated }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
