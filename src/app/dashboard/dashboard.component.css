@@ -1,0 +1,67 @@
+/* Dashboard Grid */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px; /* Cap width for large screens */
+    margin: 0 auto; /* Center the dashboard */
+    margin-top: 5vh;
+  }
+  
+  /* Square cards */
+  .dashboard-item {
+    width: 100%; /* Take full width of grid cell */
+    padding-top: 100%; /* Makes the height equal to the width, creating a square */
+    position: relative; /* For absolute positioning of inner content */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: bottom;
+    background-image: url(../../images/document.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .dashboard-icon {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 10px; /* Space between image and text */
+  }
+  
+  
+  .dashboard-item-content {
+    position: absolute; /* Center content inside the square */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Hover effect for interactivity */
+  .dashboard-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 900px) {
+    .dashboard {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .dashboard {
+      grid-template-columns: 1fr;
+    }
+  }
+  

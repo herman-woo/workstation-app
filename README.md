@@ -1,1 +1,3 @@
-# workstation-app-proto1
+# workstation-app
+
+Prototyping for workstation
