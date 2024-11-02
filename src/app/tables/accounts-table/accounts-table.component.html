@@ -12,20 +12,20 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let task of tasks">
+            <tr *ngFor="let account of accounts">
                 <td>
-                    <a href="#">{{ task.policyId }}</a>
+                    <a [routerLink]="['/account', account.id]">{{ account.policyId }}</a>
                 </td>
                 <td>
-                    <a href="#">{{ task.insured }}</a>
+                    <a href="#">{{ account.insured }}</a>
                 </td>
                 <td>
-                    <a href="#">{{ task.underwriter }}</a>
+                    <a href="#">{{ account.underwriter }}</a>
                 </td>
-                <td>{{ task.product }}</td>
-                <td>{{ task.status }}</td>
-                <td>{{ task.dateCreated }}</td>
-                <td>{{ task.lastUpdated }}</td>
+                <td>{{ account.product }}</td>
+                <td>{{ account.status }}</td>
+                <td>{{ account.dateCreated }}</td>
+                <td>{{ account.lastUpdated }}</td>
             </tr>
         </tbody>
     </table>

@@ -3,7 +3,7 @@
     <sidebar (sidebarToggled)="onSidebarToggled($event)"></sidebar>
     <div class="main-content" [ngClass]="{ 'shrink': sidebarExpanded }">
       <banner></banner>
-      <dashboard></dashboard>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
