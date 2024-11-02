@@ -1,0 +1,431 @@
+.account-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee;
+    border: 3px solid rgb(214, 214, 214);
+}
+
+.named-insured{
+    font-size: 25px;
+}
+
+.top-half-container {
+    width: 100%;
+    height: 345px;
+    max-width: 2000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.primary-info-card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(240, 240, 240);
+    width: 35%;
+    max-width: 700px;
+    padding: 1.1vh;
+    max-width: 1800px;
+}
+
+.broker-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1vh;
+}
+
+/* General container styling */
+.primary-info-card {
+    width: 600px;
+    height: 105%;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Main heading styles */
+.primary-info-card h1,
+.primary-info-card h2,
+.primary-info-card h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.primary-info-card h1 a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.primary-info-card h2 {
+    font-size: 1.5em;
+    color: #555;
+}
+
+.primary-info-card h3 a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.primary-info-card h3 {
+    margin-bottom: 8px;
+}
+
+/* Broker and company containers */
+.broker-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.Broker-info-container,
+.Broker-company-container {
+    width: 48%;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Broker-info-container p,
+.Broker-company-container p {
+    margin: 5px 0;
+    color: #666;
+}
+
+/* Button styling */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+
+/* Link styling on hover */
+.primary-info-card a:hover {
+    text-decoration: underline;
+}
+
+tr{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .broker-container {
+        flex-direction: column;
+    }
+
+    .Broker-info-container,
+    .Broker-company-container {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+.secondary-info-card {
+    height: 102%;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+}
+
+.info-card h1 {
+    font-size: 2em;
+    color: #2c3e50;
+  }
+  
+  .info-card h2 {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .info-card h3 {
+    font-size: 1.1em;
+    color: #3498db;
+    margin-top: 10px;
+  }
+  
+.rating-info-container {
+    width: 30%;
+    max-width: 1300px;
+    height: 100%;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+table{
+    width: 100%;
+}
+
+.folder-structure-card {
+    height: 102%;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.folder-structure-banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.folder-structure-container{
+    background-color: #d4d4d4;
+    width: 650px;
+    height: 100%;
+    border-radius: 8px;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    padding: 10px;
+    max-width: 800px; /* Cap width for large screens */
+    margin: 0 auto; /* Center the dashboard */
+}
+
+.folder-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100px; /* Take full width of grid cell */
+    height: 100px;
+    position: relative; /* For absolute positioning of inner content */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.559);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-size: 67%;
+    background-position: top 0.5vh center;
+    background-repeat: no-repeat;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70%;
+  }
+
+  .file-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100px; /* Take full width of grid cell */
+    height: 100px;
+    background-color: #2b0e0e00;
+    border-radius: 8px;
+    color: rgba(0, 0, 0, 0.559);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-size: 67%;
+    background-position: top 0.5vh center;
+    background-repeat: no-repeat;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70%;
+  }
+
+  img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  .action-center-card {
+    height: 102%;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.action-button{
+    color: #ffffff;
+    background-color: #333;
+}
+
+.bottom-half-container {
+    width: 100%;
+    height: 600px;
+    max-width: 2000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+}
+
+.rating-structure-card {
+    height: 95%;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating-banner{
+    font-size: 1.2em;
+    width: 90%;
+    color: #17b95bb9;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating-model-button{
+    color: #ffffff;
+    background-color: #17b95bb9;
+    height: 30px;
+}
+.rating-model-button:hover{
+    background-color: #0a7d23e3;
+}
+
+
+.quote-button{
+    color: #ffffff;
+    background-color: #17b95bb9;
+    height: 30px;
+    margin: 10px;
+}
+.quote-button:hover{
+    background-color: #0a7d23e3;
+}
+.revision{
+    color: black;
+}
+.quoting-info-card{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.quote-info-item-tr{
+    background-color: #a5a5a5;
+    width: 70%;
+}
+.empty-structure-card {
+    height: 95%;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Container for the dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown toggle button */
+  .dropdown-toggle {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-toggle:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Dropdown menu */
+  .dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Position it below the toggle */
+    left: 0;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    min-width: 160px;
+    z-index: 1;
+    transition: all 0.3s ease;
+  }
+  
+  /* Dropdown items */
+  .dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Show the dropdown on hover (optional for hover-triggered) */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  

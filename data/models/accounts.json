@@ -1,9 +1,9 @@
 {
     "accounts": [
         {
-            "id":"1",
+            "id": "1",
             "policyId": "BC04123-2432",
-            "insured": "Kilmer Capital Partners",
+            "insured": "Bread Winner Inc.",
             "underwriter": "Herman Woo",
             "product": "CPP",
             "status": "Submitted",
@@ -11,9 +11,9 @@
             "lastUpdated": "2023-10-21"
         },
         {
-            "id":"2",
+            "id": "2",
             "policyId": "BC04513-2455",
-            "insured": "Fowler Construction",
+            "insured": "Capital Construction",
             "underwriter": "Herman Woo",
             "product": "CPP",
             "status": "Submitted",
@@ -21,7 +21,7 @@
             "lastUpdated": "2023-10-21"
         },
         {
-            "id":"3",
+            "id": "3",
             "policyId": "BC01263-2411",
             "insured": "NorthWest Regional Service Commission",
             "underwriter": "Herman Woo",
@@ -31,9 +31,9 @@
             "lastUpdated": "2023-10-14"
         },
         {
-            "id":"4",
+            "id": "4",
             "policyId": "BC04173-2423",
-            "insured": "Hudbay Minerals",
+            "insured": "Herman's Minerals",
             "underwriter": "Herman Woo",
             "product": "FSE",
             "status": "Final Quote",
@@ -41,9 +41,9 @@
             "lastUpdated": "2023-10-22"
         },
         {
-            "id":"5",
+            "id": "5",
             "policyId": "BC04183-2434",
-            "insured": "Anyox Copper",
+            "insured": "Herman Copper",
             "underwriter": "Herman Woo",
             "product": "CPP",
             "status": "Submitted",
@@ -51,9 +51,9 @@
             "lastUpdated": "2023-10-22"
         },
         {
-            "id":"6",
+            "id": "6",
             "policyId": "BC04912-2484",
-            "insured": "Evolys Quebec",
+            "insured": "Gigner Ale Quebec",
             "underwriter": "Herman Woo",
             "product": "CPP",
             "status": "Rating",
@@ -61,9 +61,9 @@
             "lastUpdated": "2023-10-19"
         },
         {
-            "id":"7",
+            "id": "7",
             "policyId": "BC08413-2450",
-            "insured": "Chinook Fuels Ltd",
+            "insured": "Sriracha Ltd",
             "underwriter": "Herman Woo",
             "product": "CPP",
             "status": "Submitted",
@@ -71,9 +71,9 @@
             "lastUpdated": "2023-10-17"
         },
         {
-            "id":"8",
+            "id": "8",
             "policyId": "BC04413-2477",
-            "insured": "Ivanhoe Electric",
+            "insured": "Montreal Electric",
             "underwriter": "Herman Woo",
             "product": "CPP",
             "status": "Quoting",
@@ -81,9 +81,9 @@
             "lastUpdated": "2023-10-15"
         },
         {
-            "id":"9",
+            "id": "9",
             "policyId": "BC04513-2409",
-            "insured": "Acadian Group",
+            "insured": "Tokyo Group",
             "underwriter": "Herman Woo",
             "product": "CPP",
             "status": "Final Quote",
@@ -91,9 +91,9 @@
             "lastUpdated": "2023-10-18"
         },
         {
-            "id":"10",
+            "id": "10",
             "policyId": "BC04273-2425",
-            "insured": "Brampton Brick Limited",
+            "insured": "Osaka Brick Limited",
             "underwriter": "Herman Woo",
             "product": "CPP",
             "status": "Submitted",
