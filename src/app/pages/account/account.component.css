@@ -22,6 +22,7 @@
     margin-bottom: 2vh;
 }
 
+
 /* Primary Info Card */
 .primary-info-card {
     width: 600px;
@@ -34,6 +35,23 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
     color: #333;
+}
+
+.record-info-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.policy-info-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .primary-info-card h1,
@@ -54,6 +72,15 @@
     color: #3498db;
     text-decoration: none;
     font-weight: 600;
+}
+
+.account-id {
+    margin: 0;
+    color: #949494;
+}
+
+.account-status {
+    margin: 0;
 }
 
 .named-insured {
@@ -93,6 +120,17 @@ button {
     cursor: pointer;
     font-weight: bold;
     margin-top: 10px;
+    background-color: #999999;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.riskwrite-button {
+    color: #4e0000;
+    background-color: #d3d3d3;
 }
 
 .top-button {
@@ -217,7 +255,12 @@ table {
 
 .action-button {
     color: #ffffff;
-    background-color: #333;
+    background-color: #707070;
+}
+
+.action-button:hover {
+    color: #ffffff;
+    background-color: #464646;
 }
 
 .rating-info-container {
@@ -244,7 +287,7 @@ table {
     margin-bottom: 2vh;
 }
 
-.rating-structure-card {
+.structure-card {
     height: 95%;
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
@@ -252,20 +295,29 @@ table {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 700px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .rating-banner {
     font-size: 1.2em;
-    width: 90%;
+    width: 100%;
     color: #17b95bb9;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.rating-table {
+    margin-top: 20px;
+}
+
+.rating-banner-bottom {
+    font-size: 1.2em;
+    width: 100%;
+    color: #17b95bb9;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .rating-model-button {
@@ -278,13 +330,41 @@ table {
     background-color: #0a7d23e3;
 }
 
+.financial-title {
+    color: #000;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+.rating-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.quoting-card {
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.quoting-button-banner {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px;
+    gap: 5px;
+    margin-bottom: 20px;
+}
 
 .quote-button {
     color: #ffffff;
     background-color: #17b95bb9;
     height: 30px;
     margin: 10px;
-    width: 15%;
+    padding: 3px;
     font-size: 0.1em;
 }
 
@@ -294,111 +374,102 @@ table {
 
 .revision {
     color: black;
+    font-size: 0.6em;
 }
 
-.quoting-info-card {
-    width: 70%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+.financial-subject {
+    width: 33%;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    text-align: left;
+}
+
+.financial-sub-subject {
+    width: 33%;
+    font-size: 15px;
+    color: #6d6d6d;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+.financial-option-item {
+    width: 33%;
+    text-align: end;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+}
+
+.financial-line-item {
+    width: 33%;
+    text-align: end;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.notes-title{
+    color: #000;
+}
+
+.notes-container{
+    width: 90%;
+    height: 350px;
     background-color: #ffffff;
     padding: 15px;
+    margin-top: 10px;
     border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.quote-info-item-tr {
-    background-color: #a5a5a5;
-    width: 70%;
-}
-
-.empty-structure-card {
-    height: 95%;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 700px;
+.final-card{
+    background-color: #eeeeee;
+    border-radius: 0px;
+    padding: 0px;
+    height: 103%;
+    box-shadow: none;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.subcard{
+    width: 95%;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
+    
 }
 
-/* Container for the dropdown */
-.dropdown {
-    position: relative;
-    display: inline-block;
+.auditing-card{
+    height: 250px;
 }
-
-/* Dropdown toggle button */
-.dropdown-toggle {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.riskwrite-card{
+    height: 200px;
 }
-
-.dropdown-toggle:hover {
-    background-color: #2980b9;
+.riskwrite-card-banner{
+    width: 100%;
+    margin-bottom: 10px;
 }
-
-/* Dropdown menu */
-.dropdown-menu {
-    display: none;
-    /* Hidden by default */
-    position: absolute;
-    top: 100%;
-    /* Position it below the toggle */
-    left: 0;
-    background-color: white;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    overflow: hidden;
-    min-width: 160px;
-    z-index: 1;
-    transition: all 0.3s ease;
-}
-
-/* Dropdown items */
-.dropdown-menu a {
-    display: block;
-    padding: 10px 20px;
-    color: #333;
-    text-decoration: none;
-    font-size: 14px;
-    transition: background-color 0.2s ease;
-}
-
-.dropdown-menu a:hover {
-    background-color: #f1f1f1;
-}
-
-/* Show the dropdown on hover (optional for hover-triggered) */
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-
-
 
 /* Responsive design for 1080p */
 @media (max-width: 2100px) {
 
     .account-page {
-        padding: 0.2vh;
+        padding: 1.2vh;
         border: none
     }
 
     .top-half-container {
         height: 255px;
         gap: 10px;
-        margin: 0.5vh;
+        margin: 0vh;
         margin-bottom: 0;
     }
 
@@ -502,7 +573,7 @@ table {
         margin-top: 10px;
     }
 
-    .quote-line-item{
+    .quote-line-item {
         font-size: 1em;
     }
 }
@@ -515,9 +586,24 @@ table {
         width: 100%;
         height: 100%;
     }
+
+    .bottom-half-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .structure-card {
+        padding: 20px;
+        width: 90%;
+    }
+
     .primary-info-card {
         width: 90%;
     }
+
     .secondary-info-card {
         font-family: Arial, sans-serif;
         background-color: #f9f9f9;
@@ -533,6 +619,7 @@ table {
     .broker-container {
         flex-direction: column;
     }
+
     .Broker-info-container,
     .Broker-company-container {
         width: 100%;

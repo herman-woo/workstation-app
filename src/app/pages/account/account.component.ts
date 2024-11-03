@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import * as accountData from '../../../../data/models/accounts.json'
+import { AuditingChecklistComponent } from './auditing-checklist/auditing-checklist.component';
 
 @Component({
   selector: 'app-account',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, AuditingChecklistComponent],
   templateUrl: './account.component.html',
   styleUrl: './account.component.css'
 })
@@ -48,7 +49,7 @@ export class AccountComponent {
   policyExpiration = "2027-10-31"
 
   subunit = "SME"
-  insuranceProduct = "Fixed SIte Environmental"
+  insuranceProduct = "Fixed Site Environmental"
 
 
 

@@ -2,8 +2,14 @@
     <div class="top-half-container">
         <div class="primary-info-card">
             <div class="primary-info-container">
+                <div class="record-info-container">
+                    <p class="account-id">Account ID:{{id}}</p>
+                    <p class="account-status">Status:{{status}}</p>
+                </div>
                 <h1 class="named-insured"><a href="/dashboard">{{insured}}</a></h1>
-                <h2>Policy Number: {{policyId}}</h2>
+                <div class="policy-info-container">
+                    <h2>Policy Number: {{policyId}}</h2>
+                </div>
             </div>
             <div class="broker-container">
                 <div class="Broker-info-container">
@@ -25,7 +31,7 @@
         <div class="secondary-info-card">
             <div>
                 <div class="info-card">
-                    <h3>Status:</h3>
+                    <h3>Submission:</h3>
                     <table class="status-table table">
                         <tr>
                             <td>New or Renewal:</td>
@@ -34,6 +40,22 @@
                         <tr>
                             <td>Submitted To RiskWrite:</td>
                             <td>{{submittedToRiskWrite}}</td>
+                        </tr>
+                    </table>
+                    <h3>Product:</h3>
+                    <table class="status-table table">
+                        <tr>
+                        <tr>
+                            <td>Underwriter:</td>
+                            <td>{{underwriter}}</td>
+                        </tr>
+                        <tr>
+                            <td>Business Unity:</td>
+                            <td>Environmental</td>
+                        </tr>
+                        <tr>
+                            <td>Subunit:</td>
+                            <td>{{subunit}}</td>
                         </tr>
                     </table>
                     <h3>Timeline:</h3>
@@ -57,22 +79,6 @@
                         <tr>
                             <td>Policy Expiration:</td>
                             <td>{{policyExpiration}}</td>
-                        </tr>
-                    </table>
-                    <h3>Product:</h3>
-                    <table class="status-table table">
-                        <tr>
-                        <tr>
-                            <td>Underwriter:</td>
-                            <td>{{underwriter}}</td>
-                        </tr>
-                        <tr>
-                            <td>Subunit:</td>
-                            <td>{{subunit}}</td>
-                        </tr>
-                        <tr>
-                            <td>Product:</td>
-                            <td><b>{{insuranceProduct}}</b></td>
                         </tr>
                     </table>
                 </div>
@@ -107,99 +113,205 @@
                 <h2>Action Center</h2>
             </div>
             <button class="action-button">Generate Templates</button>
-            <button class="action-button">Indicate Quote</button>
-            <button class="action-button">Rate</button>
-            <button class="action-button">Final Rating</button>
-            <button class="action-button">Final Quote</button>
-            <button class="action-button">Bind to RiskWrite</button>
+            <button class="action-button">Email Broker</button>
+            <button class="action-button">Save Account</button>
+            <button class="action-button">Revise Status</button>
+            <button class="action-button">View History</button>
+            <button class="action-button">Quote Loss</button>
 
         </div>
     </div>
     <div class="bottom-half-container">
-        <div class="rating-structure-card">
+        <div class="rating-card structure-card">
             <div class="rating-banner">
-                <h2>Rating</h2>
-                <button class="rating-model-button">Rating Model</button>
+                <h2>Product:</h2>
+                <h2 class="financial-title">{{insuranceProduct}}</h2>
             </div>
-
-            <button>Finalize Rating</button>
+            <div class="rating-banner-bottom">
+                <button class="rating-model-button">Change Product</button>
+                <button class="rating-model-button">Rating Model</button>
+                <button class="rating-model-button">Extract Rating</button>
+            </div>
+            <table class="rating-table">
+                <tr>
+                    <td class="financial-subject">Item</td>
+                    <td class="financial-option-item">Option 1</td>
+                    <td class="financial-option-item">Option 2</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">Per Limit</td>
+                    <td class="financial-line-item">$2,000,000</td>
+                    <td class="financial-line-item">$5,000,000</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">Total Limit 1</td>
+                    <td class="financial-line-item">$2,000,000</td>
+                    <td class="financial-line-item">$5,000,000</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">SIR 1</td>
+                    <td class="financial-line-item">$25,000</td>
+                    <td class="financial-line-item">$25,000</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">SIR 2</td>
+                    <td class="financial-line-item">$0</td>
+                    <td class="financial-line-item">$0</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">SIR 3</td>
+                    <td class="financial-line-item">$0</td>
+                    <td class="financial-line-item">$0</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">Term 1</td>
+                    <td class="financial-line-item">3</td>
+                    <td class="financial-line-item">3</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">Term 2</td>
+                    <td class="financial-line-item">0</td>
+                    <td class="financial-line-item">0</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">T1/Premium 1</td>
+                    <td class="financial-line-item">$16,625</td>
+                    <td class="financial-line-item">$26,625</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">T1/Premium 2</td>
+                    <td class="financial-line-item">$0</td>
+                    <td class="financial-line-item">$0</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">T1/Premium 3</td>
+                    <td class="financial-line-item">$0</td>
+                    <td class="financial-line-item">$0</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">T2/Premium 1</td>
+                    <td class="financial-line-item">$0</td>
+                    <td class="financial-line-item">$0</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">T2/Premium 2</td>
+                    <td class="financial-line-item">$0</td>
+                    <td class="financial-line-item">$0</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">T2/Premium 3</td>
+                    <td class="financial-line-item">$0</td>
+                    <td class="financial-line-item">$0</td>
+                </tr>
+            </table>
         </div>
-        <div class="rating-structure-card">
+        <div class="quoting-card structure-card">
             <div class="rating-banner">
-                <h2>Quoting</h2>
+                <h2>Quote:</h2>
                 <h3 class="revision">Revison No. 2</h3>
             </div>
-            <div class="quoting-info-card">
-                <table class="status-table table">
-                    <tr>
-                        <td>Pol. Period From:</td>
-                        <td>2024/10/11</td>
-                    </tr>
-                    <tr>
-                        <td>Pol. Period To:</td>
-                        <td>2027/11/11</td>
-                    </tr>
-                    <tr>
-                        <td>Max Policy Term:</td>
-                        <td>$2 000.00</td>
-                    </tr>
-                    <tr>
-                        <td>Finaly Policy Term:</td>
-                        <td>$2 000.00</td>
-                    </tr>
-                    <tr>
-                        <td>Per Pollution Limit:</td>
-                        <td>$2 000.00</td>
-                    </tr>
-                    <tr>
-                        <td>Total Poll. Limit:</td>
-                        <td>$2 000.00</td>
-                    </tr>
-                    <tr>
-                        <td>Policy SIR:</td>
-                        <td>$2 000.00</td>
-                    </tr>
-                    <tr>
-                        <td>Retroactive Date:</td>
-                        <td>2024/10/21</td>
-                    </tr>
-                    <tr>
-                        <td>Benchmark:</td>
-                        <td>$1 000.00</td>
-                    </tr>
-                    <tr>
-                        <td>Issued Date:</td>
-                        <td>2024/10/31</td>
-                    </tr>
-                    <tr>
-                        <td>Bound Premium:</td>
-                        <td>$5 555.00</td>
-                    </tr>
-                    <tr>
-                        <td>Bound Com.:</td>
-                        <td>$4 321.00</td>
-                    </tr>
-                    <tr>
-                        <td>Bound RC Fee:</td>
-                        <td>$1 234.00</td>
-                    </tr>
-                    <tr>
-                        <td>Total Fees/CVs:</td>
-                        <td>$123 012.00</td>
-                    </tr>
-                </table>
+            <div class="quoting-button-banner">
+                <button class="rating-model-button">Indicate Quote</button>
+                <button class="rating-model-button">Revise Quote</button>
+                <button class="rating-model-button">Finalize Rate</button>
+                <button class="rating-model-button">Finalize Quote</button>
             </div>
+            <table>
+                <tr>
+                    <td class="financial-sub-subject">Pol. Period From:</td>
+                    <td class="financial-line-item">2024/10/11</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">Pol. Period To:</td>
+                    <td class="financial-line-item">2027/11/11</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">Max Policy Term:</td>
+                    <td class="financial-line-item">$2 000.00</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">Finaly Policy Term:</td>
+                    <td class="financial-line-item">$2 000.00</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">Per Pollution Limit:</td>
+                    <td class="financial-line-item">$2 000.00</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">Total Poll. Limit:</td>
+                    <td class="financial-line-item">$2 000.00</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">Policy SIR:</td>
+                    <td class="financial-line-item">$2 000.00</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">Retroactive Date:</td>
+                    <td class="financial-line-item">2024/10/21</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">Benchmark:</td>
+                    <td class="financial-line-item">$1 000.00</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">Issued Date:</td>
+                    <td class="financial-line-item">2024/10/31</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">Bound Premium:</td>
+                    <td class="financial-line-item">$5 555.00</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">Bound Com.:</td>
+                    <td class="financial-line-item">$4 321.00</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">Bound RC Fee:</td>
+                    <td class="financial-line-item">$1 234.00</td>
+                </tr>
+                <tr>
+                    <td class="financial-sub-subject">Total Fees/CVs:</td>
+                    <td class="financial-line-item">$123 012.00</td>
+                </tr>
+            </table>
         </div>
-        <div class="empty-structure-card">
+        <div class="notes-card structure-card">
             <div class="rating-banner">
-                <h2>Workstation Account Notes</h2>
+                <h2 class="notes-title">Workstation Account Notes</h2>
+                <button>Edit Notes</button>
+            </div>
+            <div class="notes-container">
+                <p>Take notes about the account here</p>
+                <ul>
+                    <li>
+                        <p>
+                            Make a list of things
+                        </p>
+                    </li>
+                    <li><p>second bullet list item</p></li>
+                </ul>
             </div>
         </div>
-        <div class="empty-structure-card">
-            <div class="rating-banner">
-                <h2>Audting Checklist</h2>
+        <div class="final-card structure-card">
+            <div class="auditing-card subcard">
+                <div class="riskwrite-card-banner">
+                    <h2>Auditing Checklist</h2>
+                </div>
+                <auditing-checklist></auditing-checklist>
+            </div>
+            <div class="riskwrite-card subcard">
+                <div class="riskwrite-card-banner">
+                    <h2>RiskWrite</h2>
+                </div>
+                <div>
+                    <div class="action-center-card">
+                        <button class="riskwrite-button">Submit to RiskWrite</button>
+                        <button class="riskwrite-button">Open in RiskWrite</button>
+                        <button class="riskwrite-button">Bind to RiskWrite</button>
+                    </div>
+                </div>
             </div>
         </div>
-        
+
     </div>
 </div>
