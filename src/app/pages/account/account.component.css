@@ -1,16 +1,12 @@
 .account-page {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 90%;
+    width: 98%;
     align-items: center;
+    padding: 1.2vh;
     justify-content: center;
     background-color: #eeeeee;
     border: 3px solid rgb(214, 214, 214);
-}
-
-.named-insured{
-    font-size: 25px;
 }
 
 .top-half-container {
@@ -20,33 +16,19 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    gap: 20px;
+    gap: 10px;
     align-items: flex-start;
     margin-top: 2vh;
     margin-bottom: 2vh;
 }
 
-.primary-info-card {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(240, 240, 240);
-    width: 35%;
-    max-width: 700px;
-    padding: 1.1vh;
-    max-width: 1800px;
-}
-
-.broker-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 1vh;
-}
-
-/* General container styling */
+/* Primary Info Card */
 .primary-info-card {
     width: 600px;
     height: 105%;
+    padding: 1.1vh;
+    display: flex;
+    flex-direction: column;
     border-radius: 8px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -54,7 +36,6 @@
     color: #333;
 }
 
-/* Main heading styles */
 .primary-info-card h1,
 .primary-info-card h2,
 .primary-info-card h3 {
@@ -69,25 +50,22 @@
     font-weight: bold;
 }
 
-.primary-info-card h2 {
-    font-size: 1.5em;
-    color: #555;
-}
-
 .primary-info-card h3 a {
     color: #3498db;
     text-decoration: none;
     font-weight: 600;
 }
 
-.primary-info-card h3 {
-    margin-bottom: 8px;
+.named-insured {
+    font-size: 25px;
 }
 
-/* Broker and company containers */
 .broker-container {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    gap: 10px;
+    margin: 1vh;
     margin-top: 20px;
 }
 
@@ -108,7 +86,6 @@
 
 /* Button styling */
 button {
-    background-color: #3498db;
     color: white;
     border: none;
     border-radius: 5px;
@@ -116,34 +93,14 @@ button {
     cursor: pointer;
     font-weight: bold;
     margin-top: 10px;
-  }
-  
-  button:hover {
+}
+
+.top-button {
+    background-color: #3498db;
+}
+
+.top-button:hover {
     background-color: #2980b9;
-  }
-
-/* Link styling on hover */
-.primary-info-card a:hover {
-    text-decoration: underline;
-}
-
-tr{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-}
-/* Responsive design for smaller screens */
-@media (max-width: 600px) {
-    .broker-container {
-        flex-direction: column;
-    }
-
-    .Broker-info-container,
-    .Broker-company-container {
-        width: 100%;
-        margin-bottom: 15px;
-    }
 }
 
 .secondary-info-card {
@@ -156,35 +113,20 @@ tr{
     width: 300px;
 }
 
-.info-card h1 {
-    font-size: 2em;
-    color: #2c3e50;
-  }
-  
-  .info-card h2 {
-    font-size: 1.2em;
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
-  .info-card h3 {
+.info-card h3 {
     font-size: 1.1em;
     color: #3498db;
     margin-top: 10px;
-  }
-  
-.rating-info-container {
-    width: 30%;
-    max-width: 1300px;
-    height: 100%;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
-    color: #333;
 }
 
-table{
+tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+table {
     width: 100%;
 }
 
@@ -201,14 +143,16 @@ table{
     justify-content: space-between;
     align-items: center;
 }
-.folder-structure-banner{
+
+.folder-structure-banner {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
-.folder-structure-container{
+
+.folder-structure-container {
     background-color: #d4d4d4;
     width: 650px;
     height: 100%;
@@ -218,60 +162,48 @@ table{
     grid-template-columns: repeat(6, 1fr);
     gap: 10px;
     padding: 10px;
-    max-width: 800px; /* Cap width for large screens */
-    margin: 0 auto; /* Center the dashboard */
+    max-width: 800px;
+    /* Cap width for large screens */
+    margin: 0 auto;
+    /* Center the dashboard */
+}
+
+.folder-item,
+.file-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 8px;
+    color: rgba(0, 0, 0, 0.559);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-size: 67%;
+    background-position: top 0.5vh center;
+    background-repeat: no-repeat;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70%;
+
 }
 
 .folder-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100px; /* Take full width of grid cell */
-    height: 100px;
-    position: relative; /* For absolute positioning of inner content */
-    background-color: #ffffff;
-    border-radius: 8px;
+    /* For absolute positioning of inner content */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: rgba(0, 0, 0, 0.559);
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    background-size: 67%;
-    background-position: top 0.5vh center;
-    background-repeat: no-repeat;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 70%;
-  }
+    background-color: #ffffff;
 
-  .file-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100px; /* Take full width of grid cell */
-    height: 100px;
+}
+
+.file-item {
     background-color: #2b0e0e00;
-    border-radius: 8px;
-    color: rgba(0, 0, 0, 0.559);
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    background-size: 67%;
-    background-position: top 0.5vh center;
-    background-repeat: no-repeat;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 70%;
-  }
+}
 
-  img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-  }
-  .action-center-card {
+.action-center-card {
     height: 102%;
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
@@ -283,9 +215,20 @@ table{
     flex-direction: column;
 }
 
-.action-button{
+.action-button {
     color: #ffffff;
     background-color: #333;
+}
+
+.rating-info-container {
+    width: 30%;
+    max-width: 1300px;
+    height: 100%;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #333;
 }
 
 .bottom-half-container {
@@ -315,7 +258,7 @@ table{
     align-items: center;
 }
 
-.rating-banner{
+.rating-banner {
     font-size: 1.2em;
     width: 90%;
     color: #17b95bb9;
@@ -325,40 +268,50 @@ table{
     align-items: center;
 }
 
-.rating-model-button{
+.rating-model-button {
     color: #ffffff;
     background-color: #17b95bb9;
     height: 30px;
 }
-.rating-model-button:hover{
+
+.rating-model-button:hover {
     background-color: #0a7d23e3;
 }
 
 
-.quote-button{
+.quote-button {
     color: #ffffff;
     background-color: #17b95bb9;
     height: 30px;
     margin: 10px;
+    width: 15%;
+    font-size: 0.1em;
 }
-.quote-button:hover{
+
+.quote-button:hover {
     background-color: #0a7d23e3;
 }
-.revision{
+
+.revision {
     color: black;
 }
-.quoting-info-card{
+
+.quoting-info-card {
     width: 70%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
 }
 
-.quote-info-item-tr{
+.quote-info-item-tr {
     background-color: #a5a5a5;
     width: 70%;
 }
+
 .empty-structure-card {
     height: 95%;
     font-family: Arial, sans-serif;
@@ -377,10 +330,10 @@ table{
 .dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-  /* Dropdown toggle button */
-  .dropdown-toggle {
+}
+
+/* Dropdown toggle button */
+.dropdown-toggle {
     background-color: #3498db;
     color: white;
     padding: 10px 20px;
@@ -389,17 +342,19 @@ table{
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .dropdown-toggle:hover {
+}
+
+.dropdown-toggle:hover {
     background-color: #2980b9;
-  }
-  
-  /* Dropdown menu */
-  .dropdown-menu {
-    display: none; /* Hidden by default */
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;
+    /* Hidden by default */
     position: absolute;
-    top: 100%; /* Position it below the toggle */
+    top: 100%;
+    /* Position it below the toggle */
     left: 0;
     background-color: white;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -408,24 +363,179 @@ table{
     min-width: 160px;
     z-index: 1;
     transition: all 0.3s ease;
-  }
-  
-  /* Dropdown items */
-  .dropdown-menu a {
+}
+
+/* Dropdown items */
+.dropdown-menu a {
     display: block;
     padding: 10px 20px;
     color: #333;
     text-decoration: none;
     font-size: 14px;
     transition: background-color 0.2s ease;
-  }
-  
-  .dropdown-menu a:hover {
+}
+
+.dropdown-menu a:hover {
     background-color: #f1f1f1;
-  }
-  
-  /* Show the dropdown on hover (optional for hover-triggered) */
-  .dropdown:hover .dropdown-menu {
+}
+
+/* Show the dropdown on hover (optional for hover-triggered) */
+.dropdown:hover .dropdown-menu {
     display: block;
-  }
-  
+}
+
+
+
+
+/* Responsive design for 1080p */
+@media (max-width: 2100px) {
+
+    .account-page {
+        padding: 0.2vh;
+        border: none
+    }
+
+    .top-half-container {
+        height: 255px;
+        gap: 10px;
+        margin: 0.5vh;
+        margin-bottom: 0;
+    }
+
+    .primary-info-card {
+        height: 92%;
+        max-height: 100%;
+        padding: 10px;
+    }
+
+    .primary-info-card h1 a {
+        font-size: 1.4em;
+    }
+
+    .primary-info-card h2 {
+        font-size: 1em;
+    }
+
+    .primary-info-card h1 {
+        margin: 0 0 4px 0;
+    }
+
+    .primary-info-card h2,
+    .primary-info-card h3 {
+        margin: 0 0 0 0;
+    }
+
+    .primary-info-card h3 a {
+        font-size: 0.8em;
+    }
+
+    p {
+        font-size: 0.7em;
+    }
+
+    .broker-container {
+        margin-top: 10px;
+    }
+
+    button {
+        padding: 6px 10px;
+        font-size: 0.7em;
+        margin-top: 8px;
+    }
+
+    .secondary-info-card {
+        height: 92%;
+        max-height: 100%;
+        padding: 10px;
+        width: 230px;
+    }
+
+
+    .info-card h3 {
+        font-size: 0.8em;
+        color: #3498db;
+        margin: 5px;
+    }
+
+    .info-card tr {
+        font-size: 0.6em;
+    }
+
+    .folder-structure-card {
+        height: 92%;
+        max-height: 100%;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    .folder-structure-container {
+        width: 650px;
+        height: 70%;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 0px;
+        padding: 8px;
+    }
+
+    .folder-item,
+    .file-item {
+        width: 70px;
+        height: 70px;
+        font-size: 0.6em;
+    }
+
+    .action-center-card {
+        height: 92%;
+        max-height: 100%;
+        padding: 10px;
+        width: 200px;
+    }
+
+    .bottom-half-container {
+        width: 100%;
+        height: 486px;
+        max-width: 2000px;
+        gap: 10px;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    .quote-line-item{
+        font-size: 1em;
+    }
+}
+
+
+@media (max-width: 1600px) {
+    .top-half-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        height: 100%;
+    }
+    .primary-info-card {
+        width: 90%;
+    }
+    .secondary-info-card {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 0px;
+        width: 80%;
+    }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .broker-container {
+        flex-direction: column;
+    }
+    .Broker-info-container,
+    .Broker-company-container {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}

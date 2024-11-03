@@ -1,24 +1,24 @@
 <div class="account-page">
     <div class="top-half-container">
         <div class="primary-info-card">
-            <div>
+            <div class="primary-info-container">
                 <h1 class="named-insured"><a href="/dashboard">{{insured}}</a></h1>
                 <h2>Policy Number: {{policyId}}</h2>
             </div>
             <div class="broker-container">
                 <div class="Broker-info-container">
-                    <h3><a href="/dashboard">Broker: John Doe</a></h3>
-                    <p>Title: Broker</p>
-                    <p>Tel: 416-999-9999</p>
-                    <p>Email: john.doe&#64;broker4insured.com</p>
-                    <button>Change Broker</button>
+                    <h3><a href="/dashboard">Broker: {{brokerName}}</a></h3>
+                    <p>Title: {{brokerTitle}}</p>
+                    <p>Tel: {{brokerPhone}}</p>
+                    <p>Email: {{brokerEmail}}</p>
+                    <button class="top-button">Change Broker</button>
                 </div>
                 <div class="Broker-company-container">
-                    <h3><a href="/dashboard">Company: Brokers4Insureds</a></h3>
-                    <p>Address: 130 Brokers Ave</p>
-                    <p>City: Toronto, Ontario</p>
-                    <p>PostalCode: RXE 1K2</p>
-                    <button>Change Company</button>
+                    <h3><a href="/dashboard">Company: {{brokerCompanyName}}</a></h3>
+                    <p>Address: {{brokerCompanyAddress}}</p>
+                    <p>City: {{brokerCompanyCity}}</p>
+                    <p>PostalCode: {{brokerCompanyPostalCode}}</p>
+                    <button class="top-button">Change Company</button>
                 </div>
             </div>
         </div>
@@ -29,35 +29,34 @@
                     <table class="status-table table">
                         <tr>
                             <td>New or Renewal:</td>
-                            <td>New</td>
+                            <td>{{newOrRenewal}}</td>
                         </tr>
                         <tr>
                             <td>Submitted To RiskWrite:</td>
-                            <td>Yes</td>
+                            <td>{{submittedToRiskWrite}}</td>
                         </tr>
                     </table>
-
                     <h3>Timeline:</h3>
                     <table class="timeline-table table">
                         <tr>
                             <td>Submission Rec Date:</td>
-                            <td>2024/10/01</td>
+                            <td>{{submissionRecDate}}</td>
                         </tr>
                         <tr>
                             <td>First Indication/Quote Day:</td>
-                            <td>2024/10/10</td>
+                            <td>{{firstIndicationOrQuoteDay}}</td>
                         </tr>
                         <tr>
                             <td>Last Updated:</td>
-                            <td>2024/10/20</td>
+                            <td>{{lastUpdated}}</td>
                         </tr>
                         <tr>
                             <td>Bound in RiskWrite:</td>
-                            <td>2024/10/30</td>
+                            <td>{{boundInRiskWrite}}</td>
                         </tr>
                         <tr>
                             <td>Policy Expiration:</td>
-                            <td>2034/10/30</td>
+                            <td>{{policyExpiration}}</td>
                         </tr>
                     </table>
                     <h3>Product:</h3>
@@ -65,25 +64,24 @@
                         <tr>
                         <tr>
                             <td>Underwriter:</td>
-                            <td>Herman Woo</td>
+                            <td>{{underwriter}}</td>
                         </tr>
                         <tr>
                             <td>Subunit:</td>
-                            <td>SME</td>
+                            <td>{{subunit}}</td>
                         </tr>
                         <tr>
                             <td>Product:</td>
-                            <td><b>Fixed Site Environmental</b></td>
+                            <td><b>{{insuranceProduct}}</b></td>
                         </tr>
                     </table>
-
                 </div>
             </div>
         </div>
         <div class="folder-structure-card">
             <div class="folder-structure-banner">
                 <h2>Documents</h2>
-                <button>Open in FileNet</button>
+                <button class="action-button">Open in FileNet</button>
             </div>
             <div class="folder-structure-container">
                 <div class="folder-item" [ngStyle]="{'background-image': 'url('+file+')'}">01 Submission</div>
@@ -105,7 +103,9 @@
             </div>
         </div>
         <div class="action-center-card">
-            <h2>Action Center</h2>
+            <div class="folder-structure-banner">
+                <h2>Action Center</h2>
+            </div>
             <button class="action-button">Generate Templates</button>
             <button class="action-button">Indicate Quote</button>
             <button class="action-button">Rate</button>
@@ -119,7 +119,7 @@
         <div class="rating-structure-card">
             <div class="rating-banner">
                 <h2>Rating</h2>
-                <button class="rating-model-button">Go to Rating Model</button>
+                <button class="rating-model-button">Rating Model</button>
             </div>
 
             <button>Finalize Rating</button>
@@ -128,36 +128,6 @@
             <div class="rating-banner">
                 <h2>Quoting</h2>
                 <h3 class="revision">Revison No. 2</h3>
-            </div>
-            <div class="rating-banner">
-                <div>
-                    <div class="dropdown">
-                        <button class="dropdown-toggle">Template</button>
-                        <div class="dropdown-menu">
-                            <a href="#">CPP</a>
-                            <a href="#">PPP</a>
-                            <a href="#">FSE</a>
-                            <a href="#">EXCESS</a>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <button class="dropdown-toggle"> Pick Sub-Product </button>
-                        <div class="dropdown-menu">
-                            <a href="#">Item 1</a>
-                            <a href="#">Item 2</a>
-                            <a href="#">Item 3</a>
-                            <a href="#">Item 4</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="rating-banner">
-                <div>
-                    <button class="quote-button">Init Quote</button>
-                    <button class="quote-button">Rev. Quote</button>
-                    <button class="quote-button">Finalize Rate</button>
-                    <button class="quote-button">Finalize Quote</button>
-                </div>
             </div>
             <div class="quoting-info-card">
                 <table class="status-table table">
@@ -221,8 +191,15 @@
             </div>
         </div>
         <div class="empty-structure-card">
-
+            <div class="rating-banner">
+                <h2>Workstation Account Notes</h2>
+            </div>
         </div>
-
+        <div class="empty-structure-card">
+            <div class="rating-banner">
+                <h2>Audting Checklist</h2>
+            </div>
+        </div>
+        
     </div>
 </div>

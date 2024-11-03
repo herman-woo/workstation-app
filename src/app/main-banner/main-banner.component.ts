@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as data from "../../../package.json"
 
 @Component({
   selector: 'banner',
@@ -8,6 +9,8 @@ import { Component } from '@angular/core';
   styleUrl: './main-banner.component.css'
 })
 export class MainBannerComponent {
+
+  version = data.version
   currentDate: Date = new Date()
   day = this.currentDate.toDateString()
 }

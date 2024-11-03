@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import * as accountData  from '../../../../data/models/accounts.json'
+import * as accountData from '../../../../data/models/accounts.json'
 
 @Component({
   selector: 'app-account',
@@ -11,7 +11,7 @@ import * as accountData  from '../../../../data/models/accounts.json'
   styleUrl: './account.component.css'
 })
 export class AccountComponent {
-  
+
   pdf = "/images/pdf-svgrepo-com.svg"
   doc = "/images/word.svg"
   exl = "/images/excel-svgrepo-com.svg"
@@ -27,8 +27,32 @@ export class AccountComponent {
   dateCreated: string = "";
   lastUpdated: string = "";
 
+  //hardcoded
+  //Broker info
+  brokerName = "John Doe"
+  brokerTitle = "Broker"
+  brokerPhone = "416-999-1111"
+  brokerEmail = "john.doe@broker4insured.com"
 
-  constructor(private route: ActivatedRoute) {}
+  brokerCompanyName = "Brokers4Insured"
+  brokerCompanyAddress = "130 Brokers Ave"
+  brokerCompanyCity = "Toronto, Ontario"
+  brokerCompanyPostalCode = "RXE 1K2"
+
+
+  newOrRenewal = "New"
+  submittedToRiskWrite = "Yes"
+  submissionRecDate = "2024-10-01"
+  firstIndicationOrQuoteDay = "2024-10-11"
+  boundInRiskWrite = "2024-10-21"
+  policyExpiration = "2027-10-31"
+
+  subunit = "SME"
+  insuranceProduct = "Fixed SIte Environmental"
+
+
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     // Capture the ID from the route
@@ -41,6 +65,6 @@ export class AccountComponent {
     this.status = account.status
     this.dateCreated = account.dateCreated
     this.lastUpdated = account.lastUpdated
-    
+
   }
 }
