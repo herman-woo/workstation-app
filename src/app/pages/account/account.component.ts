@@ -1,13 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import * as accountData from '../../../../data/models/accounts.json'
 import { AuditingChecklistComponent } from './auditing-checklist/auditing-checklist.component';
 
 @Component({
   selector: 'app-account',
   standalone: true,
-  imports: [CommonModule, AuditingChecklistComponent],
+  imports: [CommonModule, AuditingChecklistComponent,RouterLink],
   templateUrl: './account.component.html',
   styleUrl: './account.component.css'
 })
@@ -19,6 +20,7 @@ export class AccountComponent {
   file = "/images/folder-files-and-folders-svgrepo-com.svg"
 
   id: string | null = null;
+  insuredId: string = ""
   detailData: string | null = null;
   policyId: string = "";
   insured: string = "";
@@ -27,6 +29,7 @@ export class AccountComponent {
   status: string = "";
   dateCreated: string = "";
   lastUpdated: string = "";
+  newOrRenewal: string = "";
 
   //hardcoded
   //Broker info
@@ -41,7 +44,6 @@ export class AccountComponent {
   brokerCompanyPostalCode = "RXE 1K2"
 
 
-  newOrRenewal = "New"
   submittedToRiskWrite = "Yes"
   submissionRecDate = "2024-10-01"
   firstIndicationOrQuoteDay = "2024-10-11"
@@ -66,6 +68,8 @@ export class AccountComponent {
     this.status = account.status
     this.dateCreated = account.dateCreated
     this.lastUpdated = account.lastUpdated
+    this.insuredId = account.insuredId
+    this.newOrRenewal = account.newOrRenewal
 
   }
 }

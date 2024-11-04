@@ -3,16 +3,19 @@
         {
             "id": "1",
             "policyId": "BC04123-2432",
+            "insuredId" : "1",
             "insured": "Bread Winner Inc.",
             "underwriter": "Herman Woo",
+            "newOrRenewal": "New",
             "product": "CPP",
-            "status": "Submitted",
-            "dateCreated": "2023-10-19",
-            "lastUpdated": "2023-10-21"
+            "status": "Expired",
+            "dateCreated": "2023-01-21",
+            "lastUpdated": "2023-08-24"
         },
         {
             "id": "2",
             "policyId": "BC04513-2455",
+            "insuredId" : "2",
             "insured": "Capital Construction",
             "underwriter": "Herman Woo",
             "product": "CPP",
@@ -23,6 +26,7 @@
         {
             "id": "3",
             "policyId": "BC01263-2411",
+            "insuredId" : "3",
             "insured": "NorthWest Regional Service Commission",
             "underwriter": "Herman Woo",
             "product": "PPP",
@@ -32,17 +36,20 @@
         },
         {
             "id": "4",
-            "policyId": "BC04173-2423",
+            "policyId": "BC04173-2023",
+            "insuredId" : "4",
             "insured": "Herman's Minerals",
+            "newOrRenewal": "New",
             "underwriter": "Herman Woo",
             "product": "FSE",
             "status": "Final Quote",
-            "dateCreated": "2023-10-19",
-            "lastUpdated": "2023-10-22"
+            "dateCreated": "2020-02-19",
+            "lastUpdated": "2020-04-12"
         },
         {
             "id": "5",
             "policyId": "BC04183-2434",
+            "insuredId" : "5",
             "insured": "Herman Copper",
             "underwriter": "Herman Woo",
             "product": "CPP",
@@ -53,6 +60,7 @@
         {
             "id": "6",
             "policyId": "BC04912-2484",
+            "insuredId" : "6",
             "insured": "Gigner Ale Quebec",
             "underwriter": "Herman Woo",
             "product": "CPP",
@@ -63,6 +71,7 @@
         {
             "id": "7",
             "policyId": "BC08413-2450",
+            "insuredId" : "7",
             "insured": "Sriracha Ltd",
             "underwriter": "Herman Woo",
             "product": "CPP",
@@ -73,6 +82,7 @@
         {
             "id": "8",
             "policyId": "BC04413-2477",
+            "insuredId" : "8",
             "insured": "Montreal Electric",
             "underwriter": "Herman Woo",
             "product": "CPP",
@@ -83,6 +93,7 @@
         {
             "id": "9",
             "policyId": "BC04513-2409",
+            "insuredId" : "9",
             "insured": "Tokyo Group",
             "underwriter": "Herman Woo",
             "product": "CPP",
@@ -93,12 +104,61 @@
         {
             "id": "10",
             "policyId": "BC04273-2425",
+            "insuredId" : "10",
             "insured": "Osaka Brick Limited",
             "underwriter": "Herman Woo",
             "product": "CPP",
             "status": "Submitted",
             "dateCreated": "2023-10-20",
             "lastUpdated": "2023-10-24"
+        },
+        {
+            "id": "11",
+            "policyId": "BC04123-2444",
+            "insuredId" : "1",
+            "insured": "Bread Winner Inc.",
+            "underwriter": "Herman Woo",
+            "newOrRenewal": "Renewal",
+            "product": "CPP",
+            "status": "Submitted",
+            "dateCreated": "2024-10-19",
+            "lastUpdated": "2024-10-21"
+        },
+        {
+            "id": "12",
+            "policyId": "BC04173-2183",
+            "insuredId" : "4",
+            "insured": "Herman's Minerals",
+            "underwriter": "Herman Woo",
+            "newOrRenewal": "Renewal",
+            "product": "FSE",
+            "status": "Final Quote",
+            "dateCreated": "2021-04-12",
+            "lastUpdated": "2021-05-22"
+        },
+        {
+            "id": "13",
+            "policyId": "BC04173-2353",
+            "insuredId" : "4",
+            "insured": "Herman's Minerals",
+            "underwriter": "Herman Woo",
+            "newOrRenewal": "Renewal",
+            "product": "FSE",
+            "status": "Final Quote",
+            "dateCreated": "2023-07-09",
+            "lastUpdated": "2023-09-13"
+        },
+        {
+            "id": "14",
+            "policyId": "BC04173-2424",
+            "insuredId" : "4",
+            "insured": "Herman's Minerals",
+            "underwriter": "Carl Spensieri",
+            "newOrRenewal": "Renewal",
+            "product": "FSE",
+            "status": "Final Quote",
+            "dateCreated": "2024-02-19",
+            "lastUpdated": "2024-04-12"
         }
     ]
 }

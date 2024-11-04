@@ -1,0 +1,12 @@
+<div class="insured-page">
+    <div class="insured-container">
+        <app-reference-banner [subject]="pageSubject" [title]="insuredName"></app-reference-banner>
+        <h3>Address: {{insuredAddress}}</h3>
+        <h3>Province: {{insuredProvince}}</h3>
+        <button>Edit</button>
+    </div>
+    <div class="insured-container">
+        <h2>Insured's Accounts</h2>
+        <named-insured-table></named-insured-table>
+    </div>
+</div>

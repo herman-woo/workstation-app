@@ -2,29 +2,25 @@
     <table class="task-table">
         <thead>
             <tr>
+                <th>Year</th>
                 <th>PolicyID</th>
-                <th>Insured</th>
                 <th>Underwriter</th>
+                <th>New/Renewal</th>
                 <th>Product</th>
                 <th>Status</th>
-                <th>Date Created</th>
+                <th>Related Project</th>
                 <th>Last Updated</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let account of accounts">
-                <td>
-                    <a [routerLink]="['/account', account.id]">{{ account.policyId }}</a>
-                </td>
-                <td>
-                    <a [routerLink]="['/insured', account.insuredId]">{{ account.insured }}</a>
-                </td>
-                <td>
-                    <a [routerLink]="['/account', account.id]">{{ account.underwriter }}</a>
-                </td>
+                <td>{{ account.dateCreated.slice(0, 4) }}</td>
+                <td><a [routerLink]="['/account', account.id]">{{ account.policyId }}</a></td>
+                <td>{{ account.underwriter }}</td>
+                <td>{{ account.newOrRenewal }}</td>
                 <td>{{ account.product }}</td>
                 <td>{{ account.status }}</td>
-                <td>{{ account.dateCreated }}</td>
+                <td></td>
                 <td>{{ account.lastUpdated }}</td>
             </tr>
         </tbody>

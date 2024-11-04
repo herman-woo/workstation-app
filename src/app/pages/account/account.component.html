@@ -6,7 +6,7 @@
                     <p class="account-id">Account ID:{{id}}</p>
                     <p class="account-status">Status:{{status}}</p>
                 </div>
-                <h1 class="named-insured"><a href="/dashboard">{{insured}}</a></h1>
+                <h1 class="named-insured"><a [routerLink]="['/insured', insuredId]">{{insured}}</a></h1>
                 <div class="policy-info-container">
                     <h2>Policy Number: {{policyId}}</h2>
                 </div>

@@ -1,0 +1,28 @@
+<div>
+    <app-reference-banner [title]="title"></app-reference-banner>
+    
+    <searchbar></searchbar>
+
+    <div class="table-container">
+        <table class="task-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Insured</th>
+                    <th>Address</th>
+                    <th>Province</th>
+                    <th>Linked Accounts</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let insured of insureds">
+                    <td>{{ insured.id }}</td>
+                    <td><a [routerLink]="['/insured', insured.id]">{{insured.insuredName}}</a> </td>
+                    <td>{{ insured.address }}</td>
+                    <td>{{ insured.province }}</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
