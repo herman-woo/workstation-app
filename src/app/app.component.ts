@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { MainBannerComponent } from './main-banner/main-banner.component';
+import { MainBannerComponent } from './banner/main-banner.component';
 import { DashboardComponent } from './content/dashboard/dashboard.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { CommonModule } from '@angular/common';

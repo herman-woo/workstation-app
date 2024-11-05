@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ReferenceBannerComponent } from '../reference-banner/reference-banner.component';
+import { ReferenceBannerComponent } from '../../../content/reference-pages/reference-page-items/reference-banner/reference-banner.component';
 import { AccountsTableComponent } from "../../../tables/accounts-table/accounts-table.component";
 
 @Component({

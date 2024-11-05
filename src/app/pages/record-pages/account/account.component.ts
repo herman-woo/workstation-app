@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RouterLink } from '@angular/router';
 import * as accountData from '../../../../data/models/accounts.json'
-import { AuditingChecklistComponent } from './auditing-checklist/auditing-checklist.component';
+import { AuditingChecklistComponent } from './account-components/auditing-checklist/auditing-checklist.component';
 
 @Component({
   selector: 'app-account',

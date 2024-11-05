@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ReferenceBannerComponent } from '../reference-banner/reference-banner.component';
+import { ReferenceBannerComponent } from '../../../content/reference-pages/reference-page-items/reference-banner/reference-banner.component';
 import { BrokerAgentsReferencePageComponent } from './broker-agents-reference-page.component';
 
 describe('BrokerAgentsReferencePageComponent', () => {

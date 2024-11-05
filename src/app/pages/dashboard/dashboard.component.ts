@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActionItemComponent } from '../content-items/action-item/action-item.component';
-import * as actions from "../content-items/action-item/UnderwriterActions.json"
+import { ActionItemComponent } from './dashboard-items/action-item/action-item.component';
+import * as actions from "./dashboard-items/action-item/UnderwriterActions.json"
 import { AccountsTableComponent } from '../../tables/accounts-table/accounts-table.component';
 
 @Component({

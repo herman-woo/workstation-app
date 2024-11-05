@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
-import { AccountComponent } from './pages/account/account.component';
-import { DashboardComponent } from './content/dashboard/dashboard.component';
-import { NamedInsuredsReferencePageComponent } from './pages/reference/named-insureds-reference-page/named-insureds-reference-page.component';
-import { BrokerAgentsReferencePageComponent } from './pages/reference/broker-agents-reference-page/broker-agents-reference-page.component';
-import { BrokerCompaniesReferencePageComponent } from './pages/reference/broker-companies-reference-page/broker-companies-reference-page.component';
-import { NamedInsuredComponent } from './content/record-pages/named-insured/named-insured.component';
+import { AccountComponent } from './pages/record-pages/account/account.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { NamedInsuredsReferencePageComponent } from './pages/reference-pages/named-insureds-reference-page/named-insureds-reference-page.component';
+import { BrokerAgentsReferencePageComponent } from './pages/reference-pages/broker-agents-reference-page/broker-agents-reference-page.component';
+import { BrokerCompaniesReferencePageComponent } from './pages/reference-pages/broker-companies-reference-page/broker-companies-reference-page.component';
+import { NamedInsuredComponent } from './pages/record-pages/named-insured/named-insured.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' }, // Default route (optional)
