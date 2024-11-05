@@ -1,15 +1,20 @@
 import { Component } from '@angular/core';
-import { ReferenceBannerComponent } from '../../../content/reference-pages/reference-page-items/reference-banner/reference-banner.component';
+import { CommonModule } from '@angular/common';
+import { ReferenceBannerComponent } from '../reference-page-items/reference-banner/reference-banner.component';
 import { AccountsTableComponent } from "../../../tables/accounts-table/accounts-table.component";
+import { RouterLink } from '@angular/router';
+import * as brokerData from '../../../../../data/models/brokers.json'
+import { SearchbarComponent } from '../../../tools/searchbar/searchbar.component';
 
 @Component({
   selector: 'app-broker-companies-reference-page',
   standalone: true,
-  imports: [ReferenceBannerComponent, AccountsTableComponent],
+  imports: [CommonModule,ReferenceBannerComponent, AccountsTableComponent, SearchbarComponent, RouterLink],
   templateUrl: './broker-companies-reference-page.component.html',
   styleUrl: './broker-companies-reference-page.component.css'
 })
 export class BrokerCompaniesReferencePageComponent {
 
   title = "Broker Companies"
+  brokers = brokerData.brokers
 }

@@ -2,8 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RouterLink } from '@angular/router';
-import * as accountData from '../../../../data/models/accounts.json'
+import * as accountData from '../../../../../data/models/accounts.json'
+import * as brokerData from '../../../../../data/models/brokers.json'
 import { AuditingChecklistComponent } from './account-components/auditing-checklist/auditing-checklist.component';
+
+
 
 @Component({
   selector: 'app-account',
@@ -31,12 +34,12 @@ export class AccountComponent {
   lastUpdated: string = "";
   newOrRenewal: string = "";
 
-  //hardcoded
   //Broker info
-  brokerName = "John Doe"
-  brokerTitle = "Broker"
-  brokerPhone = "416-999-1111"
-  brokerEmail = "john.doe@broker4insured.com"
+  brokerId: string = ""
+  brokerName: string = "";
+  brokerTitle: string = "";
+  brokerPhone: string = "";
+  brokerEmail: string = "";
 
   brokerCompanyName = "Brokers4Insured"
   brokerCompanyAddress = "130 Brokers Ave"
@@ -61,8 +64,8 @@ export class AccountComponent {
     // Capture the ID from the route
     this.id = this.route.snapshot.paramMap.get('id');
     const account = (accountData as any).accounts.find((acc: any) => acc.id === this.id);
-    this.policyId = account.policyId;
     this.insured = account.insured;
+    this.policyId = account.policyId;
     this.underwriter = account.underwriter
     this.product = account.product
     this.status = account.status
@@ -70,6 +73,13 @@ export class AccountComponent {
     this.lastUpdated = account.lastUpdated
     this.insuredId = account.insuredId
     this.newOrRenewal = account.newOrRenewal
+    this.brokerId = account.brokerId
+  
+    const broker = (brokerData as any).brokers.find((brk: any) => brk.brokerId === this.brokerId);
+    this.brokerName = broker.brokerFirstName + " " + broker.brokerLastName
+    this.brokerTitle = broker.brokerTitle
+    this.brokerPhone = broker.brokerPhone
+    this.brokerEmail = broker.brokerEmail
 
   }
 }

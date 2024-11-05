@@ -13,7 +13,7 @@
             </div>
             <div class="broker-container">
                 <div class="Broker-info-container">
-                    <h3><a href="/dashboard">Broker: {{brokerName}}</a></h3>
+                    <h3><a [routerLink]="['/broker', brokerId]">Broker: {{brokerName}}</a></h3>
                     <p>Title: {{brokerTitle}}</p>
                     <p>Tel: {{brokerPhone}}</p>
                     <p>Email: {{brokerEmail}}</p>

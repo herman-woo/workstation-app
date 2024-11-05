@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReferenceBannerComponent } from '../reference-page-items/reference-banner/reference-banner.component';
-import * as data from '../../../../../data/models/NamedInsureds.json'
+import * as data from '../../../../../data/models/named-insureds.json'
 import { RouterLink } from '@angular/router';
 import { SearchbarComponent } from '../../../tools/searchbar/searchbar.component';
 

@@ -1,0 +1,37 @@
+<div class="insured-page">
+    <record-breadcrumb [link]="'brokers'" [category]="'Brokers'" [id]="id"></record-breadcrumb>
+    <div class="insured-container">
+        <div class="insured-info-content">
+            <h2>Broker Info:</h2>
+            <div class="info-row">
+                <span class="label">Broker Name:</span>
+                <span class="value">{{brokerFirstName}} {{brokerLastName}}</span>
+            </div>
+            <div class="info-row">
+                <span class="label">Broker Title:</span>
+                <span class="value">{{brokerTitle}}</span>
+            </div>
+            <div class="info-row">
+                <span class="label">Phone Number:</span>
+                <span class="value">{{brokerPhone}}</span>
+            </div>
+            <div class="info-row">
+                <span class="label">Email:</span>
+                <span class="value">{{brokerEmail}}</span>
+            </div>
+            <div class="info-row">
+                <span class="label">Company ID:</span>
+                <span class="value">{{brokerCompanyId}}</span>
+            </div>
+            <div class="info-row">
+                <span class="label">Parent Company:</span>
+                <span class="value"><a href="/brokers">{{brokerCompanyName}}</a></span>
+            </div>
+        </div>
+        <button>Edit</button>
+    </div>
+    <div class="insured-container">
+        <h2>Linked Accounts with Broker</h2>
+        <brokers-table></brokers-table>
+    </div>
+</div>

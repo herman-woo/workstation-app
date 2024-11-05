@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import * as data from '../../../../data/models/accounts.json'
-import * as insuredData from '../../../../data/models/NamedInsureds.json'
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import * as data from '../../../../data/models/accounts.json'
+import * as insuredData from '../../../../data/models/named-insureds.json' 
 
 @Component({
   selector: 'named-insured-table',

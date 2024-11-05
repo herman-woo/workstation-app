@@ -1,4 +1,32 @@
-<div class="">
+<div>
     <app-reference-banner [title]="title"></app-reference-banner>
-    <app-accounts-table></app-accounts-table>
+    
+    <searchbar></searchbar>
+
+    <div class="table-container">
+        <table class="task-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>brokerFirstName</th>
+                    <th>brokerTitle</th>
+                    <th>brokerPhone</th>
+                    <th>brokerEmail</th>
+                    <th>brokerCompanyId</th>
+                    <th>brokerCompanyName</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let broker of brokers">
+                    <td>{{ broker.brokerId }}</td>
+                    <td><a [routerLink]="['/broker', broker.brokerId]">{{ broker.brokerFirstName }} {{ broker.brokerLastName }}</a></td>
+                    <td>{{ broker.brokerTitle}}</td>
+                    <td>{{ broker.brokerPhone}}</td>
+                    <td>{{ broker.brokerEmail}}</td>
+                    <td>{{ broker.brokerCompanyId }}</td>
+                    <td>{{ broker.brokerCompanyName}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
