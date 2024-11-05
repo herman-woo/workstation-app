@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import * as data from "../../../package.json"
 
 @Component({
-  selector: 'banner',
+  selector: 'main-banner',
   standalone: true,
   imports: [],
   templateUrl: './main-banner.component.html',

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import * as insuredData from '../../../../data/models/NamedInsureds.json'
-import { ReferenceBannerComponent } from '../reference/reference-banner/reference-banner.component';
-import { NamedInsuredTableComponent } from '../../tables/named-insured-table/named-insured-table.component';
+import * as insuredData from '../../../../../data/models/NamedInsureds.json'
+import { ReferenceBannerComponent } from '../../../pages/reference/reference-banner/reference-banner.component';
+import { NamedInsuredTableComponent } from '../../../tables/named-insured-table/named-insured-table.component'; 
 
 @Component({
   selector: 'app-named-insured',
