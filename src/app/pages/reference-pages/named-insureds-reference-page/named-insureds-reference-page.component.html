@@ -1,9 +1,13 @@
-<div>
-    <app-reference-banner [title]="title"></app-reference-banner>
+<div class="reference-page-container">
+    <div class="reference-page-header">
+        <app-reference-banner [title]="title"></app-reference-banner>
+    </div>
     
-    <searchbar></searchbar>
-
     <div class="table-container">
+        <div class="reference-page-panel">
+            <searchbar></searchbar>
+            <button>New Insured</button>
+        </div>
         <table class="task-table">
             <thead>
                 <tr>

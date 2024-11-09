@@ -4,11 +4,12 @@ import { RecordHeaderComponent } from '../record-items/record-header/record-head
 import { RecordBreadcrumbComponent } from '../record-items/record-breadcrumb/record-breadcrumb.component';
 import { BrokersTableComponent } from '../../../tables/brokers-table/brokers-table.component';
 import * as brokerData from '../../../../../data/models/brokers.json'
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-broker',
+  selector: 'broker-page',
   standalone: true,
-  imports: [RecordBreadcrumbComponent, RecordHeaderComponent, BrokersTableComponent],
+  imports: [RecordBreadcrumbComponent, RecordHeaderComponent, BrokersTableComponent,RouterLink],
   templateUrl: './broker.component.html',
   styleUrl: './broker.component.css'
 })
@@ -27,7 +28,7 @@ export class BrokerComponent {
   ngOnInit(): void {
     // Capture the ID from the route
     this.id = this.route.snapshot.paramMap.get('id');
-    const broker = (brokerData as any).brokers.find((broker: any) => broker.brokerId === this.id)
+    const broker = (brokerData as any).brokers[this.id!]
     this.brokerFirstName = broker.brokerFirstName
     this.brokerLastName = broker.brokerLastName
     this.brokerTitle = broker.brokerTitle
@@ -35,6 +36,5 @@ export class BrokerComponent {
     this.brokerEmail = broker.brokerEmail
     this.brokerCompanyId = broker.brokerCompanyId
     this.brokerCompanyName = broker.brokerCompanyName
-
   }
 }

@@ -1,0 +1,160 @@
+{
+    "companies": [
+        {
+            "id": 0,
+            "brokerCompanyId": 120,
+            "brokerCompanyName": "Samsung",
+            "Address": "130 Brokers Ave",
+            "City": "Toronto",
+            "Province": "Ontario",
+            "PostalCode": "RXE 1K2",
+            "isTopLevel": true,
+            "companyLevel": 0,
+            "parentCompanyId": null
+        },
+        {
+            "id": 1,
+            "brokerCompanyId": 130,
+            "brokerCompanyName": "Panasonic",
+            "Address": "130 Brokers Ave",
+            "City": "Toronto",
+            "Province": "Ontario",
+            "PostalCode": "RXE 1K2",
+            "isTopLevel": true,
+            "companyLevel": 0,
+            "parentCompanyId": null
+        },
+        {
+            "id": 2,
+            "brokerCompanyId": 201,
+            "brokerCompanyName": "Sony",
+            "Address": "220 Coverage St",
+            "City": "Vancouver",
+            "Province": "British Columbia",
+            "PostalCode": "V5K 0A1",
+            "isTopLevel": true,
+            "companyLevel": 0,
+            "parentCompanyId": null
+        },
+        {
+            "id": 3,
+            "brokerCompanyId": 203,
+            "brokerCompanyName": "Sharma Group",
+            "Address": "45 Unity Plaza",
+            "City": "Calgary",
+            "Province": "Alberta",
+            "PostalCode": "T2P 1J4",
+            "isTopLevel": true,
+            "companyLevel": 0,
+            "parentCompanyId": null
+        },
+        {
+            "id": 4,
+            "brokerCompanyId": 234,
+            "brokerCompanyName": "Pham Services",
+            "Address": "350 Apex Lane",
+            "City": "Montreal",
+            "Province": "Quebec",
+            "PostalCode": "H3B 1X8",
+            "isTopLevel": true,
+            "companyLevel": 0,
+            "parentCompanyId": null
+        },
+        {
+            "id": 5,
+            "brokerCompanyId": 245,
+            "brokerCompanyName": "Woo's Workers",
+            "Address": "120 Secure Way",
+            "City": "Ottawa",
+            "Province": "Ontario",
+            "PostalCode": "K1P 5J3",
+            "isTopLevel": true,
+            "companyLevel": 0,
+            "parentCompanyId": null
+        },
+        {
+            "id": 6,
+            "brokerCompanyId": 256,
+            "brokerCompanyName": "Harvest Moon Co.",
+            "Address": "75 Reliant Blvd",
+            "City": "Winnipeg",
+            "Province": "Manitoba",
+            "PostalCode": "R3C 4S5",
+            "isTopLevel": true,
+            "companyLevel": 0,
+            "parentCompanyId": null
+        },
+        {
+            "id": 7,
+            "brokerCompanyId": 457,
+            "brokerCompanyName": "Woo's Workers: West",
+            "Address": "120 Super Secure Way",
+            "City": "Vancouver",
+            "Province": "British Columbia",
+            "PostalCode": "L5K 8F4",
+            "isTopLevel": false,
+            "companyLevel": 1,
+            "parentCompanyId": 5
+        },
+        {
+            "id": 8,
+            "brokerCompanyId": 608,
+            "brokerCompanyName": "Woo's Workers: East",
+            "Address": "120 Mildly Secure Way",
+            "City": "Charlottetown",
+            "Province": "Prince Edward Island",
+            "PostalCode": "R4K 9D8",
+            "isTopLevel": false,
+            "companyLevel": 1,
+            "parentCompanyId": 5
+        },
+        {
+            "id": 9,
+            "brokerCompanyId": 700,
+            "brokerCompanyName": "National BasketBall Association",
+            "Address": "120 Mildly Secure Way",
+            "City": "Charlottetown",
+            "Province": "Prince Edward Island",
+            "PostalCode": "R4K 9D8",
+            "isTopLevel": true,
+            "companyLevel": 0,
+            "parentCompanyId": null
+        },
+        {
+            "id": 10,
+            "brokerCompanyId": 708,
+            "brokerCompanyName": "Phoenix Suns",
+            "Address": "120 Mildly Secure Way",
+            "City": "Charlottetown",
+            "Province": "Prince Edward Island",
+            "PostalCode": "R4K 9D8",
+            "isTopLevel": false,
+            "companyLevel": 1,
+            "parentCompanyId": 9
+        },
+        {
+            "id": 11,
+            "brokerCompanyId": 710,
+            "brokerCompanyName": "Golden State Warriors",
+            "Address": "120 Mildly Secure Way",
+            "City": "Charlottetown",
+            "Province": "Prince Edward Island",
+            "PostalCode": "R4K 9D8",
+            "isTopLevel": false,
+            "companyLevel": 1,
+            "parentCompanyId": 9
+        },
+        {
+            "id": 12,
+            "brokerCompanyId": 712,
+            "brokerCompanyName": "Los Angeles Lakers",
+            "Address": "120 Mildly Secure Way",
+            "City": "Charlottetown",
+            "Province": "Prince Edward Island",
+            "PostalCode": "R4K 9D8",
+            "isTopLevel": false,
+            "companyLevel": 1,
+            "parentCompanyId": 9
+        }
+    ]
+}

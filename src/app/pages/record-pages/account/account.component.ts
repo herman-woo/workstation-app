@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { RouterLink } from '@angular/router';
 import * as accountData from '../../../../../data/models/accounts.json'
 import * as brokerData from '../../../../../data/models/brokers.json'
+import * as companyData from '../../../../../data/models/broker-companies.json'
 import { AuditingChecklistComponent } from './account-components/auditing-checklist/auditing-checklist.component';
 
 
@@ -41,10 +42,11 @@ export class AccountComponent {
   brokerPhone: string = "";
   brokerEmail: string = "";
 
-  brokerCompanyName = "Brokers4Insured"
-  brokerCompanyAddress = "130 Brokers Ave"
-  brokerCompanyCity = "Toronto, Ontario"
-  brokerCompanyPostalCode = "RXE 1K2"
+  //broker Company
+  brokerCompanyName: string = ""
+  brokerCompanyAddress: string = ""
+  brokerCompanyCity: string = ""
+  brokerCompanyPostalCode: string = ""
 
 
   submittedToRiskWrite = "Yes"
@@ -75,11 +77,16 @@ export class AccountComponent {
     this.newOrRenewal = account.newOrRenewal
     this.brokerId = account.brokerId
   
-    const broker = (brokerData as any).brokers.find((brk: any) => brk.brokerId === this.brokerId);
+    const broker = (brokerData as any).brokers[this.brokerId!];
     this.brokerName = broker.brokerFirstName + " " + broker.brokerLastName
     this.brokerTitle = broker.brokerTitle
     this.brokerPhone = broker.brokerPhone
     this.brokerEmail = broker.brokerEmail
 
+    const company = (companyData as any).companies[broker.brokerCompanyId];
+    this.brokerCompanyName = company.brokerCompanyName
+    this.brokerCompanyAddress = company.Address
+    this.brokerCompanyCity = company.City
+    this.brokerCompanyPostalCode = company.PostalCode
   }
 }

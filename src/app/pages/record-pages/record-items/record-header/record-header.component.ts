@@ -9,5 +9,4 @@ import { Component, Input } from '@angular/core';
 })
 export class RecordHeaderComponent {
   @Input() title: string = '';
-  @Input() subject: string = '';
 }

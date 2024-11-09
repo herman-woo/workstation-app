@@ -11,5 +11,6 @@ import { RouterLink } from '@angular/router';
 export class RecordBreadcrumbComponent {
   @Input() id: string | null = '';
   @Input() category: string = '';
+  home = ""
   @Input() link: string = '';
 }

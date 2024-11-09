@@ -1,0 +1,30 @@
+<div class="reference-page-container">
+    <div class="reference-page-header">
+        <app-reference-banner [title]="title"></app-reference-banner>
+    </div>
+
+    <div class="table-container">
+        <div class="reference-page-panel">
+            <searchbar></searchbar>
+            <button>New Underwriter</button>
+        </div>
+        <table class="task-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Underwriter Name</th>
+                    <th>Role</th>
+                    <th>Business Unit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let underwriter of underwriters">
+                    <td>{{ underwriter.id }}</td>
+                    <td><a [routerLink]="['/underwriter', underwriter.id]">{{underwriter.underwriterFirstName}} {{underwriter.underwriterLastName}}</a> </td>
+                    <td>{{ underwriter.underwriterRole }}</td>
+                    <td>{{ underwriter.businessUnit }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

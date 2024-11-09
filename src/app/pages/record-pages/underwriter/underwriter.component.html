@@ -1,29 +1,32 @@
 <div class="page-container">
-    <record-breadcrumb [link]="'insureds'" [category]="'Named Insureds'" [id]="id"></record-breadcrumb>
+    <record-breadcrumb [link]="'underwriters'" [category]="'Underwriters'" [id]="id"></record-breadcrumb>
     <div class="page-section">
-        <record-header [title]="insuredName"></record-header>
-        <div class="insured-info-content">
-            <h2>Insured Info:</h2>
+        <div class="info-content">
+            <h2>Underwriter Info:</h2>
             <div class="info-row">
-                <span class="label">Mailing Address:</span>
-                <span class="value">{{insuredAddress}}</span>
+                <span class="label">Name:</span>
+                <span class="value">{{underwriterFirstName}} {{underwriterLastName}}</span>
             </div>
             <div class="info-row">
-                <span class="label">Province:</span>
-                <span class="value">{{insuredProvince}}</span>
+                <span class="label">Role</span>
+                <span class="value">{{underwriterRole}}</span>
+            </div>
+            <div class="info-row">
+                <span class="label">Business Unit:</span>
+                <span class="value">{{businessUnit}}</span>
             </div>
         </div>
         <button>Edit</button>
     </div>
     <div class="page-section">
-        <h2>Insured's Accounts</h2>
+        <h2>Linked Accounts with Underwriter ({{count}})</h2>
         <div class="table-container">
             <table class="task-table">
                 <thead>
                     <tr>
-                        <th>Year</th>
+                        <th>Date Created</th>
                         <th>PolicyID</th>
-                        <th>Underwriter</th>
+                        <th>Insured</th>
                         <th>Product</th>
                         <th>Status</th>
                         <th>Last Updated</th>
@@ -31,14 +34,15 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let account of accounts">
+
                         <td>
-                            <a [routerLink]="['/account', account.id]">{{ account.dateCreated.slice(0, 4) }}</a>
+                            <a [routerLink]="['/account', account.id]">{{ account.dateCreated }}</a>
                         </td>
                         <td>
                             <a [routerLink]="['/account', account.id]">{{ account.policyId }}</a>
                         </td>
                         <td>
-                            <a [routerLink]="['/underwriter', account.underwriterId]">{{ account.underwriter }}</a>
+                            <a [routerLink]="['/insured', account.insuredId]">{{ account.insured }}</a>
                         </td>
                         <td>{{ account.product }}</td>
                         <td>{{ account.status }}</td>

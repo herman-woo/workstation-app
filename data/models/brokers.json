@@ -1,104 +1,114 @@
 {
     "brokers": [
         {
-            "brokerId": "1",
+            "brokerId": 0,
+            "brokerFirstName": "Kevin",
+            "brokerLastName": "Durant",
+            "brokerTitle": "Small Forward",
+            "brokerPhone": "351-482-7290",
+            "brokerEmail": "kevindurant@phoenixsuns.com",
+            "brokerCompanyId": 10,
+            "brokerCompanyName": "Phoenix Suns"
+        },
+        {
+            "brokerId": 1,
             "brokerFirstName": "Cash",
             "brokerLastName": "Flo",
             "brokerTitle": "Broker",
             "brokerPhone": "351-482-7290",
             "brokerEmail": "firstname@brokerCopm.com",
-            "brokerCompanyId": "123",
-            "brokerCompanyName": "Brokers4Insureds"
+            "brokerCompanyId": 0,
+            "brokerCompanyName": "Samsung"
         },
         {
-            "brokerId": "2",
+            "brokerId": 2,
             "brokerFirstName": "Buck",
             "brokerLastName": "Plenti",
             "brokerTitle": "Broker",
             "brokerPhone": "718-364-0912",
             "brokerEmail": "firstname@brokerCopm.com",
-            "brokerCompanyId": "123",
-            "brokerCompanyName": "Brokers4Insureds"
+            "brokerCompanyId": 1,
+            "brokerCompanyName": "Panasonic"
         },
         {
-            "brokerId": "3",
+            "brokerId": 3,
             "brokerFirstName": "Penny",
             "brokerLastName": "Pincher",
             "brokerTitle": "Broker",
             "brokerPhone": "482-159-6384",
             "brokerEmail": "firstname@brokerCopm.com",
-            "brokerCompanyId": "123",
-            "brokerCompanyName": "Brokers4Insureds"
+            "brokerCompanyId": 2,
+            "brokerCompanyName": "Sony"
         },
         {
-            "brokerId": "4",
+            "brokerId": 4,
             "brokerFirstName": "Goldie",
             "brokerLastName": "Stake",
             "brokerTitle": "Broker",
             "brokerPhone": "213-647-5029",
             "brokerEmail": "firstname@brokerCopm.com",
-            "brokerCompanyId": "123",
-            "brokerCompanyName": "Brokers4Insureds"
+            "brokerCompanyId": 3,
+            "brokerCompanyName": "Sharma Group"
         },
         {
-            "brokerId": "5",
+            "brokerId": 5,
             "brokerFirstName": "Richie",
             "brokerLastName": "Bucksly",
             "brokerTitle": "Broker",
             "brokerPhone": "635-891-2475",
             "brokerEmail": "firstname@brokerCopm.com",
-            "brokerCompanyId": "123",
-            "brokerCompanyName": "Brokers4Insureds"
+            "brokerCompanyId": 4,
+            "brokerCompanyName": "Pham Services"
         },
         {
-            "brokerId": "6",
+            "brokerId": 6,
             "brokerFirstName": "Minty",
             "brokerLastName": "Coin",
             "brokerTitle": "Broker",
             "brokerPhone": "416-345-6543",
             "brokerEmail": "firstname@brokerCopm.com",
-            "brokerCompanyId": "123",
-            "brokerCompanyName": "Brokers4Insureds"
+            "brokerCompanyId": 5,
+            "brokerCompanyName": "Woo's Workers"
         },
         {
-            "brokerId": "7",
+            "brokerId": 7,
             "brokerFirstName": "Dolla",
             "brokerLastName": "Moolah",
             "brokerTitle": "Broker",
             "brokerPhone": "519-234-8076",
             "brokerEmail": "firstname@brokerCopm.com",
-            "brokerCompanyId": "123",
-            "brokerCompanyName": "Brokers4Insureds"
+            "brokerCompanyId": 5,
+            "brokerCompanyName": "Woo's Workers"
         },
         {
-            "brokerId": "8",
+            "brokerId": 8,
             "brokerFirstName": "Fortuna",
             "brokerLastName": "Cashmere",
             "brokerTitle": "Broker",
             "brokerPhone": "351-482-7290",
             "brokerEmail": "firstname@brokerCopm.com",
-            "brokerCompanyId": "123",
-            "brokerCompanyName": "Brokers4Insureds"
+            "brokerCompanyId": 6,
+            "brokerCompanyName": "Harvest Moon Co."
         },
         {
-            "brokerId": "9",
+            "brokerId": 9,
             "brokerFirstName": "Sol",
             "brokerLastName": "Venture",
             "brokerTitle": "Broker",
             "brokerPhone": "708-946-5823",
             "brokerEmail": "firstname@brokerCopm.com",
-            "brokerCompanyId": "123",
-            "brokerCompanyName": "Brokers4Insureds"
+            "brokerCompanyId": 7,
+            "brokerCompanyName": "Woo's Workers: West"
         },
         {
-            "brokerId": "10",
+            "brokerId": 10,
             "brokerFirstName": "Randall",
             "brokerLastName": "Coinage",
             "brokerTitle": "Broker",
             "brokerPhone": "613-798-2409",
             "brokerEmail": "firstname@brokerCopm.com",
-            "brokerCompanyId": "123",
-            "brokerCompanyName": "Brokers4Insureds"
+            "brokerCompanyId": 8,
+            "brokerCompanyName": "Woo's Workers: East"
         },
         {
             "brokerId": "11",
@@ -107,8 +117,8 @@
             "brokerTitle": "Broker",
             "brokerPhone": "891-674-1253",
             "brokerEmail": "firstname@brokerCopm.com",
-            "brokerCompanyId": "123",
-            "brokerCompanyName": "Brokers4Insureds"
+            "brokerCompanyId": 8,
+            "brokerCompanyName": "Woo's Workers: East"
         },
         {
             "brokerId": "12",
@@ -117,8 +127,8 @@
             "brokerTitle": "Broker",
             "brokerPhone": "520-364-1972",
             "brokerEmail": "firstname@brokerCopm.com",
-            "brokerCompanyId": "123",
-            "brokerCompanyName": "Brokers4Insureds"
+            "brokerCompanyId": 8,
+            "brokerCompanyName": "Woo's Workers: East"
         },
         {
             "brokerId": "13",
@@ -127,8 +137,8 @@
             "brokerTitle": "Broker",
             "brokerPhone": "436-590-2187",
             "brokerEmail": "firstname@brokerCopm.com",
-            "brokerCompanyId": "123",
-            "brokerCompanyName": "Brokers4Insureds"
+            "brokerCompanyId": 7,
+            "brokerCompanyName": "Woo's Workers: West"
         },
         {
             "brokerId": "14",
@@ -137,8 +147,8 @@
             "brokerTitle": "Broker",
             "brokerPhone": "295-871-6043",
             "brokerEmail": "firstname@brokerCopm.com",
-            "brokerCompanyId": "123",
-            "brokerCompanyName": "Brokers4Insureds"
+            "brokerCompanyId": 7,
+            "brokerCompanyName": "Woo's Workers: West"
         },
         {
             "brokerId": "15",
@@ -147,8 +157,8 @@
             "brokerTitle": "Broker",
             "brokerPhone": "762-491-3058",
             "brokerEmail": "firstname@brokerCopm.com",
-            "brokerCompanyId": "123",
-            "brokerCompanyName": "Brokers4Insureds"
+            "brokerCompanyId": 8,
+            "brokerCompanyName": "Woo's Workers: East"
         },
         {
             "brokerId": "16",
@@ -157,8 +167,8 @@
             "brokerTitle": "Broker",
             "brokerPhone": "504-387-2168",
             "brokerEmail": "firstname@brokerCopm.com",
-            "brokerCompanyId": "123",
-            "brokerCompanyName": "Brokers4Insureds"
+            "brokerCompanyId": 4,
+            "brokerCompanyName": "Pham Services"
         },
         {
             "brokerId": "17",
@@ -167,8 +177,8 @@
             "brokerTitle": "Broker",
             "brokerPhone": "408-562-1937",
             "brokerEmail": "firstname@brokerCopm.com",
-            "brokerCompanyId": "123",
-            "brokerCompanyName": "Brokers4Insureds"
+            "brokerCompanyId": 2,
+            "brokerCompanyName": "Sony"
         },
         {
             "brokerId": "18",
@@ -177,8 +187,8 @@
             "brokerTitle": "Broker",
             "brokerPhone": "613-904-8265",
             "brokerEmail": "firstname@brokerCopm.com",
-            "brokerCompanyId": "123",
-            "brokerCompanyName": "Brokers4Insureds"
+            "brokerCompanyId": 4,
+            "brokerCompanyName": "Pham Services"
         },
         {
             "brokerId": "19",
@@ -187,8 +197,8 @@
             "brokerTitle": "Broker",
             "brokerPhone": "416-345-6543",
             "brokerEmail": "firstname@brokerCopm.com",
-            "brokerCompanyId": "123",
-            "brokerCompanyName": "Brokers4Insureds"
+            "brokerCompanyId": 6,
+            "brokerCompanyName": "Harvest Moon Co."
         },
         {
             "brokerId": "20",
@@ -197,8 +207,28 @@
             "brokerTitle": "Broker",
             "brokerPhone": "729-384-5612",
             "brokerEmail": "firstname@brokerCopm.com",
-            "brokerCompanyId": "123",
-            "brokerCompanyName": "Brokers4Insureds"
+            "brokerCompanyId": 6,
+            "brokerCompanyName": "Harvest Moon Co."
+        },
+        {
+            "brokerId": "21",
+            "brokerFirstName": "Steph",
+            "brokerLastName": "Curry",
+            "brokerTitle": "Point Guard",
+            "brokerPhone": "351-482-7290",
+            "brokerEmail": "firstname@brokerCopm.com",
+            "brokerCompanyId": 11,
+            "brokerCompanyName": "Golden State Warriors"
+        },
+        {
+            "brokerId": "22",
+            "brokerFirstName": "LeBron",
+            "brokerLastName": "James",
+            "brokerTitle": "Power Forward",
+            "brokerPhone": "351-482-7290",
+            "brokerEmail": "firstname@brokerCopm.com",
+            "brokerCompanyId": 12,
+            "brokerCompanyName": "LA Lakers"
         }
     ]
 }

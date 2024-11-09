@@ -1,7 +1,7 @@
-<div class="insured-page">
+<div class="page-container">
     <record-breadcrumb [link]="'brokers'" [category]="'Brokers'" [id]="id"></record-breadcrumb>
-    <div class="insured-container">
-        <div class="insured-info-content">
+    <div class="page-section">
+        <div class="info-content">
             <h2>Broker Info:</h2>
             <div class="info-row">
                 <span class="label">Broker Name:</span>
@@ -25,12 +25,12 @@
             </div>
             <div class="info-row">
                 <span class="label">Parent Company:</span>
-                <span class="value"><a href="/brokers">{{brokerCompanyName}}</a></span>
+                <span class="value"><a [routerLink]="['/brokercompany', brokerCompanyId]">{{brokerCompanyName}}</a></span>
             </div>
         </div>
         <button>Edit</button>
     </div>
-    <div class="insured-container">
+    <div class="page-section">
         <h2>Linked Accounts with Broker</h2>
         <brokers-table></brokers-table>
     </div>

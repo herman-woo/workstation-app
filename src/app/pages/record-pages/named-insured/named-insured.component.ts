@@ -7,11 +7,12 @@ import { NamedInsuredTableComponent } from '../../../tables/named-insured-table/
 import { RecordHeaderComponent } from "../record-items/record-header/record-header.component";
 import { RecordBreadcrumbComponent } from '../record-items/record-breadcrumb/record-breadcrumb.component';
 import { TableComponent } from '../../../tools/table/table.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-named-insured',
+  selector: 'insured-page',
   standalone: true,
-  imports: [CommonModule, RecordBreadcrumbComponent, NamedInsuredTableComponent, RecordHeaderComponent, TableComponent],
+  imports: [CommonModule, RecordBreadcrumbComponent, NamedInsuredTableComponent, RecordHeaderComponent, TableComponent, RouterLink],
   templateUrl: './named-insured.component.html',
   styleUrl: './named-insured.component.css'
 })
@@ -25,32 +26,7 @@ export class NamedInsuredComponent {
   insuredAddress: string = "";
   insuredProvince: string = "";
   pageSubject = "Named Insured"
-
-
-  columnTitles = [
-    "Created",
-    "Policy ID",
-    "Underwriter",
-    "New/Renewal",
-    "Product",
-    "Status",
-    "Related Project",
-    "Last Updated",
-  ]
-
-  columnFields = [
-    "dateCreated",
-    "policyId",
-    "underwriter",
-    "newOrRenewal",
-    "product",
-    "status",
-    "Related Project",
-    "lastUpdated"
-  ]
-
-  rows: any[] = []
-
+  accounts: any[] = []
 
 
 
@@ -58,16 +34,17 @@ export class NamedInsuredComponent {
   ngOnInit(): void {
     // Capture the ID from the route
     this.id = this.route.snapshot.paramMap.get('id');
-    const insured = (insuredData as any).namedInsureds.find((insured: any) => insured.id === this.id)
+    const insured = (insuredData as any).namedInsureds[this.id!]
     this.insuredName = insured.insuredName
     this.insuredAddress = insured.address
     this.insuredProvince = insured.province
 
-    for (let account of data.accounts) {
-      if (account.insuredId == this.id) {
-        this.rows.push(account)
+    for(let account of data.accounts){
+      if(account.insuredId === this.id){
+        this.accounts.push(account)
       }
     }
+
   }
 
 }

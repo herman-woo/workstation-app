@@ -1,0 +1,94 @@
+{
+    "underwriters": [
+        {
+            "id": "0",
+            "underwriterFirstName": "George",
+            "underwriterLastName": "Boire",
+            "underwriterRole": "Underwriter",
+            "businessUnit": "Environmental",
+            "dateCreated": "2023-10-19",
+            "lastUpdated": "2023-10-21"
+        },
+        {
+            "id": "1",
+            "underwriterFirstName": "Carl",
+            "underwriterLastName": "Spensieri",
+            "underwriterRole": "Underwriter",
+            "businessUnit": "Environmental",
+            "dateCreated": "2023-10-19",
+            "lastUpdated": "2023-10-21"
+        },
+        {
+            "id": "2",
+            "underwriterFirstName": "Katrine",
+            "underwriterLastName": "Spensieri",
+            "underwriterRole": "Underwriter",
+            "businessUnit": "Environmental",
+            "dateCreated": "2023-10-19",
+            "lastUpdated": "2023-10-21"
+        },
+        {
+            "id": "3",
+            "underwriterFirstName": "Brynn",
+            "underwriterLastName": "Spensieri",
+            "underwriterRole": "Underwriter",
+            "businessUnit": "Environmental",
+            "dateCreated": "2023-10-19",
+            "lastUpdated": "2023-10-21"
+        },
+        {
+            "id": "4",
+            "underwriterFirstName": "Leonora",
+            "underwriterLastName": "",
+            "underwriterRole": "Underwriter",
+            "businessUnit": "Environmental",
+            "dateCreated": "2023-10-19",
+            "lastUpdated": "2023-10-21"
+        },
+        {
+            "id": "5",
+            "underwriterFirstName": "Mina",
+            "underwriterLastName": "V",
+            "underwriterRole": "Underwriter",
+            "businessUnit": "Environmental",
+            "dateCreated": "2023-10-19",
+            "lastUpdated": "2023-10-21"
+        },
+        {
+            "id": "6",
+            "underwriterFirstName": "Shani",
+            "underwriterLastName": "",
+            "underwriterRole": "Underwriter",
+            "businessUnit": "Environmental",
+            "dateCreated": "2023-10-19",
+            "lastUpdated": "2023-10-21"
+        },
+        {
+            "id": "7",
+            "underwriterFirstName": "Herman",
+            "underwriterLastName": "Woo",
+            "underwriterRole": "Underwriter",
+            "businessUnit": "Environmental",
+            "dateCreated": "2023-10-19",
+            "lastUpdated": "2023-10-21"
+        },
+        {
+            "id": "8",
+            "underwriterFirstName": "Puja",
+            "underwriterLastName": "Sharma",
+            "underwriterRole": "Underwriter",
+            "businessUnit": "Environmental",
+            "dateCreated": "2023-10-19",
+            "lastUpdated": "2023-10-21"
+        },
+        {
+            "id": "9",
+            "underwriterFirstName": "Tina",
+            "underwriterLastName": "Pham",
+            "underwriterRole": "Underwriter",
+            "businessUnit": "Environmental",
+            "dateCreated": "2023-10-19",
+            "lastUpdated": "2023-10-21"
+        }
+    ]
+}

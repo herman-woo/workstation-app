@@ -1,28 +1,36 @@
-<div>
-    <app-reference-banner [title]="title"></app-reference-banner>
-    
-    <searchbar></searchbar>
+<div class="reference-page-container">
+    <div class="reference-page-header">
+        <app-reference-banner [title]="title"></app-reference-banner>
+    </div>
 
     <div class="table-container">
+        <div class="reference-page-panel">
+            <searchbar></searchbar>
+            <button>New Broker Company</button>
+        </div>
         <table class="task-table">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Insured</th>
-                    <th>Insured</th>
-                    <th>Insured</th>
-                    <th>Insured</th>
+                    <th>Company ID</th>
+                    <th>Company Name</th>
                     <th>Address</th>
+                    <th>City</th>
                     <th>Province</th>
-                    <th>Linked Accounts</th>
+                    <th>PostalCode</th>
+                    <th>isTopLevel</th>
+                    <th>parentCompanyId</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let broker of brokers">
-                    <td>{{ broker.brokerId }}</td>
-                    <td><a [routerLink]="['/broker', broker.brokerId]">{{broker.brokerFirstName}}</a> </td>
-                    <td></td>
-                </tr>
+                <tr *ngFor="let company of companies">
+                    <td>{{ company.brokerCompanyId }}</td>
+                    <td><a [routerLink]="['/brokercompany', company.id]">{{company.brokerCompanyName}}</a> </td>
+                    <td>{{ company.Address }}</td>
+                    <td>{{ company.City }}</td>
+                    <td>{{ company.Province }}</td>
+                    <td>{{ company.PostalCode }}</td>
+                    <td>{{ company.isTopLevel }}</td>
+                    <td><a [routerLink]="['/brokercompany', company.id]">{{company.parentCompanyId}}</a> </td>                </tr>
             </tbody>
         </table>
     </div>

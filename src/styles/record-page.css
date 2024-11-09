@@ -1,0 +1,66 @@
+/* Page Container */
+.page-container {
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Insured Container Styling */
+  .page-section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header Styling */
+  .page-section  h2 {
+    font-size: 1.5em;
+    color: #343a40;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 5px;
+  }
+  
+  /* Insured Info Section */
+  .info-content {
+    margin-top: 10px;
+  }
+  
+  /* Row Styling */
+  .info-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  /* Labels Styling */
+  .info-row .label {
+    font-weight: bold;
+    color: #555;
+    width: 150px; /* Adjust this width to align the labels */
+  }
+  
+  /* Value Text Styling */
+  .info-row .value {
+    font-size: 1em;
+    color: #333;
+  }
+  
+  /* Edit Button Styling */
+  .page-section button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .page-section button:hover {
+    background-color: #0056b3;
+  }

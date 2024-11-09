@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import * as data from "../../../package.json"
+import { SearchbarComponent } from '../tools/searchbar/searchbar.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'main-banner',
   standalone: true,
-  imports: [],
+  imports: [SearchbarComponent,RouterLink],
   templateUrl: './main-banner.component.html',
   styleUrl: './main-banner.component.css'
 })
