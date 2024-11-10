@@ -2,91 +2,39 @@
     "namedInsureds": [
         {
             "id": "0",
-            "insuredName": "McDonalds",
-            "address": "125 Maplewood Drive",
-            "province": "Ontario",
-            "dateCreated": "2023-10-19",
-            "lastUpdated": "2023-10-21"
-        },
-        {
-            "id": "1",
-            "insuredName": "Bread Winner Inc.",
-            "address": "125 Maplewood Drive",
-            "province": "Ontario",
-            "dateCreated": "2023-10-19",
-            "lastUpdated": "2023-10-21"
-        },
-        {
-            "id": "2",
             "insuredName": "Capital Construction",
-            "address": "4728 Oak Street",
-            "province": "Ontario",
+            "insuredStreetAddress": "4728 Oak Street",
+            "insuredProvince": "Ontario",
+            "insuredPostalCode": "2023-10-21",
             "dateCreated": "2023-10-18",
             "lastUpdated": "2023-10-21"
         },
         {
-            "id": "3",
+            "id": "1",
             "insuredName": "NorthWest Regional Service Commission",
-            "address": "59 Birch Lane",
-            "province": "North-West Territories",
+            "insuredStreetAddress": "59 Birch Lane",
+            "insuredProvince": "North-West Territories",
+            "insuredPostalCode": "2023-10-21",
             "dateCreated": "2023-10-10",
             "lastUpdated": "2023-10-14"
         },
         {
-            "id": "4",
-            "insuredName": "Herman's Minerals",
-            "address": "8120 Elm Avenue",
-            "province": "British Columbia",
-            "dateCreated": "2023-10-19",
-            "lastUpdated": "2023-10-22"
-        },
-        {
-            "id": "5",
-            "insuredName": "Herman Copper",
-            "address": "237 Willow Road",
-            "province": "Alberta",
-            "dateCreated": "2023-10-17",
-            "lastUpdated": "2023-10-22"
-        },
-        {
-            "id": "6",
+            "id": "2",
             "insuredName": "Gigner Ale Quebec",
-            "province": "Quebec",
-            "address": "5107 Pinecrest Street",
+            "insuredProvince": "Quebec",
+            "insuredStreetAddress": "5107 Pinecrest Street",
+            "insuredPostalCode": "2023-10-21",
             "dateCreated": "2023-10-15",
             "lastUpdated": "2023-10-19"
         },
         {
-            "id": "7",
-            "insuredName": "Sriracha Ltd",
-            "address": "342 Cedar Ridge Way",
-            "province": "British Columbia",
-            "dateCreated": "2023-10-13",
-            "lastUpdated": "2023-10-17"
-        },
-        {
-            "id": "8",
+            "id": "3",
             "insuredName": "Montreal Electric",
-            "address": "1986 Magnolia Boulevard",
-            "province": "Quebec",
+            "insuredStreetAddress": "1986 Magnolia Boulevard",
+            "insuredPostalCode": "2023-10-21",
+            "insuredProvince": "Quebec",
             "dateCreated": "2023-10-12",
             "lastUpdated": "2023-10-15"
-        },
-        {
-            "id": "9",
-            "insuredName": "NS Group",
-            "province": "Nova Scotia",
-            "address": "768 Poplar Street",
-            "dateCreated": "2023-10-16",
-            "lastUpdated": "2023-10-18"
-        },
-        {
-            "id": "10",
-            "insuredName": "PEI Brick Limited",
-            "address": "3912 Chestnut Drive",
-            "province": "Prince Edward Island",
-            "dateCreated": "2023-10-20",
-            "lastUpdated": "2023-10-24"
         }
     ]
 }

@@ -2,13 +2,13 @@
     "brokers": [
         {
             "brokerId": 0,
-            "brokerFirstName": "Kevin",
-            "brokerLastName": "Durant",
-            "brokerTitle": "Small Forward",
+            "brokerFirstName": "Super",
+            "brokerLastName": "BRoker",
+            "brokerTitle": "Broker",
             "brokerPhone": "351-482-7290",
-            "brokerEmail": "kevindurant@phoenixsuns.com",
-            "brokerCompanyId": 10,
-            "brokerCompanyName": "Phoenix Suns"
+            "brokerEmail": "firstname@brokerCopm.com",
+            "brokerCompanyId": 0,
+            "brokerCompanyName": "Samsung"
         },
         {
             "brokerId": 1,
@@ -209,26 +209,6 @@
             "brokerEmail": "firstname@brokerCopm.com",
             "brokerCompanyId": 6,
             "brokerCompanyName": "Harvest Moon Co."
-        },
-        {
-            "brokerId": "21",
-            "brokerFirstName": "Steph",
-            "brokerLastName": "Curry",
-            "brokerTitle": "Point Guard",
-            "brokerPhone": "351-482-7290",
-            "brokerEmail": "firstname@brokerCopm.com",
-            "brokerCompanyId": 11,
-            "brokerCompanyName": "Golden State Warriors"
-        },
-        {
-            "brokerId": "22",
-            "brokerFirstName": "LeBron",
-            "brokerLastName": "James",
-            "brokerTitle": "Power Forward",
-            "brokerPhone": "351-482-7290",
-            "brokerEmail": "firstname@brokerCopm.com",
-            "brokerCompanyId": 12,
-            "brokerCompanyName": "LA Lakers"
         }
     ]
 }

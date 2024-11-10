@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MainBannerComponent } from './banner/main-banner.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { CommonModule } from '@angular/common';
-import { SidebarService } from './services/sidebar.service';
+import { SidebarService } from '../services/sidebar.service';
 
 @Component({
   selector: 'app-root',
@@ -13,8 +12,7 @@ import { SidebarService } from './services/sidebar.service';
     CommonModule,
     RouterOutlet,
     MainBannerComponent,
-    SidebarComponent,
-    DashboardComponent
+    SidebarComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'] // corrected from `styleUrl`

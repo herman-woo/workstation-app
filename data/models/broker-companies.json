@@ -107,54 +107,6 @@
             "isTopLevel": false,
             "companyLevel": 1,
             "parentCompanyId": 5
-        },
-        {
-            "id": 9,
-            "brokerCompanyId": 700,
-            "brokerCompanyName": "National BasketBall Association",
-            "Address": "120 Mildly Secure Way",
-            "City": "Charlottetown",
-            "Province": "Prince Edward Island",
-            "PostalCode": "R4K 9D8",
-            "isTopLevel": true,
-            "companyLevel": 0,
-            "parentCompanyId": null
-        },
-        {
-            "id": 10,
-            "brokerCompanyId": 708,
-            "brokerCompanyName": "Phoenix Suns",
-            "Address": "120 Mildly Secure Way",
-            "City": "Charlottetown",
-            "Province": "Prince Edward Island",
-            "PostalCode": "R4K 9D8",
-            "isTopLevel": false,
-            "companyLevel": 1,
-            "parentCompanyId": 9
-        },
-        {
-            "id": 11,
-            "brokerCompanyId": 710,
-            "brokerCompanyName": "Golden State Warriors",
-            "Address": "120 Mildly Secure Way",
-            "City": "Charlottetown",
-            "Province": "Prince Edward Island",
-            "PostalCode": "R4K 9D8",
-            "isTopLevel": false,
-            "companyLevel": 1,
-            "parentCompanyId": 9
-        },
-        {
-            "id": 12,
-            "brokerCompanyId": 712,
-            "brokerCompanyName": "Los Angeles Lakers",
-            "Address": "120 Mildly Secure Way",
-            "City": "Charlottetown",
-            "Province": "Prince Edward Island",
-            "PostalCode": "R4K 9D8",
-            "isTopLevel": false,
-            "companyLevel": 1,
-            "parentCompanyId": 9
         }
     ]
 }

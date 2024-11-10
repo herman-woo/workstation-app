@@ -3,7 +3,7 @@ import { ReferenceBannerComponent } from '../reference-page-items/reference-bann
 import { SearchbarComponent } from '../../../tools/searchbar/searchbar.component';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import * as data from '../../../../../data/models/underwriters.json'
+import { UnderwriterService } from '../../../../services/underwriter.service';
 
 @Component({
   selector: 'app-underwriter-reference-pages',
@@ -13,8 +13,15 @@ import * as data from '../../../../../data/models/underwriters.json'
   styleUrl: './underwriter-reference-pages.component.css'
 })
 export class UnderwriterReferencePagesComponent {
-
   title = "Underwriters"
-  underwriters = data.underwriters
+  underwriters: any[] = []
+
+  constructor(private underwriterService: UnderwriterService) { }
+
+  ngOnInit(): void {
+    this.underwriterService.getAllUnderwriters().subscribe((data) => {
+      this.underwriters = data
+    })
+  }
 
 }

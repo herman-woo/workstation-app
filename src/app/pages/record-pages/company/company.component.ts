@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { RecordHeaderComponent } from '../record-items/record-header/record-header.component';
 import { RecordBreadcrumbComponent } from '../record-items/record-breadcrumb/record-breadcrumb.component';
 import { RouterLink } from '@angular/router';
-import * as companyData from '../../../../../data/models/broker-companies.json'
+import { BrokerCompanyService } from '../../../../services/broker-company.service';
 
 
 @Component({
@@ -27,24 +27,22 @@ export class CompanyComponent {
   parentCompanyId: string = "";
   parentCompanyName: string = "";
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute,
+    private companyService: BrokerCompanyService){}
   ngOnInit(): void {
     // Capture the ID from the route
     this.id = this.route.snapshot.paramMap.get('id');
-    const company = (companyData as any).companies[this.id!]
-    this.brokerCompanyName = company.brokerCompanyName
-    this.address = company.Address
-    this.city = company.City
-    this.province = company.Province
-    this.postalCode = company.PostalCode
-    this.parentCompanyId = company.parentCompanyId
-    this.companyId = company.brokerCompanyId
-    this.isTopLevel = company.isTopLevel
-    if (!this.isTopLevel) {
-      const parent = (companyData as any).companies[this.parentCompanyId!]
-      this.parentCompanyName = parent.brokerCompanyName
-    }
-
+    this.companyService.getBrokerCompanyById(parseInt(this.id!)).subscribe((data) => {
+      this.brokerCompanyName = data.broker_company_name
+      this.address = data.broker_company_address
+      this.city = data.broker_company_city
+      this.province = data.broker_company_province
+      this.postalCode = data.broker_company_postal_code
+      this.parentCompanyId = data.parent_company
+      this.parentCompanyName = data.parent_company_name
+      this.companyId = data.broker_company_id
+      this.isTopLevel = data.is_top_level
+    })
 
   }
 

@@ -22,12 +22,12 @@
             </thead>
             <tbody>
                 <tr *ngFor="let broker of brokers">
-                    <td>{{ broker.brokerId }}</td>
-                    <td><a [routerLink]="['/broker', broker.brokerId]">{{ broker.brokerFirstName }} {{ broker.brokerLastName }}</a></td>
-                    <td>{{ broker.brokerTitle}}</td>
-                    <td>{{ broker.brokerPhone}}</td>
-                    <td>{{ broker.brokerEmail}}</td>
-                    <td>{{ broker.brokerCompanyId }}</td>
+                    <td>{{ broker.broker_id }}</td>
+                    <td><a [routerLink]="['/broker', broker.broker_id]">{{ broker.broker_first_name }} {{ broker.broker_last_name }}</a></td>
+                    <td>{{ broker.broker_title}}</td>
+                    <td>{{ broker.broker_phone_number}}</td>
+                    <td>{{ broker.broker_email}}</td>
+                    <td>{{ broker.broker_company }}</td>
                     <td>{{ broker.brokerCompanyName}}</td>
                 </tr>
             </tbody>

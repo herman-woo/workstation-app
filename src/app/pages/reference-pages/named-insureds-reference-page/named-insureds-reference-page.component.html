@@ -13,17 +13,17 @@
                 <tr>
                     <th>ID</th>
                     <th>Insured</th>
-                    <th>Address</th>
+                    <th>Mailing Address</th>
                     <th>Province</th>
                     <th># of Linked Accounts</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let insured of insureds">
-                    <td>{{ insured.id }}</td>
-                    <td><a [routerLink]="['/insured', insured.id]">{{insured.insuredName}}</a> </td>
-                    <td>{{ insured.address }}</td>
-                    <td>{{ insured.province }}</td>
+                    <td>{{ insured.insured_id }}</td>
+                    <td><a [routerLink]="['/insured', insured.insured_id]">{{insured.insured_name}}</a> </td>
+                    <td>{{ insured.insured_street_address }}, {{ insured.insured_postal_code }}</td>
+                    <td>{{ insured.insured_province }}</td>
                     <td></td>
                 </tr>
             </tbody>

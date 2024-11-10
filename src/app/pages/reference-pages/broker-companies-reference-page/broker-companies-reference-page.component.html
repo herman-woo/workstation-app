@@ -23,14 +23,14 @@
             </thead>
             <tbody>
                 <tr *ngFor="let company of companies">
-                    <td>{{ company.brokerCompanyId }}</td>
-                    <td><a [routerLink]="['/brokercompany', company.id]">{{company.brokerCompanyName}}</a> </td>
-                    <td>{{ company.Address }}</td>
-                    <td>{{ company.City }}</td>
-                    <td>{{ company.Province }}</td>
-                    <td>{{ company.PostalCode }}</td>
-                    <td>{{ company.isTopLevel }}</td>
-                    <td><a [routerLink]="['/brokercompany', company.id]">{{company.parentCompanyId}}</a> </td>                </tr>
+                    <td>{{ company.broker_company_id }}</td>
+                    <td><a [routerLink]="['/brokercompany', company.id]">{{company.broker_company_name}}</a> </td>
+                    <td>{{ company.broker_company_address }}</td>
+                    <td>{{ company.broker_company_city }}</td>
+                    <td>{{ company.broker_company_province }}</td>
+                    <td>{{ company.broker_company_postal_code }}</td>
+                    <td>{{ company.is_top_level }}</td>
+                    <td><a [routerLink]="['/brokercompany', company.parent_company]">{{company.parent_company}}</a> </td>                </tr>
             </tbody>
         </table>
     </div>
