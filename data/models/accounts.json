@@ -2,16 +2,19 @@
     "accounts": [
         {
             "id": "0",
-            "underwriterId":4,
-            "brokerId": "11",
             "policyId": "BC04123-2232",
-            "insuredId" : "1",
-            "brokerCompanyId": 8,
-            "insured": "Bread Winner Inc.",
+            "underwriterId":4,
             "underwriter": "Herman Woo",
+            "insuredId" : "1",
+            "insured": "Bread Winner Inc.",
+            "brokerId": "11",
+            "brokerCompanyId": 8,
             "newOrRenewal": "New",
             "product": "CPP",
+
+            
             "status": "Expired",
+            
             "dateCreated": "2022-01-21",
             "lastUpdated": "2022-08-24"
         },

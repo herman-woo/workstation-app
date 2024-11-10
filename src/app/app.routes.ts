@@ -1,15 +1,14 @@
 import { Routes } from '@angular/router';
-import { AccountComponent } from './pages/record-pages/account/account.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { UnderwriterReferencePagesComponent } from './pages/reference-pages/underwriter-reference-pages/underwriter-reference-pages.component';
-import { UnderwriterComponent } from './pages/record-pages/underwriter/underwriter.component';
-import { NamedInsuredsReferencePageComponent } from './pages/reference-pages/named-insureds-reference-page/named-insureds-reference-page.component';
-import { BrokerAgentsReferencePageComponent } from './pages/reference-pages/broker-agents-reference-page/broker-agents-reference-page.component';
-import { BrokerCompaniesReferencePageComponent } from './pages/reference-pages/broker-companies-reference-page/broker-companies-reference-page.component';
-import { NamedInsuredComponent } from './pages/record-pages/named-insured/named-insured.component';
-import { BrokerComponent } from './pages/record-pages/broker/broker.component';
-import { CompanyComponent } from './pages/record-pages/company/company.component';
-
+import { AccountComponent } from '../pages/record-pages/account/account.component';
+import { DashboardComponent } from '../components/dashboard/dashboard.component';
+import { UnderwriterReferencePagesComponent } from '../pages/reference-pages/underwriter-reference-pages/underwriter-reference-pages.component';
+import { UnderwriterComponent } from '../pages/record-pages/underwriter/underwriter.component';
+import { NamedInsuredsReferencePageComponent } from '../pages/reference-pages/named-insureds-reference-page/named-insureds-reference-page.component';
+import { BrokerAgentsReferencePageComponent } from '../pages/reference-pages/broker-agents-reference-page/broker-agents-reference-page.component';
+import { BrokerCompaniesReferencePageComponent } from '../pages/reference-pages/broker-companies-reference-page/broker-companies-reference-page.component';
+import { NamedInsuredComponent } from '../pages/record-pages/named-insured/named-insured.component';
+import { BrokerComponent } from '../pages/record-pages/broker/broker.component';
+import { CompanyComponent } from '../pages/record-pages/company/company.component';
 export const routes: Routes = [
     //main page references
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -26,5 +25,7 @@ export const routes: Routes = [
     { path: 'brokercompanies', component: BrokerCompaniesReferencePageComponent},
     { path: 'brokercompany', redirectTo: '/brokercompanies', pathMatch: 'full' },
     { path: 'brokercompany/:id', component: CompanyComponent},
-    { path: 'account/:id', component: AccountComponent}
+    { path: 'account/:id', component: AccountComponent},
+    { path: 'account/full/:id', component: AccountComponent},
+    { path: 'account/sections/:id', component: AccountComponent}
 ];
