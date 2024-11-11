@@ -1,11 +1,3 @@
-.account-card {
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
-    color: #333;
-}
-
 .account-page {
     display: flex;
     flex-direction: column;
@@ -34,9 +26,15 @@
 /* Primary Info Card */
 .primary-info-card {
     width: 600px;
-    height: 100%;
+    height: 105%;
+    padding: 1.1vh;
     display: flex;
     flex-direction: column;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #333;
 }
 
 .record-info-container {

@@ -4,17 +4,50 @@ import { ActivatedRoute } from '@angular/router';
 import { RouterLink } from '@angular/router';
 import * as accountData from '../../../../data/models/accounts.json'
 import { AuditingChecklistComponent } from './account-components/auditing-checklist/auditing-checklist.component';
+import { RecordBreadcrumbComponent } from '../record-items/record-breadcrumb/record-breadcrumb.component';
 
+import { RiskSummaryComponent } from '../../../modules/risk-summary/risk-summary.component';
+import { RatingQuotingComponent } from '../../../modules/rating-quoting/rating-quoting.component';
+import { FileStructureComponent } from '../../../modules/file-structure/file-structure.component';
+import { AccountNotesComponent } from '../../../modules/account-notes/account-notes.component';
 
 
 @Component({
   selector: 'app-account',
   standalone: true,
-  imports: [CommonModule, AuditingChecklistComponent,RouterLink],
+  imports: [CommonModule, AuditingChecklistComponent, RouterLink,
+    RiskSummaryComponent,
+    RatingQuotingComponent,
+    FileStructureComponent,
+    AccountNotesComponent,
+    RecordBreadcrumbComponent
+  ],
   templateUrl: './account.component.html',
   styleUrl: './account.component.css'
 })
 export class AccountComponent {
+
+  data = {
+    "id": "1",
+    "underwriterId": 4,
+    "policyId": "BC04123-2432",
+    "insuredId": "1",
+    "brokerId": "11",
+    "brokerCompanyId": 8,
+    "insured": "Bread Winner Inc.",
+    "underwriter": "Herman Woo",
+    "newOrRenewal": "Renewal",
+    "product": "CPP",
+    "status": "In Progress",
+    "dateCreated": "2023-01-21",
+    "lastUpdated": "2023-08-24"
+  }
+
+  activeTab: number = 1;
+
+  setActiveTab(tabNumber: number) {
+    this.activeTab = tabNumber
+  }
 
   pdf = "/images/pdf-svgrepo-com.svg"
   doc = "/images/word.svg"
@@ -74,7 +107,7 @@ export class AccountComponent {
     this.insuredId = account.insuredId
     this.newOrRenewal = account.newOrRenewal
     this.brokerId = account.brokerId
-  
+
     // const broker = (brokerData as any).brokers[this.brokerId!];
     // this.brokerName = broker.brokerFirstName + " " + broker.brokerLastName
     // this.brokerTitle = broker.brokerTitle

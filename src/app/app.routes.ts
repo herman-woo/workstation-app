@@ -9,6 +9,8 @@ import { BrokerCompaniesReferencePageComponent } from '../pages/reference-pages/
 import { NamedInsuredComponent } from '../pages/record-pages/named-insured/named-insured.component';
 import { BrokerComponent } from '../pages/record-pages/broker/broker.component';
 import { CompanyComponent } from '../pages/record-pages/company/company.component';
+import { RiskSummaryComponent } from '../modules/risk-summary/risk-summary.component';
+
 export const routes: Routes = [
     //main page references
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -26,6 +28,5 @@ export const routes: Routes = [
     { path: 'brokercompany', redirectTo: '/brokercompanies', pathMatch: 'full' },
     { path: 'brokercompany/:id', component: CompanyComponent},
     { path: 'account/:id', component: AccountComponent},
-    { path: 'account/full/:id', component: AccountComponent},
-    { path: 'account/sections/:id', component: AccountComponent}
+    { path: 'account/risksummary/:id', component: RiskSummaryComponent}
 ];
