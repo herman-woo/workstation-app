@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'rating-quoting',
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './rating-quoting.component.css'
 })
 export class RatingQuotingComponent {
-
+  @Input() data: any;
 }

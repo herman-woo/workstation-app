@@ -7,7 +7,7 @@
 </div>
 <div class="tab-content">
     <div *ngIf="activeTab === 1">
-        <risk-summary [data]="data"></risk-summary>
+        <risk-summary [data]="accountRecord"></risk-summary>
     </div>
     <div *ngIf="activeTab === 2">
         <rating-quoting></rating-quoting>

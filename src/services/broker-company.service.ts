@@ -5,6 +5,8 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class BrokerCompanyService {
   private apiUrl = 'http://localhost:8000/company/';
   constructor(private http: HttpClient) {}

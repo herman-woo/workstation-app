@@ -1,22 +1,29 @@
 <div class="top-half-container">
+    <div class=" account-card">
+        <h3><a [routerLink]="['/broker', data.brokerId]">Broker: {{data.brokerName}}</a></h3>
+        <p>Title: {{data.brokerTitle}}</p>
+        <p>Tel: {{data.brokerPhone}}</p>
+        <p>Email: {{data.brokerEmail}}</p>
+        <button class="top-button">Change Broker</button>
+    </div>
     <div class="primary-info-card account-card">
         <div class="primary-info-container">
             <div class="record-info-container">
                 <p class="account-id">Account ID:{{data.id}}</p>
-                <p class="account-status">Status: Submitted</p>
+                <p class="account-status">Status: {{data.account_status}}</p>
             </div>
-            <h1 class="named-insured"><a [routerLink]="['/insured', 1]">{{data.id}}</a></h1>
+            <h1 class="named-insured"><a [routerLink]="['/insured', 1]">{{data.named_insured.insured_name}}</a></h1>
             <div class="policy-info-container">
-                <h2>Policy Number: {{data.policyId}}</h2>
+                <h2>Policy Number: {{data.policy_id}}</h2>
                 <h3>Contact Type: Broker/Direct</h3>
             </div>
         </div>
         <div class="broker-container">
             <div class="Broker-info-container">
-                <h3><a [routerLink]="['/broker', data.brokerId]">Broker: {{data.brokerName}}</a></h3>
-                <p>Title: {{data.brokerTitle}}</p>
-                <p>Tel: {{data.brokerPhone}}</p>
-                <p>Email: {{data.brokerEmail}}</p>
+                <h3><a [routerLink]="['/broker', data.brokerId]">Broker: {{data.insurance_broker.broker_first_name}} {{data.insurance_broker.broker_last_name}}</a></h3>
+                <p>Title: {{data.insurance_broker.broker_title}}</p>
+                <p>Tel: {{data.insurance_broker.broker_phone_number}}</p>
+                <p>Email: {{data.insurance_broker.broker_email}}</p>
                 <button class="top-button">Change Broker</button>
             </div>
             <div class="Broker-company-container">
@@ -28,7 +35,7 @@
             </div>
         </div>
     </div>
-    <div class="secondary-info-card">
+    <div class="secondary-info-card account-card">
         <div>
             <div class="info-card">
                 <h3>Submission:</h3>

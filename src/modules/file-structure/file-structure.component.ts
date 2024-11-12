@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'file-structure',
@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './file-structure.component.css'
 })
 export class FileStructureComponent {
+  @Input() data: any;
 
 }

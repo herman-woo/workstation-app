@@ -10,6 +10,7 @@ import { RiskSummaryComponent } from '../../../modules/risk-summary/risk-summary
 import { RatingQuotingComponent } from '../../../modules/rating-quoting/rating-quoting.component';
 import { FileStructureComponent } from '../../../modules/file-structure/file-structure.component';
 import { AccountNotesComponent } from '../../../modules/account-notes/account-notes.component';
+import { AccountService } from '../../../services/account.service';
 
 
 @Component({
@@ -49,6 +50,7 @@ export class AccountComponent {
     this.activeTab = tabNumber
   }
 
+  
   pdf = "/images/pdf-svgrepo-com.svg"
   doc = "/images/word.svg"
   exl = "/images/excel-svgrepo-com.svg"
@@ -89,9 +91,11 @@ export class AccountComponent {
   subunit = "SME"
   insuranceProduct = "Fixed Site Environmental"
 
+  accountRecord = null
 
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute,
+              private accountService: AccountService) { }
 
   ngOnInit(): void {
     // Capture the ID from the route
@@ -107,7 +111,9 @@ export class AccountComponent {
     this.insuredId = account.insuredId
     this.newOrRenewal = account.newOrRenewal
     this.brokerId = account.brokerId
-
+    
+    
+    this.accountService.getAccountById(parseInt(this.id!)).subscribe((data) => this.accountRecord = data)
     // const broker = (brokerData as any).brokers[this.brokerId!];
     // this.brokerName = broker.brokerFirstName + " " + broker.brokerLastName
     // this.brokerTitle = broker.brokerTitle
