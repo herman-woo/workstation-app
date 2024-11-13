@@ -1,0 +1,49 @@
+<div class="account-summary account-card">
+    <table>
+        <tr>
+            <td><h2>Account Status:</h2></td>
+            <td><h2>{{accountData.account_status}}</h2></td>
+
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>Business Unit:</td>
+            <td>{{accountData.business_unit}}</td>
+        </tr>
+        <tr>
+            <td>Submission Type:</td>
+            <td>{{accountData.submission_type}}</td>
+        </tr>
+        <tr>
+            <td>Indicated:</td>
+            <td>{{accountData.indicated}}</td>
+        </tr>
+        <tr>
+            <td>Quote Revisions:</td>
+            <td>{{accountData.quote_revisions_count}}</td>
+        </tr>
+        <tr>
+            <td>Final Quote Created:</td>
+            <td>{{accountData.final_quote}}</td>
+        </tr>
+        <tr>
+            <td>Policy Issued</td>
+            <td>{{accountData.has_policy}}</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td><h2>Policy ID:</h2></td>
+            <td><h2>{{accountData.policy_id}}</h2></td>
+        </tr>
+        <tr>
+            <td>Policy Start:</td>
+            <td>{{accountData.policy_start_date}}</td>
+        </tr>
+        <tr>
+            <td>Policy End:</td>
+            <td>{{accountData.policy_end_date}}</td>
+        </tr>
+    </table>
+</div>

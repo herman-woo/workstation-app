@@ -1,9 +1,15 @@
-.account-card {
+.account-page {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 98%;
     align-items: center;
-    justify-content: space-between;
-    margin: 0;
+    justify-content: center;
+    background-color: #eeeeee;
+    border: 3px solid rgb(214, 214, 214);
+}
+.account-card {
+    margin: 10px;
+    padding: 10px;
     border-radius: 8px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -11,135 +17,34 @@
     color: #333;
 }
 
-.account-tabs{
-    width: 100%;
-    margin-bottom: 5px;
-    margin-top: 20px;
-    max-width: 1400px;
-}
-.account-tabs button {
-    width: 25%;
-    height: 40px;
-    background-color: rgb(198, 198, 198);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    color: black;
-}
-
-.account-tabs button:hover{
-    background-color: rgb(255, 255, 255);
-    box-shadow: none;
-    border: 1px solid rgb(135, 135, 135);
-    border-bottom: white;
-}
-
-.account-page {
-    display: flex;
-    flex-direction: column;
-    width: 98%;
-    align-items: center;
-    padding: 1.2vh;
-    justify-content: center;
-    background-color: #eeeeee;
-    border: 3px solid rgb(214, 214, 214);
-}
-
-.top-half-container {
-    width: 100%;
-    height: 345px;
-    max-width: 2000px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 10px;
-    align-items: flex-start;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-}
-
-
-/* Primary Info Card */
-.primary-info-card {
-    width: 600px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.record-info-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0;
-}
-
-.policy-info-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.primary-info-card h1,
-.primary-info-card h2,
-.primary-info-card h3 {
-    margin: 0 0 10px 0;
-    color: #333;
-}
-
-.primary-info-card h1 a {
-    color: #2c3e50;
-    text-decoration: none;
-    font-size: 2em;
-    font-weight: bold;
-}
-
-.primary-info-card h3 a {
-    color: #3498db;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.account-id {
-    margin: 0;
-    color: #949494;
-}
-
-.account-status {
-    margin: 0;
-}
-
-.named-insured {
-    font-size: 25px;
-}
-
-.broker-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 10px;
-    margin: 1vh;
-    margin-top: 20px;
-}
-
-.Broker-info-container,
-.Broker-company-container {
-    width: 48%;
+.info-card {
     background-color: #ffffff;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.Broker-info-container p,
-.Broker-company-container p {
+.info-card p {
     margin: 5px 0;
     color: #666;
+}
+.info-card h3 {
+    font-size: 1.1em;
+    color: #3498db;
+    margin-top: 10px;
+}
+.info-card h3 a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.account-row-container {
+    width: 100%;
+    max-width: 2000px;
+    display: flex;
+    flex-direction: row;
 }
 
 /* Button styling */
@@ -172,22 +77,6 @@ button:hover {
     background-color: #2980b9;
 }
 
-.secondary-info-card {
-    height: 102%;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
-}
-
-.info-card h3 {
-    font-size: 1.1em;
-    color: #3498db;
-    margin-top: 10px;
-}
-
 tr {
     display: flex;
     flex-direction: row;
@@ -195,9 +84,6 @@ tr {
     width: 100%;
 }
 
-table {
-    width: 100%;
-}
 
 .folder-structure-card {
     height: 102%;
@@ -366,14 +252,12 @@ table {
     font-size: 1.2em;
     font-weight: 700;
 }
-
-.rating-card {
+.rating-card{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
-
 .quoting-card {
     justify-content: flex-start;
     display: flex;
@@ -442,11 +326,11 @@ table {
     font-weight: 400;
 }
 
-.notes-title {
+.notes-title{
     color: #000;
 }
 
-.notes-container {
+.notes-container{
     width: 90%;
     height: 350px;
     background-color: #ffffff;
@@ -456,7 +340,7 @@ table {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.final-card {
+.final-card{
     background-color: #eeeeee;
     border-radius: 0px;
     padding: 0px;
@@ -467,7 +351,7 @@ table {
     justify-content: space-between;
 }
 
-.subcard {
+.subcard{
     width: 95%;
     padding: 10px;
     border-radius: 8px;
@@ -477,18 +361,16 @@ table {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-
+    
 }
 
-.auditing-card {
+.auditing-card{
     height: 250px;
 }
-
-.riskwrite-card {
+.riskwrite-card{
     height: 200px;
 }
-
-.riskwrite-card-banner {
+.riskwrite-card-banner{
     width: 100%;
     margin-bottom: 10px;
 }
@@ -506,33 +388,6 @@ table {
         gap: 10px;
         margin: 0vh;
         margin-bottom: 0;
-    }
-
-    .primary-info-card {
-        height: 92%;
-        max-height: 100%;
-        padding: 10px;
-    }
-
-    .primary-info-card h1 a {
-        font-size: 1.4em;
-    }
-
-    .primary-info-card h2 {
-        font-size: 1em;
-    }
-
-    .primary-info-card h1 {
-        margin: 0 0 4px 0;
-    }
-
-    .primary-info-card h2,
-    .primary-info-card h3 {
-        margin: 0 0 0 0;
-    }
-
-    .primary-info-card h3 a {
-        font-size: 0.8em;
     }
 
     p {
@@ -632,10 +487,6 @@ table {
 
     .structure-card {
         padding: 20px;
-        width: 90%;
-    }
-
-    .primary-info-card {
         width: 90%;
     }
 
