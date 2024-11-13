@@ -4,6 +4,7 @@ import { UnderwriterCardComponent } from '../module-components/underwriter-card/
 import { NamedInsuredCardComponent } from '../module-components/named-insured-card/named-insured-card.component';
 import { AccountSummaryCardComponent } from '../module-components/account-summary-card/account-summary-card.component';
 import { AccountTimelineCardComponent } from '../module-components/account-timeline-card/account-timeline-card.component';
+import { AccountProductCardComponent } from '../module-components/account-product-card/account-product-card.component';
 
 @Component({
   selector: 'risk-summary',
@@ -12,7 +13,8 @@ import { AccountTimelineCardComponent } from '../module-components/account-timel
             UnderwriterCardComponent,
             NamedInsuredCardComponent,
             AccountSummaryCardComponent,
-            AccountTimelineCardComponent],
+            AccountTimelineCardComponent,
+            AccountProductCardComponent],
   templateUrl: './risk-summary.component.html',
   styleUrl: './risk-summary.component.css'
 })

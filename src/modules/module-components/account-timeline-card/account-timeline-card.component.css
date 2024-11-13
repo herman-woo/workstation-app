@@ -1,7 +1,7 @@
 @import '../../../styles/account-page.css';
 
 .account-timeline {
-    width: 1380px;
+    width: 740px;
 }
 
 .account-timeline h2 {
@@ -12,4 +12,9 @@
 
 .account-timeline table {
     width: 100%
+}
+
+.timeline-table{
+    width: 70%;
+    background-color: #ffffff;
 }

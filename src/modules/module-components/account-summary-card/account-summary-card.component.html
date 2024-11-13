@@ -1,22 +1,18 @@
 <div class="account-summary account-card">
     <table>
-        <tr>
-            <td><h2>Account Status:</h2></td>
-            <td><h2>{{accountData.account_status}}</h2></td>
-
-        </tr>
     </table>
     <table>
         <tr>
-            <td>Business Unit:</td>
-            <td>{{accountData.business_unit}}</td>
+            <td><h2>Account Status:</h2></td>
+            <td><h2>{{accountData.account_status}}</h2></td>
+    
         </tr>
         <tr>
             <td>Submission Type:</td>
             <td>{{accountData.submission_type}}</td>
         </tr>
         <tr>
-            <td>Indicated:</td>
+            <td>Quote Indicated:</td>
             <td>{{accountData.indicated}}</td>
         </tr>
         <tr>
@@ -34,16 +30,15 @@
     </table>
     <table>
         <tr>
-            <td><h2>Policy ID:</h2></td>
-            <td><h2>{{accountData.policy_id}}</h2></td>
+            <td><h2>RiskWrite</h2></td>
         </tr>
         <tr>
-            <td>Policy Start:</td>
-            <td>{{accountData.policy_start_date}}</td>
+            <td>Submitted to RiskWrite:</td>
+            <td>{{accountData.riskwrite_submitted}}</td>
         </tr>
         <tr>
-            <td>Policy End:</td>
-            <td>{{accountData.policy_end_date}}</td>
+            <td>Bound in RiskWrite:</td>
+            <td>{{accountData.riskwrite_bound}}</td>
         </tr>
     </table>
 </div>
