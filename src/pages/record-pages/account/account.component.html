@@ -10,7 +10,7 @@
         <risk-summary [data]="accountRecord"></risk-summary>
     </div>
     <div *ngIf="activeTab === 2">
-        <rating-quoting></rating-quoting>
+        <rating-quoting [data]="accountRecord"></rating-quoting>
     </div>
     <div *ngIf="activeTab === 3">
         <file-structure></file-structure>
