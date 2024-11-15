@@ -1,0 +1,8 @@
+<div class="account-card">
+    <h1>Auditing Checklist</h1>
+    <label *ngFor="let item of checklistItems; let i = index" class="auditing-checklist info-card"
+        [ngClass]="{ 'active': item.checked === true }">
+        <input type="checkbox" [checked]="item.checked" (change)="toggleChecked(i)" />
+        {{ item.name }}
+    </label>
+</div>

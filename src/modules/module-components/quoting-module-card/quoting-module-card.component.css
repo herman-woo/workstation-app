@@ -1,13 +1,23 @@
 
 @import '../../rating-quoting/rating-quoting.component.css';
 
+.quoting-module {
+    width: 880px;
+    height: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
 
 .quote-revisions h2{
     font-size: 1.5em;
 }
 
 .quote-revisions-container{
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: row;
 }

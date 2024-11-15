@@ -28,17 +28,13 @@ export class AccountComponent {
   setActiveTab(tabNumber: number) {
     this.activeTab = tabNumber
   }
-  
+
   id: string | null = null;
   accountRecord = null
-  pdf = "/images/pdf-svgrepo-com.svg"
-  doc = "/images/word.svg"
-  exl = "/images/excel-svgrepo-com.svg"
-  file = "/images/folder-files-and-folders-svgrepo-com.svg"
 
 
   constructor(private route: ActivatedRoute,
-              private accountService: AccountService) { }
+    private accountService: AccountService) { }
 
   ngOnInit(): void {
     // Capture the ID from the route

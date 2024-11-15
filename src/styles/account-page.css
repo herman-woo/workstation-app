@@ -93,78 +93,7 @@ tr {
 }
 
 
-.folder-structure-card {
-    height: 102%;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 700px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.folder-structure-banner {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.folder-structure-container {
-    background-color: #d4d4d4;
-    width: 650px;
-    height: 100%;
-    border-radius: 8px;
-
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
-    padding: 10px;
-    max-width: 800px;
-    /* Cap width for large screens */
-    margin: 0 auto;
-    /* Center the dashboard */
-}
-
-.folder-item,
-.file-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    position: relative;
-    border-radius: 8px;
-    color: rgba(0, 0, 0, 0.559);
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    background-size: 67%;
-    background-position: top 0.5vh center;
-    background-repeat: no-repeat;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 70%;
-
-}
-
-.folder-item {
-    /* For absolute positioning of inner content */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
-
-}
-
-.file-item {
-    background-color: #2b0e0e00;
-}
 
 .action-center-card {
     height: 102%;
@@ -188,150 +117,16 @@ tr {
     background-color: #464646;
 }
 
-.rating-info-container {
-    width: 30%;
-    max-width: 1300px;
-    height: 100%;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
-    color: #333;
-}
-
-.bottom-half-container {
-    width: 100%;
-    height: 600px;
-    max-width: 2000px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 20px;
-    align-items: flex-start;
-    margin-top: 3vh;
-    margin-bottom: 2vh;
-}
-
-.structure-card {
-    height: 95%;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 700px;
-}
-
-.rating-banner {
-    font-size: 1.2em;
-    width: 100%;
-    color: #17b95bb9;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.rating-table {
-    margin-top: 20px;
-}
-
-.rating-banner-bottom {
-    font-size: 1.2em;
-    width: 100%;
-    color: #17b95bb9;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.rating-model-button {
-    color: #ffffff;
-    background-color: #17b95bb9;
-    height: 30px;
-}
-
-.rating-model-button:hover {
-    background-color: #0a7d23e3;
-}
-
 .financial-title {
     color: #000;
     font-size: 1.2em;
     font-weight: 700;
 }
-.rating-card{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-.quoting-card {
-    justify-content: flex-start;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
 
-.quoting-button-banner {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 5px;
-    gap: 5px;
-    margin-bottom: 20px;
-}
-
-.quote-button {
-    color: #ffffff;
-    background-color: #17b95bb9;
-    height: 30px;
-    margin: 10px;
-    padding: 3px;
-    font-size: 0.1em;
-}
-
-.quote-button:hover {
-    background-color: #0a7d23e3;
-}
 
 .revision {
     color: black;
     font-size: 0.6em;
-}
-
-.financial-subject {
-    width: 33%;
-    font-size: 20px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    text-align: left;
-}
-
-.financial-sub-subject {
-    width: 33%;
-    font-size: 15px;
-    color: #6d6d6d;
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-}
-
-.financial-option-item {
-    width: 33%;
-    text-align: end;
-    font-size: 15px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-}
-
-.financial-line-item {
-    width: 33%;
-    text-align: end;
-    font-size: 15px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
 }
 
 .notes-title{
@@ -346,41 +141,6 @@ tr {
     margin-top: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.final-card{
-    background-color: #eeeeee;
-    border-radius: 0px;
-    padding: 0px;
-    height: 103%;
-    box-shadow: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.subcard{
-    width: 95%;
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    
-}
-
-.auditing-card{
-    height: 250px;
-}
-.riskwrite-card{
-    height: 200px;
-}
-.riskwrite-card-banner{
-    width: 100%;
-    margin-bottom: 10px;
 }
 
 /* Responsive design for 1080p */
