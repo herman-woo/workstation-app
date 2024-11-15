@@ -1,33 +1,7 @@
 @import '../../../styles/account-page.css';
+@import '../../rating-quoting/rating-quoting.component.css';
 
-.rating-module {
-    width: 1080px;
-    height: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: top;
-    align-items: center;
-}
-
-table {
-    width: 100%;
-}
-
-tr {
-    vertical-align: middle;
-    display: flex;
-}
-
-td {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    
-}
-
-.risk-line-items th{
+.risk-line-items-headers th{
     width: 25%;
     border: 2px solid rgb(226, 226, 226);
     background-color: rgb(116, 116, 116);
@@ -45,16 +19,36 @@ td {
     justify-content: center;
 }
 
-
-.rating-button{
-    background-color: rgb(8, 169, 126);
-    width: 120px;
-    height: 40px;
-    margin: 5px;
+.risk-line-items-subtotals th{
+    width: 25%;
+    border: 2px solid rgb(226, 226, 226);
+    background-color: rgb(226, 226, 226);
+    font-size: 14px;
+    align-items: center;
+    color: rgb(102, 102, 102);
+}
+.risk-line-items-totals th{
+    width: 25%;
+    border: 2px solid rgb(116, 116, 116);
+    background-color: rgb(116, 116, 116);
+    font-size: 14px;
+    align-items: center;
+    color: rgb(102, 102, 102);
 }
 .rater-product-name{
-    color: rgb(8, 169, 126);
 }
 .rating-table{
     width: 90%;
+}
+
+.risk-subtotals {
+    margin-top: 20px;
+}
+.risk-totals {
+    margin-top: 0px;
+}
+
+.risk-revenue{
+    width: 90%;
+    text-align: end;
 }
