@@ -1,0 +1,44 @@
+<div class="assignments-module account-card">
+    <div class="assigments-header">
+        <h1>Tasks:</h1>
+        <div>
+            <button [ngClass]="{ 'active': activeTab === 1 }" (click)="setActiveTab(1)">Assigned</button>
+            <button [ngClass]="{ 'active': activeTab === 2 }" (click)="setActiveTab(2)">Completed</button>
+        </div>
+    </div>
+    <div class="assignments-container">
+        <div *ngIf="activeTab === 1">
+            <div class="assignment info-card">
+                <h2 class="assignment-info in-progress">
+                    In Progress
+                </h2>
+                <p class="assignment-info">Herman Woo</p>
+                <h2 class="assignment-info">Submit Account to RiskWrite</h2>
+            </div>
+        </div>
+        <div *ngIf="activeTab === 2">
+            <div class="assignment info-card">
+                <h2 class="assignment-info completed">
+                    Completed
+                </h2>
+                <p class="assignment-info">Herman Woo</p>
+                <h2 class="assignment-info">Revise Quote</h2>
+            </div>
+            <div class="assignment info-card">
+                <h2 class="assignment-info completed">
+                    Completed
+                </h2>
+                <p class="assignment-info">Herman Woo</p>
+                <h2 class="assignment-info">Change Broker</h2>
+            </div>
+            <div class="assignment info-card">
+                <h2 class="assignment-info completed">
+                    Completed
+                </h2>
+                <p class="assignment-info">Herman Woo</p>
+                <h2 class="assignment-info">Submit Account to RiskWrite</h2>
+            </div>
+        </div>
+    </div>
+
+</div>

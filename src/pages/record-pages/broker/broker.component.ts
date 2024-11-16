@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RecordBreadcrumbComponent } from '../record-items/record-breadcrumb/record-breadcrumb.component';
 import { RouterLink } from '@angular/router';
@@ -11,6 +11,8 @@ import { BrokerService } from '../../../services/broker.service';
   templateUrl: './broker.component.html',
   styleUrl: './broker.component.css'
 })
+
+@Injectable()
 export class BrokerComponent {
 
   id: string | null = null;
