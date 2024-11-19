@@ -1,6 +1,0 @@
-<div class="auditing-checklist" *ngFor="let item of checklistItems; let i = index">
-    <label>
-        <input type="checkbox" [checked]="item.checked" (change)="toggleChecked(i)" />
-        {{ item.name }}
-    </label>
-</div>

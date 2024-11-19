@@ -1,0 +1,44 @@
+@import '../../../styles/account-page.css';
+
+.assignments-module h1,
+.completed {
+    color: rgb(125, 125, 125);
+}
+
+.assigments-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.assigments-header button {
+    margin: 10px;
+    width: 100px;
+}
+
+.assignment {
+    margin: 10px;
+    height: 40px;
+    width: 92%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.assignment:hover {
+    cursor: pointer;
+}
+
+.in-progress {
+    color: rgb(211, 192, 17);
+}
+
+.assignment-info {
+    width: 33%;
+}
+
+button.active {
+    background-color: rgb(8, 169, 126);
+}

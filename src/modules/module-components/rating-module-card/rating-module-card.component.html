@@ -1,0 +1,178 @@
+<div class="rating-quoting-module account-card">
+    <table>
+        <tr>
+            <td>
+                <h1 class="rater-product-name">{{accountData.product_type}}</h1>
+            </td>
+            <td *ngIf="accountData.business_subunit === 'Small to Medium Business'">
+                <h1 class="rater-product-name">SME</h1>
+            </td>
+            <td *ngIf="accountData.business_subunit != 'Small to Medium Business'">
+                <h1 class="rater-product-name">Core</h1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="rating-quoting-button">Change Product</button>
+            </td>
+            <td>
+                <button class="rating-quoting-button">Rating Model</button>
+            </td>
+        </tr>
+    </table>
+    <div *ngIf="accountData.product_type === 'Consultant Or Contractor'" class="rating-table info-card">
+        <div class="table-container">
+            <table class="task-table">
+                <thead>
+                    <tr class="risk-line-items-headers">
+                        <th>Risk</th>
+                        <th>Environmental Operations</th>
+                        <th>Revenue</th>
+                        <th>Subcontracted Revenue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="risk-line-items">
+                        <td><em>High</em></td>
+                        <td>Pipeline Installation</td>
+                        <td><div class="risk-revenue">$1,000,000</div></td>
+                        <td><div class="risk-revenue">$0</div></td>
+                    </tr>
+                    <tr class="risk-line-items">
+                        <td><em>Moderate/Low</em></td>
+                        <td>Remediation</td>
+                        <td><div class="risk-revenue">$10,000</div></td>
+                        <td><div class="risk-revenue">$0</div></td>
+                    </tr>
+                    <tr class="risk-line-items">
+                        <td><em>Moderate/Low</em></td>
+                        <td>Tank Cleaning, O&M</td>
+                        <td><div class="risk-revenue">$200,000</div></td>
+                        <td><div class="risk-revenue">$0</div></td>
+                    </tr>
+                    <tr class="risk-line-items">
+                        <td><em>Moderate/Low</em></td>
+                        <td>Soil Sampling</td>
+                        <td><div class="risk-revenue">$100,000</div></td>
+                        <td><div class="risk-revenue">$0</div></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="risk-subtotals task-table">
+                <thead>
+                    <tr class="risk-line-items-subtotals">
+                        <th></th>
+                        <th></th>
+                        <th>Total Revenue</th>
+                        <th>Total 
+                            Subcontracted Revenue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="risk-line-items">
+                        <td>Total High Risk</td>
+                        <td></td>
+                        <td><div class="risk-revenue">$1,000,000</div></td>
+                        <td><div class="risk-revenue">$0</div></td>
+                    </tr>
+                    <tr class="risk-line-items">
+                        <td>Total Moderate/Low Risk</td>
+                        <td></td>
+                        <td><div class="risk-revenue">$310,000</div></td>
+                        <td><div class="risk-revenue">$0</div></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="risk-totals task-table">
+                <thead>
+                    <tr class="risk-line-items-totals">
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="risk-line-items">
+                        <td><b>Total All Contracting</b></td>
+                        <td></td>
+                        <td><div class="risk-revenue"><b>$1,310,000</b></div></td>
+                        <td><div class="risk-revenue"><b>$0</b></div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div *ngIf="accountData.product_type === 'Fixed Site Environmental'" class="rating-table info-card">
+        <div class="table-container">
+            <table class="task-table">
+                <thead>
+                    <tr class="risk-line-items-headers">
+                        <th>Risk Class</th>
+                        <th>Mod</th>
+                        <th>Risk NAICS</th>
+                        <th>Description</th>
+                        <th>No.of Locations</th>
+                        <th>Premium</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="risk-line-items">
+                        <td><em>1st</em></td>
+                        <td><em>100%</em></td>
+                        <td>221</td>
+                        <td>Utilities</td>
+                        <td>3</td>
+                        <td><div class="risk-revenue">$37,500</div></td>
+                    </tr>
+                    <tr class="risk-line-items">
+                        <td><em>2nd</em></td>
+                        <td><em>80%</em></td>
+                        <td>111</td>
+                        <td>Crop Production</td>
+                        <td>2</td>
+                        <td><div class="risk-revenue">$10,400</div></td>
+                    </tr>
+                    <tr class="risk-line-items">
+                        <td><em>3rd</em></td>
+                        <td><em>60%</em></td>
+                        <td>314</td>
+                        <td>Large Textile Mills</td>
+                        <td>1</td>
+                        <td><div class="risk-revenue">$6,000</div></td>
+                    </tr>
+                    <tr class="risk-line-items">
+                        <td><em>4th</em></td>
+                        <td><em>40%</em></td>
+                        <td>484</td>
+                        <td>Truck Transportation</td>
+                        <td>1</td>
+                        <td><div class="risk-revenue">$2,000</div></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="risk-totals task-table">
+                <thead>
+                    <tr class="risk-line-items-totals">
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="risk-line-items">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><b>Total Premium</b></td>
+                        <td><div class="risk-revenue"><b>$55,900</b></div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

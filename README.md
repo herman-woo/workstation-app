@@ -1,5 +1,8 @@
 # workstation-app
 
+## Changelog
+### version 0.3.6 2024-11-15
+Skipped a bunch of updates. Massive Overhaul, Branched account page into tabs. Completed Each tab, RiskSumary, Rating/Quoting, Files, and Account Notes.
 
 ### version 0.2.4 2024-11-03
 Added the named insured refernce page and individual page.

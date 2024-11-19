@@ -1,0 +1,44 @@
+<div class="account-summary account-card">
+    <table>
+    </table>
+    <table>
+        <tr>
+            <td><h2>Account Status:</h2></td>
+            <td><h2>{{accountData.account_status}}</h2></td>
+    
+        </tr>
+        <tr>
+            <td>Submission Type:</td>
+            <td>{{accountData.submission_type}}</td>
+        </tr>
+        <tr>
+            <td>Quote Indicated:</td>
+            <td>{{accountData.indicated}}</td>
+        </tr>
+        <tr>
+            <td>Quote Revisions:</td>
+            <td>{{accountData.quote_revisions_count}}</td>
+        </tr>
+        <tr>
+            <td>Final Quote Created:</td>
+            <td>{{accountData.final_quote}}</td>
+        </tr>
+        <tr>
+            <td>Policy Issued</td>
+            <td>{{accountData.has_policy}}</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td><h2>RiskWrite</h2></td>
+        </tr>
+        <tr>
+            <td>Submitted to RiskWrite:</td>
+            <td>{{accountData.riskwrite_submitted}}</td>
+        </tr>
+        <tr>
+            <td>Bound in RiskWrite:</td>
+            <td>{{accountData.riskwrite_bound}}</td>
+        </tr>
+    </table>
+</div>

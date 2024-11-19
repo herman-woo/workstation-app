@@ -5,6 +5,8 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class BrokerCompanyService {
   private apiUrl = 'http://localhost:8000/company/';
   constructor(private http: HttpClient) {}
@@ -14,5 +16,9 @@ export class BrokerCompanyService {
 
   getBrokerCompanyById(id:number): Observable<any> {
     return this.http.get<any>(this.apiUrl+id)
+  }
+
+  searchInsuranceCompanies(query: string): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl+'search/?query='+query);
   }
 }

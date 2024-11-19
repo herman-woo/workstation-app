@@ -1,0 +1,317 @@
+.account-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.account-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.account-tabs {
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    max-width: 2400px;
+
+}
+
+.account-tabs button {
+    width: 25%;
+    height: 40px;
+    background-color: rgb(222, 222, 222);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    color: black;
+}
+
+.account-tabs button:hover {
+    background-color: rgb(255, 255, 255);
+    box-shadow: none;
+    border: 1px solid rgb(135, 135, 135);
+    border-bottom: white;
+}
+
+.account-tabs button.active {
+    background-color: #ffffff;
+    /* Active tab color */
+    color: rgb(125, 125, 125);
+    border: 1px solid rgb(201, 201, 201);
+    border-bottom: none;
+    font-size: 1.3em;
+}
+
+.account-page {
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    align-items: center;
+    padding: 1.2vh;
+    justify-content: center;
+    background-color: #eeeeee;
+    border: 3px solid rgb(214, 214, 214);
+}
+
+table{
+    width: 100%;
+}
+
+/* Button styling */
+button {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: #999999;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.riskwrite-button {
+    color: #4e0000;
+    background-color: #d3d3d3;
+}
+
+
+tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+.action-center-card {
+    height: 102%;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.action-button {
+    color: #ffffff;
+    background-color: #707070;
+}
+
+.action-button:hover {
+    color: #ffffff;
+    background-color: #464646;
+}
+
+.notes-title {
+    color: #000;
+}
+
+.notes-container {
+    width: 90%;
+    height: 350px;
+    background-color: #ffffff;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.riskwrite-card {
+    height: 200px;
+}
+
+.riskwrite-card-banner {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Responsive design for 1080p */
+@media (max-width: 2100px) {
+
+    .account-page {
+        padding: 1.2vh;
+        border: none
+    }
+
+    .top-half-container {
+        height: 255px;
+        gap: 10px;
+        margin: 0vh;
+        margin-bottom: 0;
+    }
+
+    .primary-info-card {
+        height: 92%;
+        max-height: 100%;
+        padding: 10px;
+    }
+
+    .primary-info-card h1 a {
+        font-size: 1.4em;
+    }
+
+    .primary-info-card h2 {
+        font-size: 1em;
+    }
+
+    .primary-info-card h1 {
+        margin: 0 0 4px 0;
+    }
+
+    .primary-info-card h2,
+    .primary-info-card h3 {
+        margin: 0 0 0 0;
+    }
+
+    .primary-info-card h3 a {
+        font-size: 0.8em;
+    }
+
+    p {
+        font-size: 0.7em;
+    }
+
+    .broker-container {
+        margin-top: 10px;
+    }
+
+    button {
+        padding: 6px 10px;
+        font-size: 0.7em;
+        margin-top: 8px;
+    }
+
+    .secondary-info-card {
+        height: 92%;
+        max-height: 100%;
+        padding: 10px;
+        width: 230px;
+    }
+
+
+    .info-card h3 {
+        font-size: 0.8em;
+        color: #3498db;
+        margin: 5px;
+    }
+
+    .info-card tr {
+        font-size: 0.6em;
+    }
+
+    .folder-structure-card {
+        height: 92%;
+        max-height: 100%;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    .folder-structure-container {
+        width: 650px;
+        height: 70%;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 0px;
+        padding: 8px;
+    }
+
+    .folder-item,
+    .file-item {
+        width: 70px;
+        height: 70px;
+        font-size: 0.6em;
+    }
+
+    .action-center-card {
+        height: 92%;
+        max-height: 100%;
+        padding: 10px;
+        width: 200px;
+    }
+
+    .bottom-half-container {
+        width: 100%;
+        height: 486px;
+        max-width: 2000px;
+        gap: 10px;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    .quote-line-item {
+        font-size: 1em;
+    }
+}
+
+
+@media (max-width: 1600px) {
+    .top-half-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        height: 100%;
+    }
+
+    .bottom-half-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .structure-card {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .primary-info-card {
+        width: 90%;
+    }
+
+    .secondary-info-card {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 0px;
+        width: 80%;
+    }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .broker-container {
+        flex-direction: column;
+    }
+
+    .Broker-info-container,
+    .Broker-company-container {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}

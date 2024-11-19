@@ -1,0 +1,77 @@
+<div class="quoting-module account-card">
+    <table class="quote-revisions">
+        <tr>
+            <td>
+                <h2>Revision: FINAL</h2>
+            </td>
+            <td>
+                <button class="rating-quoting-button">Revise Quote</button>
+                <button class="rating-quoting-button">Finalize Quote</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>Doc Link: <a href="dashboard">{{doclink}}</a></h3>
+            </td>
+            <td>
+                <h3>Date Quoted: {{dateQuoted}}</h3>
+            </td>
+        </tr>
+    </table>
+    <div class="quote-revisions-container">
+        <div class="revisions-table info-card">
+            <div *ngFor="let quote of filteredQuotes" class="revision-item"
+                [ngClass]="{ 'active': activeQuote === quote.revisionName }"
+                (click)="setActiveQuote(quote.revisionName,quote.dateQuoted,quote)">
+                <div class="revision-name">{{quote.revisionName}}</div>
+            </div>
+        </div>
+        <div class="quote-table info-card">
+            <div class="quote-table-row">
+                <th class="quote-table-row-item-header" *ngFor="let item of activeQuoteObject.options">{{ item }}</th>
+            </div>
+            <div class="quote-table-row">
+                <td *ngFor="let item of activeQuoteObject.perLimit">{{ item }}</td>
+            </div>
+            <div class="quote-table-row">
+                <td *ngFor="let item of activeQuoteObject.totalLimit">{{ item }}</td>
+
+            </div>
+            <div class="quote-table-row">
+                <td *ngFor="let item of activeQuoteObject.sirOne">{{ item }}</td>
+
+            </div>
+
+            <div class="quote-table-row">
+                <td *ngFor="let item of activeQuoteObject.sirOne">{{ item }}</td>
+            </div>
+            <div class="quote-table-row">
+                <td *ngFor="let item of activeQuoteObject.sirTwo">{{ item }}</td>
+            </div>
+            <div class="quote-table-row">
+                <td *ngFor="let item of activeQuoteObject.termOne">{{ item }}</td>
+            </div>
+            <div class="quote-table-row">
+                <td *ngFor="let item of activeQuoteObject.termTwo">{{ item }}</td>
+            </div>
+            <div class="quote-table-row">
+                <td *ngFor="let item of activeQuoteObject.termOnePremiumOne">{{ item }}</td>
+            </div>
+            <div class="quote-table-row">
+                <td *ngFor="let item of activeQuoteObject.termOnePremiumTwo">{{ item }}</td>
+            </div>
+            <div class="quote-table-row">
+                <td *ngFor="let item of activeQuoteObject.termOnePremiumThree">{{ item }}</td>
+            </div>
+            <div class="quote-table-row">
+                <td *ngFor="let item of activeQuoteObject.termTwoPremiumOne">{{ item }}</td>
+            </div>
+            <div class="quote-table-row">
+                <td *ngFor="let item of activeQuoteObject.termTwoPremiumTwo">{{ item }}</td>
+            </div>
+            <div class="quote-table-row">
+                <td *ngFor="let item of activeQuoteObject.termTwoPremiumThree">{{ item }}</td>
+            </div>
+        </div>
+    </div>
+</div>

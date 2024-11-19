@@ -16,4 +16,8 @@ export class UnderwriterService {
   getUnderwriterById(id:number): Observable<any> {
     return this.http.get<any>(this.apiUrl+id)
   }
+
+  searchUnderwriter(query: string): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl+'search/?query='+query);
+  }
 }
