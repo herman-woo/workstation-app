@@ -5,8 +5,15 @@
 
     <div class="table-container">
         <div class="reference-page-panel">
-            <searchbar></searchbar>
+
+            <!-- Search Input -->
+            <div class="search-container">
+                <input type="text" placeholder="Search by name, title, phone or email..." [(ngModel)]="query" (keyup)="search()"
+                    class="search-bar" />
+            </div>
+
             <button>New Agent</button>
+
         </div>
         <table class="task-table">
             <thead>
@@ -23,7 +30,8 @@
             <tbody>
                 <tr *ngFor="let broker of brokers">
                     <td>{{ broker.broker_id }}</td>
-                    <td><a [routerLink]="['/broker', broker.broker_id]">{{ broker.broker_first_name }} {{ broker.broker_last_name }}</a></td>
+                    <td><a [routerLink]="['/broker', broker.broker_id]">{{ broker.broker_first_name }} {{
+                            broker.broker_last_name }}</a></td>
                     <td>{{ broker.broker_title}}</td>
                     <td>{{ broker.broker_phone_number}}</td>
                     <td>{{ broker.broker_email}}</td>

@@ -17,8 +17,30 @@ import { NamedInsuredService } from '../../../services/named-insured.service';
 export class NamedInsuredsReferencePageComponent {
   title = "Named Insureds"
   insureds: any[] = []
+  query: string = ''; // Search query entered by the user
+  isLoading: boolean = false; // Show a loading indicator during the API call
 
   constructor(private insuredService: NamedInsuredService) { }
+  search(): void {
+    if (!this.query.trim()) {
+      this.insuredService.getAllNamedInsured().subscribe((data) => {
+        this.insureds = data;
+      })
+      return;
+    }
+
+    this.isLoading = true; // Start loading
+    this.insuredService.searchNamedInsured(this.query).subscribe(
+      (data) => {
+        this.insureds = data; // Update the results with the API response
+        this.isLoading = false; // Stop loading
+      },
+      (error) => {
+        console.error('Error fetching search results:', error);
+        this.isLoading = false; // Stop loading
+      }
+    );
+  }
 
   ngOnInit(): void {
     // Subscribe to the service and assign the data to the array

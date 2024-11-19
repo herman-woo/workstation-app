@@ -17,7 +17,8 @@ export class NamedInsuredService {
     return this.http.get<any>(this.apiUrl+id)
   }
 
-
-
+  searchNamedInsured(query: string): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl+'search/?query='+query);
+  }
 
 }

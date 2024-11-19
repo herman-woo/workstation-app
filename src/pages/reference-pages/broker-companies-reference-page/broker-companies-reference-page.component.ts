@@ -19,8 +19,30 @@ import { BrokerCompanyService } from '../../../services/broker-company.service';
 export class BrokerCompaniesReferencePageComponent {
   title = "Broker Companies"
   companies: any[] = []
+  query: string = ''; // Search query entered by the user
+  isLoading: boolean = false; // Show a loading indicator during the API call
 
   constructor(private companyService: BrokerCompanyService) { }
+  search(): void {
+    if (!this.query.trim()) {
+      this.companyService.getAllBrokerCompanies().subscribe((data) => {
+        this.companies = data;
+      })
+      return;
+    }
+
+    this.isLoading = true; // Start loading
+    this.companyService.searchInsuranceCompanies(this.query).subscribe(
+      (data) => {
+        this.companies = data; // Update the results with the API response
+        this.isLoading = false; // Stop loading
+      },
+      (error) => {
+        console.error('Error fetching search results:', error);
+        this.isLoading = false; // Stop loading
+      }
+    );
+  }
 
   ngOnInit(): void {
     this.companyService.getAllBrokerCompanies().subscribe((data) => {
