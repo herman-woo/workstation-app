@@ -4,11 +4,12 @@ import { SearchbarComponent } from '../../../components/tools/searchbar/searchba
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { UnderwriterService } from '../../../services/underwriter.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-underwriter-reference-pages',
   standalone: true,
-  imports: [ReferenceBannerComponent, CommonModule, RouterLink, SearchbarComponent ],
+  imports: [ReferenceBannerComponent, CommonModule, RouterLink, SearchbarComponent, FormsModule ],
   templateUrl: './underwriter-reference-pages.component.html',
   styleUrl: './underwriter-reference-pages.component.css'
 })

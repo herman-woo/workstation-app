@@ -5,7 +5,11 @@
 
     <div class="table-container">
         <div class="reference-page-panel">
-            <searchbar></searchbar>
+            <!-- Search Input -->
+            <div class="search-container">
+                <input type="text" placeholder="Search by Copmany Name..." [(ngModel)]="query" (keyup)="search()"
+                    class="search-bar" />
+            </div>
             <button>New Broker Company</button>
         </div>
         <table class="task-table">

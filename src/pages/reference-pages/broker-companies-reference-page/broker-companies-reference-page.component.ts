@@ -4,6 +4,7 @@ import { ReferenceBannerComponent } from '../reference-page-items/reference-bann
 import { RouterLink } from '@angular/router';
 import { SearchbarComponent } from '../../../components/tools/searchbar/searchbar.component';
 import { BrokerCompanyService } from '../../../services/broker-company.service';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
@@ -12,7 +13,8 @@ import { BrokerCompanyService } from '../../../services/broker-company.service';
   imports: [CommonModule,
             ReferenceBannerComponent,
             SearchbarComponent,
-            RouterLink],
+            RouterLink,
+            FormsModule],
   templateUrl: './broker-companies-reference-page.component.html',
   styleUrl: './broker-companies-reference-page.component.css'
 })

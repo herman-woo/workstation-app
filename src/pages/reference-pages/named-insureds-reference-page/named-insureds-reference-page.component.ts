@@ -4,13 +4,13 @@ import { ReferenceBannerComponent } from '../reference-page-items/reference-bann
 import { RouterLink } from '@angular/router';
 import { SearchbarComponent } from '../../../components/tools/searchbar/searchbar.component';
 import { NamedInsuredService } from '../../../services/named-insured.service';
-
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-named-insureds-reference-page',
   standalone: true,
-  imports: [ReferenceBannerComponent, CommonModule, RouterLink, SearchbarComponent],
+  imports: [ReferenceBannerComponent, CommonModule, RouterLink, SearchbarComponent,FormsModule],
   templateUrl: './named-insureds-reference-page.component.html',
   styleUrl: './named-insureds-reference-page.component.css'
 })
