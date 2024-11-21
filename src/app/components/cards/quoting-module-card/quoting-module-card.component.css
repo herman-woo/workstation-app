@@ -1,0 +1,122 @@
+
+@import '../../../../styles/account-page.css';
+@import '../../../routes/account/account-tabs/rating-quoting/rating-quoting.component.css';
+
+.quoting-module {
+    width: 880px;
+    height: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+.quote-revisions h2{
+    font-size: 1.5em;
+}
+
+.quote-revisions-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.revisions-table{
+    width: 350px;
+    height: 300px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: auto;
+    direction: rtl;
+    overflow-x: hidden;
+}
+
+.quote-table{
+    width: 850px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.revision-item{
+    border: 2px solid rgb(226, 226, 226);
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    background-color: rgb(222, 222, 222);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.revision-item:hover{
+    cursor: pointer;
+}
+
+.revision-item.active{
+    color: white;
+    background-color: rgb(8, 169, 126);
+    font-size: 18px;
+}
+.revision-name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.quote-table-row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.quote-table-row-item-header{
+    border: 2px solid rgb(226, 226, 226);
+    background-color: rgb(116, 116, 116);
+    font-size: 14px;
+    align-items: center;
+    color: white;
+    width: 150px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.quote-table-row-item{
+    border: 2px solid rgb(226, 226, 226);
+    background-color: rgb(116, 116, 116);
+    font-size: 14px;
+    align-items: center;
+    color: white;
+    width: 150px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.quote-table-row td{
+    width: 150px;
+    height: 20px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}

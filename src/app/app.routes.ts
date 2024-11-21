@@ -1,15 +1,15 @@
 import { Routes } from '@angular/router';
-import { AccountComponent } from '../pages/record-pages/account/account.component';
-import { DashboardComponent } from '../components/dashboard/dashboard.component';
-import { UnderwriterReferencePagesComponent } from '../pages/reference-pages/underwriter-reference-pages/underwriter-reference-pages.component';
-import { UnderwriterComponent } from '../pages/record-pages/underwriter/underwriter.component';
-import { NamedInsuredsReferencePageComponent } from '../pages/reference-pages/named-insureds-reference-page/named-insureds-reference-page.component';
-import { BrokerAgentsReferencePageComponent } from '../pages/reference-pages/broker-agents-reference-page/broker-agents-reference-page.component';
-import { BrokerCompaniesReferencePageComponent } from '../pages/reference-pages/broker-companies-reference-page/broker-companies-reference-page.component';
-import { NamedInsuredComponent } from '../pages/record-pages/named-insured/named-insured.component';
-import { BrokerComponent } from '../pages/record-pages/broker/broker.component';
-import { CompanyComponent } from '../pages/record-pages/company/company.component';
-import { RiskSummaryComponent } from '../modules/risk-summary/risk-summary.component';
+import { AccountComponent } from './routes/account/account.component';
+import { DashboardComponent } from './routes/dashboard/dashboard.component';
+import { UnderwriterComponent } from './routes/records/underwriter/underwriter.component';
+import { UnderwriterReferencePagesComponent } from './routes/lists/underwriter-reference-pages/underwriter-reference-pages.component';
+import { NamedInsuredsReferencePageComponent } from './routes/lists/named-insureds-reference-page/named-insureds-reference-page.component';
+import { NamedInsuredComponent } from './routes/records/named-insured/named-insured.component';
+import { BrokerAgentsReferencePageComponent } from './routes/lists/broker-agents-reference-page/broker-agents-reference-page.component';
+import { BrokerComponent } from './routes/records/broker/broker.component';
+import { BrokerCompaniesReferencePageComponent } from './routes/lists/broker-companies-reference-page/broker-companies-reference-page.component';
+import { RiskSummaryComponent } from './routes/account/account-tabs/risk-summary/risk-summary.component';
+import { CompanyComponent } from './routes/records/company/company.component';
 
 export const routes: Routes = [
     //main page references

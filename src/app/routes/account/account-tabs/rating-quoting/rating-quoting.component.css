@@ -1,0 +1,49 @@
+@import '../../../../../styles/account-page.css';
+
+.rating-quoting-row{
+    margin-bottom: 40px;
+}
+
+.rating-quoting-module {
+    width: 1320px;
+    height: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+}
+
+tr {
+    vertical-align: middle;
+    display: flex;
+}
+
+td {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+h1, h2{
+    color: rgb(8, 169, 126);
+}
+
+.rating-quoting-button{
+    background-color: rgb(8, 169, 126);
+    width: 120px;
+    height: 40px;
+    margin: 5px;
+}
+
+.rating-quoting-container{
+    display: flex;
+    flex-direction: row;
+
+}
