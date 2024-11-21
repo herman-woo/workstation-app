@@ -9,11 +9,11 @@ import { BrokerCompanyService } from '../../../../services/broker-company.servic
   selector: 'company-page',
   standalone: true,
   imports: [RecordHeaderComponent, RecordBreadcrumbComponent,RouterLink],
-  templateUrl: './company.component.html',
-  styleUrl: './company.component.css'
+  templateUrl: './company-record.component.html',
+  styleUrl: './company-record.component.css'
 })
 
-export class CompanyComponent {
+export class CompanyRecordComponent {
 
   id: string | null = null;
   companyId: string = "";

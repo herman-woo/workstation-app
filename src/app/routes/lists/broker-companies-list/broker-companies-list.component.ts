@@ -15,10 +15,10 @@ import { FormsModule } from '@angular/forms';
             SearchbarComponent,
             RouterLink,
             FormsModule],
-  templateUrl: './broker-companies-reference-page.component.html',
-  styleUrl: './broker-companies-reference-page.component.css'
+  templateUrl: './broker-companies-list.component.html',
+  styleUrl: './broker-companies-list.component.css'
 })
-export class BrokerCompaniesReferencePageComponent {
+export class BrokerCompaniesListComponent {
   title = "Broker Companies"
   companies: any[] = []
   query: string = ''; // Search query entered by the user

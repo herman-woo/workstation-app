@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReferenceBannerComponent } from '../../../content/reference-pages/reference-page-items/reference-banner/reference-banner.component';
-import { BrokerAgentsReferencePageComponent } from './broker-agents-reference-page.component';
+import { BrokerListComponent } from './broker-list.component';
 
 describe('BrokerAgentsReferencePageComponent', () => {
-  let component: BrokerAgentsReferencePageComponent;
-  let fixture: ComponentFixture<BrokerAgentsReferencePageComponent>;
+  let component: BrokerListComponent;
+  let fixture: ComponentFixture<BrokerListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BrokerAgentsReferencePageComponent, ReferenceBannerComponent]
+      imports: [BrokerListComponent, ReferenceBannerComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(BrokerAgentsReferencePageComponent);
+    fixture = TestBed.createComponent(BrokerListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

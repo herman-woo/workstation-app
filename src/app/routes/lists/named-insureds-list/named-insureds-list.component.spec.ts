@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NamedInsuredsReferencePageComponent } from './named-insureds-reference-page.component';
+import { NamedInsuredsListComponent } from './named-insureds-list.component';
 
 describe('NamedInsuredsReferencePageComponent', () => {
-  let component: NamedInsuredsReferencePageComponent;
-  let fixture: ComponentFixture<NamedInsuredsReferencePageComponent>;
+  let component: NamedInsuredsListComponent;
+  let fixture: ComponentFixture<NamedInsuredsListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NamedInsuredsReferencePageComponent]
+      imports: [NamedInsuredsListComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(NamedInsuredsReferencePageComponent);
+    fixture = TestBed.createComponent(NamedInsuredsListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -11,14 +11,14 @@ import { NamedInsuredService } from '../../../../services/named-insured.service'
   selector: 'insured-page',
   standalone: true,
   imports: [CommonModule, RecordBreadcrumbComponent, RecordHeaderComponent, RouterLink],
-  templateUrl: './named-insured.component.html',
-  styleUrl: './named-insured.component.css'
+  templateUrl: './named-insured-record.component.html',
+  styleUrl: './named-insured-record.component.css'
 })
 
 
 
 
-export class NamedInsuredComponent {
+export class NamedInsuredRecordComponent {
   id: string | null = null;
   insuredName: string = "";
   insuredAddress: string = "";
