@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { RecordBreadcrumbComponent } from '../../../components/record-items/record-breadcrumb/record-breadcrumb.component';
+import { BreadcrumbComponent } from '../../../components/common/breadcrumb/breadcrumb.component';
 import { RouterLink } from '@angular/router';
 import * as accountData from '../../../../../data/models/accounts.json'
 import { UnderwriterService } from '../../../../services/underwriter.service';
@@ -9,7 +9,7 @@ import { UnderwriterService } from '../../../../services/underwriter.service';
 @Component({
   selector: 'app-underwriter',
   standalone: true,
-  imports: [RecordBreadcrumbComponent, RouterLink, CommonModule],
+  imports: [BreadcrumbComponent, RouterLink, CommonModule],
   templateUrl: './underwriter-record.component.html',
   styleUrl: './underwriter-record.component.css'
 })

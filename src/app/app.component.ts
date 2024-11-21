@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { MainBannerComponent } from './components/banner/main-banner.component';
+import { MainBannerComponent } from './components/banners/main-banner/main-banner.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { CommonModule } from '@angular/common';
 import { SidebarService } from '../services/sidebar.service';

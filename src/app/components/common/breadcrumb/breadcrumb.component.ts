@@ -2,13 +2,13 @@ import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'record-breadcrumb',
+  selector: 'breadcrumb',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './record-breadcrumb.component.html',
-  styleUrl: './record-breadcrumb.component.css'
+  templateUrl: './breadcrumb.component.html',
+  styleUrl: './breadcrumb.component.css'
 })
-export class RecordBreadcrumbComponent {
+export class BreadcrumbComponent {
   @Input() id: string | null = '';
   @Input() category: string = '';
   home = ""

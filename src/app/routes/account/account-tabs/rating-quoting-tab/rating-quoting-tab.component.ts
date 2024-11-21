@@ -9,9 +9,9 @@ import { PolicyModuleCardComponent } from '../../../../components/cards/policy-m
             QuotingModuleCardComponent,
             PolicyModuleCardComponent
   ],
-  templateUrl: './rating-quoting.component.html',
-  styleUrl: './rating-quoting.component.css'
+  templateUrl: './rating-quoting-tab.component.html',
+  styleUrl: './rating-quoting-tab.component.css'
 })
-export class RatingQuotingComponent {
+export class RatingQuotingTabComponent {
   @Input() data: any;
 }

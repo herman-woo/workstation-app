@@ -1,22 +1,22 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { RecordBreadcrumbComponent } from '../../components/record-items/record-breadcrumb/record-breadcrumb.component';
-import { RiskSummaryComponent } from './account-tabs/risk-summary/risk-summary.component';
-import { RatingQuotingComponent } from './account-tabs/rating-quoting/rating-quoting.component';
-import { FileStructureComponent } from './account-tabs/file-structure/file-structure.component';
-import { AccountNotesComponent } from './account-tabs/account-notes/account-notes.component';
+import { BreadcrumbComponent } from '../../components/common/breadcrumb/breadcrumb.component';
+import { RiskSummaryTabComponent } from './account-tabs/risk-summary-tab/risk-summary-tab.component';
+import { RatingQuotingTabComponent } from './account-tabs/rating-quoting-tab/rating-quoting-tab.component';
+import { FileStructureComponent } from './account-tabs/file-structure-tab/file-structure.component';
+import { AccountNotesComponent } from './account-tabs/notes-tab/account-notes.component';
 import { AccountService } from '../../../services/account.service';
 
 @Component({
   selector: 'app-account',
   standalone: true,
   imports: [CommonModule,
-    RiskSummaryComponent,
-    RatingQuotingComponent,
+    RiskSummaryTabComponent,
+    RatingQuotingTabComponent,
     FileStructureComponent,
     AccountNotesComponent,
-    RecordBreadcrumbComponent
+    BreadcrumbComponent
   ],
   templateUrl: './account.component.html',
   styleUrl: './account.component.css'

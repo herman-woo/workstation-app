@@ -1,5 +1,5 @@
 @import '../../../../styles/account-page.css';
-@import '../../../routes/account/account-tabs/rating-quoting/rating-quoting.component.css';
+@import '../../../routes/account/account-tabs/rating-quoting-tab/rating-quoting-tab.component.css';
 
 .policy-module{
     width: 400px;

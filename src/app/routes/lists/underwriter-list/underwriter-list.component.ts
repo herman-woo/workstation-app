@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ReferenceBannerComponent } from '../../../components/reference-banner/reference-banner.component';
-import { SearchbarComponent } from '../../../components/tools/searchbar/searchbar.component';
+import { ReferenceBannerComponent } from '../../../components/banners/reference-banner/reference-banner.component';
+import { SearchbarComponent } from '../../../components/common/searchbar/searchbar.component';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { UnderwriterService } from '../../../../services/underwriter.service';

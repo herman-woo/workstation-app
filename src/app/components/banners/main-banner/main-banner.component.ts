@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import * as data from "../../../../package.json"
-import { SearchbarComponent } from '../tools/searchbar/searchbar.component';
+import * as data from "../../../../../package.json"
+import { SearchbarComponent } from '../../common/searchbar/searchbar.component';
 import { RouterLink } from '@angular/router';
 
 @Component({

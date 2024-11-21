@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActionItemComponent } from '../../components/action-item/action-item.component';
-import * as actions from "../../components/action-item/UnderwriterActions.json";
+import { ActionItemComponent } from '../../components/common/action-item/action-item.component';
+import * as actions from "../../components/common/action-item/UnderwriterActions.json";
 
 @Component({
   selector: 'dashboard',

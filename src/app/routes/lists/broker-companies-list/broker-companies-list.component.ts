@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReferenceBannerComponent } from '../../../components/reference-banner/reference-banner.component';
+import { ReferenceBannerComponent } from '../../../components/banners/reference-banner/reference-banner.component';
 import { RouterLink } from '@angular/router';
-import { SearchbarComponent } from '../../../components/tools/searchbar/searchbar.component';
+import { SearchbarComponent } from '../../../components/common/searchbar/searchbar.component';
 import { BrokerCompanyService } from '../../../../services/broker-company.service';
 import { FormsModule } from '@angular/forms';
 

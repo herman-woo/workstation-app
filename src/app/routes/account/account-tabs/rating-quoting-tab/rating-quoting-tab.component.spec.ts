@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RatingQuotingComponent } from './rating-quoting.component';
+import { RatingQuotingTabComponent } from './rating-quoting-tab.component';
 
 describe('RatingQuotingComponent', () => {
-  let component: RatingQuotingComponent;
-  let fixture: ComponentFixture<RatingQuotingComponent>;
+  let component: RatingQuotingTabComponent;
+  let fixture: ComponentFixture<RatingQuotingTabComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RatingQuotingComponent]
+      imports: [RatingQuotingTabComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(RatingQuotingComponent);
+    fixture = TestBed.createComponent(RatingQuotingTabComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

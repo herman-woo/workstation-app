@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { RecordHeaderComponent } from '../../../components/record-items/record-header/record-header.component';
-import { RecordBreadcrumbComponent } from '../../../components/record-items/record-breadcrumb/record-breadcrumb.component';
+import { RecordHeaderComponent } from '../../../components/common/record-header/record-header.component';
+import { BreadcrumbComponent } from '../../../components/common/breadcrumb/breadcrumb.component';
 import { RouterLink } from '@angular/router';
 import { BrokerCompanyService } from '../../../../services/broker-company.service';
 
 @Component({
   selector: 'company-page',
   standalone: true,
-  imports: [RecordHeaderComponent, RecordBreadcrumbComponent,RouterLink],
+  imports: [RecordHeaderComponent, BreadcrumbComponent,RouterLink],
   templateUrl: './company-record.component.html',
   styleUrl: './company-record.component.css'
 })

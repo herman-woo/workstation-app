@@ -8,7 +8,7 @@ import { NamedInsuredRecordComponent } from './routes/records/named-insured-reco
 import { BrokerListComponent } from './routes/lists/broker-list/broker-list.component';
 import { BrokerRecordComponent } from './routes/records/broker-record/broker-record.component';
 import { BrokerCompaniesListComponent } from './routes/lists/broker-companies-list/broker-companies-list.component';
-import { RiskSummaryComponent } from './routes/account/account-tabs/risk-summary/risk-summary.component';
+import { RiskSummaryTabComponent } from './routes/account/account-tabs/risk-summary-tab/risk-summary-tab.component';
 import { CompanyRecordComponent } from './routes/records/company-record/company-record.component';
 
 export const routes: Routes = [
@@ -28,5 +28,5 @@ export const routes: Routes = [
     { path: 'brokercompany', redirectTo: '/brokercompanies', pathMatch: 'full' },
     { path: 'brokercompany/:id', component: CompanyRecordComponent},
     { path: 'account/:id', component: AccountComponent},
-    { path: 'account/risksummary/:id', component: RiskSummaryComponent}
+    { path: 'account/risksummary/:id', component: RiskSummaryTabComponent}
 ];
