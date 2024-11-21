@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BrokerComponent } from './broker.component';
+import { BrokerRecordComponent } from './broker-record.component';
 
 describe('BrokerComponent', () => {
-  let component: BrokerComponent;
-  let fixture: ComponentFixture<BrokerComponent>;
+  let component: BrokerRecordComponent;
+  let fixture: ComponentFixture<BrokerRecordComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BrokerComponent]
+      imports: [BrokerRecordComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(BrokerComponent);
+    fixture = TestBed.createComponent(BrokerRecordComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

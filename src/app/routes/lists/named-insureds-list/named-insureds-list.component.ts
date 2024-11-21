@@ -11,10 +11,10 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-named-insureds-reference-page',
   standalone: true,
   imports: [ReferenceBannerComponent, CommonModule, RouterLink, SearchbarComponent,FormsModule],
-  templateUrl: './named-insureds-reference-page.component.html',
-  styleUrl: './named-insureds-reference-page.component.css'
+  templateUrl: './named-insureds-list.component.html',
+  styleUrl: './named-insureds-list.component.css'
 })
-export class NamedInsuredsReferencePageComponent {
+export class NamedInsuredsListComponent {
   title = "Named Insureds"
   insureds: any[] = []
   query: string = ''; // Search query entered by the user

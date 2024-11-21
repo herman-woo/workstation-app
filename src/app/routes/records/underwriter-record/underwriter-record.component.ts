@@ -10,10 +10,10 @@ import { UnderwriterService } from '../../../../services/underwriter.service';
   selector: 'app-underwriter',
   standalone: true,
   imports: [RecordBreadcrumbComponent, RouterLink, CommonModule],
-  templateUrl: './underwriter.component.html',
-  styleUrl: './underwriter.component.css'
+  templateUrl: './underwriter-record.component.html',
+  styleUrl: './underwriter-record.component.css'
 })
-export class UnderwriterComponent {
+export class UnderwriterRecordComponent {
   id: string | null = null;
   underwriter: any = null
   underwriterFirstName: string = "";

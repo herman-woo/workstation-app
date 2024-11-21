@@ -10,11 +10,11 @@ import { RouterLink } from '@angular/router';
   selector: 'app-broker-agents-reference-page',
   standalone: true,
   imports: [CommonModule, ReferenceBannerComponent, SearchbarComponent, RouterLink, FormsModule],
-  templateUrl: './broker-agents-reference-page.component.html',
-  styleUrl: './broker-agents-reference-page.component.css'
+  templateUrl: './broker-list.component.html',
+  styleUrl: './broker-list.component.css'
 
 })
-export class BrokerAgentsReferencePageComponent {
+export class BrokerListComponent {
   title = "Broker Agents"
   brokers: any[] = []
   query: string = ''; // Search query entered by the user

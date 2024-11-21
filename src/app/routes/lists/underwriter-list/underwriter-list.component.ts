@@ -10,10 +10,10 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-underwriter-reference-pages',
   standalone: true,
   imports: [ReferenceBannerComponent, CommonModule, RouterLink, SearchbarComponent, FormsModule ],
-  templateUrl: './underwriter-reference-pages.component.html',
-  styleUrl: './underwriter-reference-pages.component.css'
+  templateUrl: './underwriter-list.component.html',
+  styleUrl: './underwriter-list.component.css'
 })
-export class UnderwriterReferencePagesComponent {
+export class UnderwriterListComponent {
   title = "Underwriters"
   underwriters: any[] = []
   query: string = ''; // Search query entered by the user

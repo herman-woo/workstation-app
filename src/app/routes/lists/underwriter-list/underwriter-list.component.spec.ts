@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UnderwriterReferencePagesComponent } from './underwriter-reference-pages.component';
+import { UnderwriterListComponent } from './underwriter-list.component';
 
 describe('UnderwriterReferencePagesComponent', () => {
-  let component: UnderwriterReferencePagesComponent;
-  let fixture: ComponentFixture<UnderwriterReferencePagesComponent>;
+  let component: UnderwriterListComponent;
+  let fixture: ComponentFixture<UnderwriterListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [UnderwriterReferencePagesComponent]
+      imports: [UnderwriterListComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(UnderwriterReferencePagesComponent);
+    fixture = TestBed.createComponent(UnderwriterListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

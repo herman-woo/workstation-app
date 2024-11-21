@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NamedInsuredComponent } from './named-insured.component';
+import { NamedInsuredRecordComponent } from './named-insured-record.component';
 
 describe('NamedInsuredComponent', () => {
-  let component: NamedInsuredComponent;
-  let fixture: ComponentFixture<NamedInsuredComponent>;
+  let component: NamedInsuredRecordComponent;
+  let fixture: ComponentFixture<NamedInsuredRecordComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NamedInsuredComponent]
+      imports: [NamedInsuredRecordComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(NamedInsuredComponent);
+    fixture = TestBed.createComponent(NamedInsuredRecordComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

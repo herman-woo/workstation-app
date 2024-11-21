@@ -8,12 +8,12 @@ import { BrokerService } from '../../../../services/broker.service';
   selector: 'broker-page',
   standalone: true,
   imports: [RecordBreadcrumbComponent,RouterLink],
-  templateUrl: './broker.component.html',
-  styleUrl: './broker.component.css'
+  templateUrl: './broker-record.component.html',
+  styleUrl: './broker-record.component.css'
 })
 
 @Injectable()
-export class BrokerComponent {
+export class BrokerRecordComponent {
 
   id: string | null = null;
   brokerFirstName: string = "";
