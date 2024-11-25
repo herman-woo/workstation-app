@@ -6,6 +6,7 @@ import { RecordHeaderComponent } from "../../../components/common/record-header/
 import { BreadcrumbComponent } from '../../../components/common/breadcrumb/breadcrumb.component';
 import { RouterLink } from '@angular/router';
 import { NamedInsuredService } from '../../../../services/named-insured.service';
+import { NamedInsured } from '../../../../models/named-insured.model';
 
 @Component({
   selector: 'insured-page',
@@ -19,30 +20,20 @@ import { NamedInsuredService } from '../../../../services/named-insured.service'
 
 
 export class NamedInsuredRecordComponent {
-  id: string | null = null;
-  insuredName: string = "";
-  insuredAddress: string = "";
-  insuredProvince: string = "";
-  insuredPostalCode: string = ""
   pageSubject = "Named Insured"
+  id: string | null = null;
+  insured = new NamedInsured()
   accounts: any[] = []
 
-
-
   constructor(private route: ActivatedRoute, private insuredService: NamedInsuredService) { }
+  
   ngOnInit(): void {
     // Capture the ID from the route
     this.id = this.route.snapshot.paramMap.get('id');
     parseInt(this.id!)
 
     //get Named Insured by ID
-    this.insuredService.getNamedInsuredById(parseInt(this.id!)).subscribe((data) => {
-      this.insuredName = data.insured_name
-      this.insuredAddress = data.insured_street_address
-      this.insuredPostalCode = data.insured_postal_code
-      this.insuredProvince = data.insured_province
-    })
-
+    this.insuredService.getNamedInsuredById(parseInt(this.id!)).subscribe((data: NamedInsured) => this.insured = data)
 
     //get accounts by named insured Id
     for (let account of data.accounts) {

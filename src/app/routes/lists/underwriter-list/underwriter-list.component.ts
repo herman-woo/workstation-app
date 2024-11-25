@@ -1,21 +1,22 @@
 import { Component } from '@angular/core';
 import { ReferenceBannerComponent } from '../../../components/banners/reference-banner/reference-banner.component';
-import { SearchbarComponent } from '../../../components/common/searchbar/searchbar.component';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { UnderwriterService } from '../../../../services/underwriter.service';
 import { FormsModule } from '@angular/forms';
+import { Underwriter } from '../../../../models/underwriter.model';
+import { UnderwriterFormComponent } from '../../../components/forms/underwriter-form/underwriter-form.component';
 
 @Component({
   selector: 'app-underwriter-reference-pages',
   standalone: true,
-  imports: [ReferenceBannerComponent, CommonModule, RouterLink, SearchbarComponent, FormsModule ],
+  imports: [ReferenceBannerComponent, CommonModule, RouterLink, FormsModule, UnderwriterFormComponent ],
   templateUrl: './underwriter-list.component.html',
   styleUrl: './underwriter-list.component.css'
 })
 export class UnderwriterListComponent {
   title = "Underwriters"
-  underwriters: any[] = []
+  underwriters: Underwriter[] = []
   query: string = ''; // Search query entered by the user
   isLoading: boolean = false; // Show a loading indicator during the API call
 
@@ -24,6 +25,7 @@ export class UnderwriterListComponent {
     if (!this.query.trim()) {
       this.underwriterService.getAllUnderwriters().subscribe((data) => {
         this.underwriters = data;
+
       })
       return;
     }
@@ -42,6 +44,13 @@ export class UnderwriterListComponent {
   }
 
   ngOnInit(): void {
+    this.loadData()
+    this.underwriterService.refresh$.subscribe(() => {
+      this.loadData();
+    });
+  }
+
+  loadData(){
     this.underwriterService.getAllUnderwriters().subscribe((data) => {
       this.underwriters = data
     })

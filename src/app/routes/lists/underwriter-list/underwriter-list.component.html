@@ -1,12 +1,16 @@
+<underwriter-form #underwriterForm></underwriter-form>
 <div class="reference-page-container">
     <div class="reference-page-header">
         <app-reference-banner [title]="title"></app-reference-banner>
     </div>
-
+    
     <div class="table-container">
         <div class="reference-page-panel">
-            <searchbar></searchbar>
-            <button>New Underwriter</button>
+            <div class="search-container">
+                <input type="text" placeholder="Search by Underwriter Name..." [(ngModel)]="query" (keyup)="search()"
+                    class="search-bar" />
+            </div>
+            <button (click)="underwriterForm.openForm()">Create Underwriter</button>
         </div>
         <table class="task-table">
             <thead>
@@ -15,16 +19,19 @@
                     <th>Underwriter Name</th>
                     <th>Role</th>
                     <th>Business Unit</th>
+                    <th>Team</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let underwriter of underwriters">
-                    <td>{{ underwriter.underwriter_id }}</td>
-                    <td><a [routerLink]="['/underwriter', underwriter.underwriter_id]">{{underwriter.uw_first_name}} {{underwriter.uw_last_name}}</a> </td>
-                    <td>{{ underwriter.uw_role }}</td>
-                    <td>{{ underwriter.uw_business_unit }}</td>
+                    <td>{{ underwriter.id }}</td>
+                    <td><a [routerLink]="['/underwriter', underwriter.id]">{{underwriter.firstName}} {{underwriter.lastName}}</a></td>
+                    <td>{{ underwriter.role }}</td>
+                    <td>{{ underwriter.businessUnitName }}</td>
+                    <td>{{ underwriter.teamName }}</td>
                 </tr>
             </tbody>
         </table>
     </div>
+
 </div>
