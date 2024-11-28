@@ -17,6 +17,6 @@ export class BrokerService {
   }
 
   searchInsuranceBrokers(query: string): Observable<any[]> {
-      return this.http.get<any[]>(this.apiUrl+'search/?query='+query);
-    }
+    return this.http.get<any[]>(this.apiUrl + 'search/?query=' + query);
+  }
 }

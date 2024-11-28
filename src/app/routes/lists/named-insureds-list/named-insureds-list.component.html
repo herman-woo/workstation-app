@@ -1,15 +1,16 @@
+<insured-creation-form #insuredCreationForm></insured-creation-form>
 <div class="reference-page-container">
     <div class="reference-page-header">
         <app-reference-banner [title]="title"></app-reference-banner>
     </div>
-    
+
     <div class="table-container">
         <div class="reference-page-panel">
             <div class="search-container">
-                <input type="text" placeholder="Search by Copmany Name..." [(ngModel)]="query" (keyup)="search()"
+                <input type="text" placeholder="Search by Insured Name..." [(ngModel)]="query" (keyup)="search()"
                     class="search-bar" />
             </div>
-            <button>New Insured</button>
+            <button (click)="insuredCreationForm.openForm()">Create Insured</button>
         </div>
         <table class="task-table">
             <thead>
@@ -23,10 +24,10 @@
             </thead>
             <tbody>
                 <tr *ngFor="let insured of insureds">
-                    <td>{{ insured.insured_id }}</td>
-                    <td><a [routerLink]="['/insured', insured.insured_id]">{{insured.insured_name}}</a> </td>
-                    <td>{{ insured.insured_street_address }}, {{ insured.insured_postal_code }}</td>
-                    <td>{{ insured.insured_province }}</td>
+                    <td>{{ insured.id }}</td>
+                    <td><a [routerLink]="['/insured', insured.id]">{{insured.name}}</a> </td>
+                    <td>{{ insured.address }}, {{ insured.postalCode }}</td>
+                    <td>{{ insured.province }}</td>
                     <td></td>
                 </tr>
             </tbody>

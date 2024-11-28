@@ -2,21 +2,22 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReferenceBannerComponent } from '../../../components/banners/reference-banner/reference-banner.component';
 import { RouterLink } from '@angular/router';
-import { SearchbarComponent } from '../../../components/common/searchbar/searchbar.component';
 import { NamedInsuredService } from '../../../../services/named-insured.service';
 import { FormsModule } from '@angular/forms';
+import { NamedInsured } from '../../../../models/named-insured.model';
+import { InsuredCreationFormComponent } from '../../../components/forms/insured-creation-form/insured-creation-form.component';
 
 
 @Component({
   selector: 'app-named-insureds-reference-page',
   standalone: true,
-  imports: [ReferenceBannerComponent, CommonModule, RouterLink, SearchbarComponent,FormsModule],
+  imports: [ReferenceBannerComponent, CommonModule, RouterLink,FormsModule, InsuredCreationFormComponent],
   templateUrl: './named-insureds-list.component.html',
   styleUrl: './named-insureds-list.component.css'
 })
 export class NamedInsuredsListComponent {
   title = "Named Insureds"
-  insureds: any[] = []
+  insureds: NamedInsured[] = []
   query: string = ''; // Search query entered by the user
   isLoading: boolean = false; // Show a loading indicator during the API call
 
@@ -43,12 +44,14 @@ export class NamedInsuredsListComponent {
   }
 
   ngOnInit(): void {
+    this.loadData()
+  }
+  loadData(){
     // Subscribe to the service and assign the data to the array
     this.insuredService.getAllNamedInsured().subscribe((data) => {
       this.insureds = data; // Assign the data to the array
     });
   }
-  
 
 
 }

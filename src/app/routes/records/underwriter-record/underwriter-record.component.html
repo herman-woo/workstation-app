@@ -5,15 +5,19 @@
             <h2>Underwriter Info:</h2>
             <div class="info-row">
                 <span class="label">Name:</span>
-                <span class="value">{{underwriterFirstName}} {{underwriterLastName}}</span>
+                <span class="value">{{underwriter?.firstName}} {{underwriter?.lastName}}</span>
             </div>
             <div class="info-row">
                 <span class="label">Role</span>
-                <span class="value">{{underwriterRole}}</span>
+                <span class="value">{{underwriter?.role}}</span>
             </div>
             <div class="info-row">
                 <span class="label">Business Unit:</span>
-                <span class="value">{{businessUnit}}</span>
+                <span class="value">{{underwriter?.businessUnitName}}</span>
+            </div>
+            <div class="info-row">
+                <span class="label">Team:</span>
+                <span class="value">{{underwriter?.teamName}}</span>
             </div>
         </div>
         <button>Edit</button>
@@ -33,7 +37,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let account of accounts">
+                    <tr *ngFor="let account of linkedAccounts">
 
                         <td>
                             <a [routerLink]="['/account', account.id]">{{ account.dateCreated }}</a>

@@ -1,0 +1,34 @@
+<div class="overlay" *ngIf="showForm">
+    <div class="popup">
+        <h2>Create Underwriter</h2>
+        <form [formGroup]="underwriterForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="first_name">First Name</label>
+                <input id="first_name" formControlName="first_name" type="text" required />
+            </div>
+
+            <div class="form-group">
+                <label for="last_name">Last Name</label>
+                <input id="last_name" formControlName="last_name" type="text" required />
+            </div>
+
+            <div class="form-group">
+                <label for="role">Role</label>
+                <input id="role" formControlName="role" type="text" required />
+            </div>
+
+            <div class="form-group">
+                <label for="business_unit">Business Unit</label>
+                <input id="business_unit" formControlName="business_unit" type="text" required />
+            </div>
+
+            <div class="form-group">
+                <label for="team">Team</label>
+                <input id="team" formControlName="team" type="text" required />
+            </div>
+
+            <button type="submit" [disabled]="underwriterForm.invalid">Create</button>
+            <button type="button" (click)="closeForm()">Cancel</button>
+        </form>
+    </div>
+</div>
