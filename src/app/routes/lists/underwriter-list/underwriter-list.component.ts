@@ -10,7 +10,7 @@ import { UnderwriterFormComponent } from '../../../components/forms/underwriter-
 @Component({
   selector: 'app-underwriter-reference-pages',
   standalone: true,
-  imports: [ReferenceBannerComponent, CommonModule, RouterLink, FormsModule, UnderwriterFormComponent ],
+  imports: [ReferenceBannerComponent, CommonModule, RouterLink, FormsModule, UnderwriterFormComponent],
   templateUrl: './underwriter-list.component.html',
   styleUrl: './underwriter-list.component.css'
 })
@@ -23,11 +23,7 @@ export class UnderwriterListComponent {
   constructor(private underwriterService: UnderwriterService) { }
   search(): void {
     if (!this.query.trim()) {
-      this.underwriterService.getAllUnderwriters().subscribe((data) => {
-        this.underwriters = data;
-
-      })
-      return;
+      this.loadData()
     }
 
     this.isLoading = true; // Start loading
@@ -49,10 +45,15 @@ export class UnderwriterListComponent {
       this.loadData();
     });
   }
-
-  loadData(){
-    this.underwriterService.getAllUnderwriters().subscribe((data) => {
-      this.underwriters = data
+  
+  loadData() {
+    this.underwriterService.getAllUnderwriters("Environmental","").subscribe({
+      next: (response) => {
+        this.underwriters = response.underwriters;
+      },
+      error: (error) => {
+        console.error('Error fetching underwriters:', error);
+      }
     })
   }
 
