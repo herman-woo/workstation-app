@@ -1,0 +1,39 @@
+@import '../../../styles/account-page.css';
+@import '../../pages/account/account-tabs/rating-quoting-tab/rating-quoting-tab.component.css';
+
+.policy-module{
+    width: 400px;
+}
+
+
+.financial-subject {
+    width: 33%;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    text-align: left;
+}
+
+.financial-sub-subject {
+    width: 33%;
+    font-size: 15px;
+    color: #6d6d6d;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+.financial-option-item {
+    width: 33%;
+    text-align: end;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+}
+
+.financial-line-item {
+    width: 33%;
+    text-align: end;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}

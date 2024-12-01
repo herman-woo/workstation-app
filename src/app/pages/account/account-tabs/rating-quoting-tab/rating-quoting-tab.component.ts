@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { RatingModuleCardComponent } from '../../../../components/cards/rating-module-card/rating-module-card.component';
-import { QuotingModuleCardComponent } from '../../../../components/cards/quoting-module-card/quoting-module-card.component';
-import { PolicyModuleCardComponent } from '../../../../components/cards/policy-module-card/policy-module-card.component';
+import { RatingModuleCardComponent } from '../../../../components/rating-module-card/rating-module-card.component';
+import { QuotingModuleCardComponent } from '../../../../components/quoting-module-card/quoting-module-card.component';
+import { PolicyModuleCardComponent } from '../../../../components/policy-module-card/policy-module-card.component';
 @Component({
   selector: 'rating-quoting',
   standalone: true,
