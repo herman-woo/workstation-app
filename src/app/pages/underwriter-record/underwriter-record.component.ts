@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { BreadcrumbComponent } from '../../components/common/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../components/breadcrumb/breadcrumb.component';
 import { RouterLink } from '@angular/router';
 import * as accountData from '../../../../data/models/accounts.json'
 import { UnderwriterService } from '../../../services/underwriter.service';

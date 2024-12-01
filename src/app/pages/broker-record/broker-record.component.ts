@@ -1,6 +1,6 @@
 import { Component, Injectable } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BreadcrumbComponent } from '../../components/common/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../components/breadcrumb/breadcrumb.component';
 import { RouterLink } from '@angular/router';
 import { BrokerService } from '../../../services/broker.service';
 

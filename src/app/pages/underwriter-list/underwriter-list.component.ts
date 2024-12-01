@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ReferenceBannerComponent } from '../../components/banners/reference-banner/reference-banner.component';
+import { ReferenceBannerComponent } from '../../components/reference-banner/reference-banner.component';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { UnderwriterService } from '../../../services/underwriter.service';

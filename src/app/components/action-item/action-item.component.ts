@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './action-item.component.html',
-  styleUrl: './action-item.component.css'
+  styleUrl: './action-item.component.scss'
 })
 export class ActionItemComponent {
   @Input() icon: string = '';

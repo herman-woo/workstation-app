@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './reference-banner.component.html',
-  styleUrl: './reference-banner.component.css'
+  styleUrl: './reference-banner.component.scss'
 })
 export class ReferenceBannerComponent {
   @Input() title: string = '';

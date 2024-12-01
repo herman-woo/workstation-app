@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BreadcrumbComponent } from '../../components/common/breadcrumb/breadcrumb.component';
+import { BreadcrumbComponent } from '../../components/breadcrumb/breadcrumb.component';
 import { RiskSummaryTabComponent } from './account-tabs/risk-summary-tab/risk-summary-tab.component';
 import { RatingQuotingTabComponent } from './account-tabs/rating-quoting-tab/rating-quoting-tab.component';
 import { FileStructureComponent } from './account-tabs/file-structure-tab/file-structure.component';

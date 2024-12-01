@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './record-header.component.html',
-  styleUrl: './record-header.component.css'
+  styleUrl: './record-header.component.scss'
 })
 export class RecordHeaderComponent {
   @Input() title: string = '';
