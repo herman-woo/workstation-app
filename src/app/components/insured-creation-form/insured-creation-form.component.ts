@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { NamedInsuredService } from '../../../../services/named-insured.service';
+import { NamedInsuredService } from '../../../services/named-insured.service';
 
 @Component({
   selector: 'insured-creation-form',
   standalone: true,
   imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './insured-creation-form.component.html',
-  styleUrl: './insured-creation-form.component.css'
+  styleUrl: './insured-creation-form.component.scss'
 })
 export class InsuredCreationFormComponent {
   insuredCreationForm: FormGroup;

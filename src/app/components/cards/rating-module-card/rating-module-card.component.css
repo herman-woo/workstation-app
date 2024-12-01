@@ -1,5 +1,5 @@
 @import '../../../../styles/account-page.css';
-@import '../../../routes/account/account-tabs/rating-quoting-tab/rating-quoting-tab.component.css';
+@import '../../../pages/account/account-tabs/rating-quoting-tab/rating-quoting-tab.component.css';
 
 .risk-line-items-headers th{
     width: 25%;

@@ -15,7 +15,7 @@ import { SidebarService } from '../services/sidebar.service';
     SidebarComponent
   ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'] // corrected from `styleUrl`
+  styleUrls: ['./app.component.scss'] // corrected from `styleUrl`
 })
 export class AppComponent implements OnInit {
   title = 'workstation-app';

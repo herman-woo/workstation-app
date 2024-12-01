@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { UnderwriterService } from '../../../../services/underwriter.service';
+import { UnderwriterService } from '../../../services/underwriter.service';
 
 @Component({
   selector: 'underwriter-form',
   standalone: true,
   imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './underwriter-form.component.html',
-  styleUrl: './underwriter-form.component.css'
+  styleUrl: './underwriter-form.component.scss'
 })
 export class UnderwriterFormComponent {
   underwriterForm: FormGroup;

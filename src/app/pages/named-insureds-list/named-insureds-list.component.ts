@@ -5,7 +5,7 @@ import { RouterLink } from '@angular/router';
 import { NamedInsuredService } from '../../../services/named-insured.service';
 import { FormsModule } from '@angular/forms';
 import { NamedInsured } from '../../../models/named-insured.model';
-import { InsuredCreationFormComponent } from '../../components/forms/insured-creation-form/insured-creation-form.component';
+import { InsuredCreationFormComponent } from '../../components/insured-creation-form/insured-creation-form.component';
 
 
 @Component({
