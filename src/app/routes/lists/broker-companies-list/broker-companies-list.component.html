@@ -7,7 +7,7 @@
         <div class="reference-page-panel">
             <!-- Search Input -->
             <div class="search-container">
-                <input type="text" placeholder="Search by Copmany Name..." [(ngModel)]="query" (keyup)="search()"
+                <input type="text" placeholder="Search by Company Name..." [(ngModel)]="query" (keyup)="search()"
                     class="search-bar" />
             </div>
             <button>New Broker Company</button>
@@ -16,25 +16,23 @@
             <thead>
                 <tr>
                     <th>Company ID</th>
-                    <th>Company Name</th>
+                    <th>Name</th>
                     <th>Address</th>
                     <th>City</th>
                     <th>Province</th>
-                    <th>PostalCode</th>
-                    <th>isTopLevel</th>
-                    <th>parentCompanyId</th>
+                    <th>Postal Code</th>
+                    <th>Parent Company</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let company of companies">
-                    <td>{{ company.broker_company_id }}</td>
-                    <td><a [routerLink]="['/brokercompany', company.id]">{{company.broker_company_name}}</a> </td>
-                    <td>{{ company.broker_company_address }}</td>
-                    <td>{{ company.broker_company_city }}</td>
-                    <td>{{ company.broker_company_province }}</td>
-                    <td>{{ company.broker_company_postal_code }}</td>
-                    <td>{{ company.is_top_level }}</td>
-                    <td><a [routerLink]="['/brokercompany', company.parent_company]">{{company.parent_company}}</a> </td>                </tr>
+                    <td>{{ company.companyId }}</td>
+                    <td><a [routerLink]="['/brokercompany', company.id]">{{company.name}}</a> </td>
+                    <td>{{ company.address }}</td>
+                    <td>{{ company.city }}</td>
+                    <td>{{ company.province }}</td>
+                    <td>{{ company.postalCode }}</td>
+                    <td><a [routerLink]="['/brokercompany', company.parentCompanyId]">{{company.parentCompanyName}}</a> </td>                </tr>
             </tbody>
         </table>
     </div>

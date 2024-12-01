@@ -30,13 +30,13 @@ export class BrokerRecordComponent {
     // Capture the ID from the route
     this.id = this.route.snapshot.paramMap.get('id');
     this.brokerService.getInsuranceBrokerById(parseInt(this.id!)).subscribe((data) => {
-      this.brokerFirstName = data.broker_first_name
-      this.brokerLastName = data.broker_last_name
-      this.brokerTitle = data.broker_title
-      this.brokerPhone = data.broker_phone_number
-      this.brokerEmail = data.broker_email
-      this.brokerCompanyId = data.broker_company
-      this.brokerCompanyName = data.broker_company_name
+      this.brokerFirstName = data.firstName
+      this.brokerLastName = data.lastName
+      this.brokerTitle = data.title
+      this.brokerPhone = data.phoneNumber
+      this.brokerEmail = data.email
+      this.brokerCompanyId = data.brokerComapnyId
+      this.brokerCompanyName = data.brokerCompanyName
     })
   }
 }

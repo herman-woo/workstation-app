@@ -1,5 +1,5 @@
 <div class="page-container">
-    <breadcrumb [link]="'insureds'" [category]="'Named Insureds'" [id]="id"></breadcrumb>
+    <breadcrumb [link]="'insureds'" [category]="'Named Insureds'" [id]="namedInsuredId"></breadcrumb>
     <div class="page-section">
         <record-header [title]="insured.name"></record-header>
         <div class="insured-info-content">
@@ -36,13 +36,13 @@
                 <tbody>
                     <tr *ngFor="let account of accounts">
                         <td>
-                            <a [routerLink]="['/account', account.id]">{{ account.dateCreated.slice(0, 4) }}</a>
+                            <a [routerLink]="['/account', account.id]">{{ account.created_time.slice(0, 4) }}</a>
                         </td>
                         <td>
-                            <a [routerLink]="['/account', account.id]">{{ account.policyId }}</a>
+                            <a [routerLink]="['/account', account.id]">{{ account.policy_id }}</a>
                         </td>
                         <td>
-                            <a [routerLink]="['/underwriter', account.underwriterId]">{{ account.underwriter }}</a>
+                            <a [routerLink]="['/underwriter', account.underwriter_id]">{{ account.underwriter_data.first_name }}</a>
                         </td>
                         <td>{{ account.product }}</td>
                         <td>{{ account.status }}</td>

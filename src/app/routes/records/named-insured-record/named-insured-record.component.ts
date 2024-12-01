@@ -7,6 +7,7 @@ import { BreadcrumbComponent } from '../../../components/common/breadcrumb/bread
 import { RouterLink } from '@angular/router';
 import { NamedInsuredService } from '../../../../services/named-insured.service';
 import { NamedInsured } from '../../../../models/named-insured.model';
+import { AccountService } from '../../../../services/account.service';
 
 @Component({
   selector: 'insured-page',
@@ -21,27 +22,34 @@ import { NamedInsured } from '../../../../models/named-insured.model';
 
 export class NamedInsuredRecordComponent {
   pageSubject = "Named Insured"
-  id: string | null = null;
+  namedInsuredId: string | null = null;
   insured = new NamedInsured()
   accounts: any[] = []
 
-  constructor(private route: ActivatedRoute, private insuredService: NamedInsuredService) { }
+  constructor(private route: ActivatedRoute, private insuredService: NamedInsuredService, private accountService: AccountService) { }
   
   ngOnInit(): void {
     // Capture the ID from the route
-    this.id = this.route.snapshot.paramMap.get('id');
-    parseInt(this.id!)
+    this.namedInsuredId = this.route.snapshot.paramMap.get('id');
+    parseInt(this.namedInsuredId!)
 
     //get Named Insured by ID
-    this.insuredService.getNamedInsuredById(parseInt(this.id!)).subscribe((data: NamedInsured) => this.insured = data)
+    this.insuredService.getNamedInsuredById(parseInt(this.namedInsuredId!)).subscribe((data: NamedInsured) => this.insured = data)
+    this.loadData()
 
-    //get accounts by named insured Id
-    for (let account of data.accounts) {
-      if (account.insuredId === this.id) {
-        this.accounts.push(account)
+    
+
+  }
+  loadData() {
+    this.accountService.getAllAccounts(parseInt(this.namedInsuredId)).subscribe({
+      next: (response) => {
+        console.log(response)
+        this.accounts = response.accounts;
+      },
+      error: (error) => {
+        console.error('Error fetching underwriters:', error);
       }
-    }
-
+    })
   }
 
 }

@@ -24,9 +24,7 @@ export class NamedInsuredsListComponent {
   constructor(private insuredService: NamedInsuredService) { }
   search(): void {
     if (!this.query.trim()) {
-      this.insuredService.getAllNamedInsured().subscribe((data) => {
-        this.insureds = data;
-      })
+      this.loadData()
       return;
     }
 
@@ -46,11 +44,16 @@ export class NamedInsuredsListComponent {
   ngOnInit(): void {
     this.loadData()
   }
-  loadData(){
-    // Subscribe to the service and assign the data to the array
-    this.insuredService.getAllNamedInsured().subscribe((data) => {
-      this.insureds = data; // Assign the data to the array
-    });
+
+  loadData() {
+    this.insuredService.getAllNamedInsured().subscribe({
+      next: (response) => {
+        this.insureds = response.insureds;
+      },
+      error: (error) => {
+        console.error('Error fetching underwriters:', error);
+      }
+    })
   }
 
 

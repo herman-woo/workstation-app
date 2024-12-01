@@ -1,29 +1,30 @@
 <div class="named-insured-card account-card">
     <div class="broker-container">
         <div>
-            <h1 class="named-insured"><a [routerLink]="['/insured', 1]">{{data.named_insured.insured_name}}</a></h1>
-            <h2>Mailing Address: {{data.named_insured.insured_street_address}}, {{data.named_insured.insured_postal_code}}</h2>
-            <h2>Province: {{data.named_insured.insured_province}}</h2>
+            <h1 class="named-insured"><a [routerLink]="['/insured', data.named_insured]">{{data.named_insured_data.name}}</a></h1>
+            <h2>Mailing Address: {{data.named_insured_data.address}},
+                {{data.named_insured_data.postal_code}}</h2>
+            <h2>Province: {{data.named_insured_data.province}}</h2>
         </div>
-        <underwriter-card [underwriter]="data.underwriter"></underwriter-card>
-    </div>    
+        <underwriter-card [underwriter]="data.underwriter_data" [underwriterId]="data.underwriter"></underwriter-card>
+    </div>
     <div class="broker-container">
         <div class="Broker-company-container info-card">
-            <h3><a [routerLink]="['/brokercompany', data.broker_company.id]">Company:
-                    {{data.broker_company.broker_company_name}}</a></h3>
-            <p>Address: {{data.broker_company.broker_company_address}}</p>
-            <p>PostalCode: {{data.broker_company.broker_company_postal_code}}</p>
-            <p>City: {{data.broker_company.broker_company_city}}</p>
-            <p>Province: {{data.broker_company.broker_company_province}}</p>
+            <h3><a [routerLink]="['/brokercompany', data.broker_company]">Company:
+                    {{data.broker_company_data.name}}</a></h3>
+            <p>Address: {{data.broker_company_data.address}}</p>
+            <p>PostalCode: {{data.broker_company_data.postal_code}}</p>
+            <p>City: {{data.broker_company_data.city}}</p>
+            <p>Province: {{data.broker_company_data.province}}</p>
             <button class="top-button">Change Company</button>
         </div>
         <div class="Broker-info-container info-card">
-            <h3><a [routerLink]="['/broker', data.insurance_broker.broker_id]">Broker:
-                    {{data.insurance_broker.broker_first_name}}
-                    {{data.insurance_broker.broker_last_name}}</a></h3>
-            <p>Title: {{data.insurance_broker.broker_title}}</p>
-            <p>Tel: {{data.insurance_broker.broker_phone_number}}</p>
-            <p>Email: {{data.insurance_broker.broker_email}}</p>
+            <h3><a [routerLink]="['/broker', data.broker_data]">Broker:
+                    {{data.broker_data.first_name}}
+                    {{data.broker_data.last_name}}</a></h3>
+            <p>Title: {{data.broker_data.title}}</p>
+            <p>Tel: {{data.broker_data.phone_number}}</p>
+            <p>Email: {{data.broker_data.email}}</p>
             <button class="top-button">Change Broker</button>
         </div>
     </div>

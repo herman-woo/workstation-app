@@ -41,6 +41,10 @@ export class AccountComponent {
     this.id = this.route.snapshot.paramMap.get('id');
 
     //get account by ID from service
-    this.accountService.getAccountById(parseInt(this.id!)).subscribe((data) => this.accountRecord = data)
+    this.accountService.getAccountById(parseInt(this.id!)).subscribe((data) => {
+      console.log(data)
+      this.accountRecord = data
+    })
+    console.log(this.accountRecord)
   }
 }

@@ -1,4 +1,5 @@
 <breadcrumb [category]="'Accounts'" [id]="id"></breadcrumb>
+<risk-summary [data]="accountRecord"></risk-summary>
 <div class="account-container">
     <div class="account-tabs">
         <button [ngClass]="{ 'active': activeTab === 1 }" (click)="setActiveTab(1)">Risk Summary</button>
@@ -8,15 +9,12 @@
     </div>
     <div class="tab-content">
         <div *ngIf="activeTab === 1">
-            <risk-summary [data]="accountRecord"></risk-summary>
-        </div>
-        <div *ngIf="activeTab === 2">
             <rating-quoting [data]="accountRecord"></rating-quoting>
         </div>
-        <div *ngIf="activeTab === 3">
+        <div *ngIf="activeTab === 2">
             <file-structure></file-structure>
         </div>
-        <div *ngIf="activeTab === 4">
+        <div *ngIf="activeTab === 3">
             <account-notes></account-notes>
         </div>
     </div>

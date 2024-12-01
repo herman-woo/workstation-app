@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReferenceBannerComponent } from '../../../components/banners/reference-banner/reference-banner.component';
 import { RouterLink } from '@angular/router';
-import { SearchbarComponent } from '../../../components/common/searchbar/searchbar.component';
 import { BrokerCompanyService } from '../../../../services/broker-company.service';
 import { FormsModule } from '@angular/forms';
+import { BrokerCompany } from '../../../../models/broker-company.model';
 
 
 @Component({
@@ -12,7 +12,6 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [CommonModule,
             ReferenceBannerComponent,
-            SearchbarComponent,
             RouterLink,
             FormsModule],
   templateUrl: './broker-companies-list.component.html',
@@ -20,17 +19,14 @@ import { FormsModule } from '@angular/forms';
 })
 export class BrokerCompaniesListComponent {
   title = "Broker Companies"
-  companies: any[] = []
+  companies: BrokerCompany[] = []
   query: string = ''; // Search query entered by the user
   isLoading: boolean = false; // Show a loading indicator during the API call
 
   constructor(private companyService: BrokerCompanyService) { }
   search(): void {
     if (!this.query.trim()) {
-      this.companyService.getAllBrokerCompanies().subscribe((data) => {
-        this.companies = data;
-      })
-      return;
+      this.loadData()
     }
 
     this.isLoading = true; // Start loading
@@ -47,8 +43,17 @@ export class BrokerCompaniesListComponent {
   }
 
   ngOnInit(): void {
-    this.companyService.getAllBrokerCompanies().subscribe((data) => {
-      this.companies = data
+    this.loadData()
+  }
+
+  loadData() {
+    this.companyService.getAllBrokerCompanies().subscribe({
+      next: (response) => {
+        this.companies = response.insureds;
+      },
+      error: (error) => {
+        console.error('Error fetching underwriters:', error);
+      }
     })
   }
 }
