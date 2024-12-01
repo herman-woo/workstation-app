@@ -3,15 +3,50 @@
         Underwriter Actions
     </div>
     <div class="actions-grid">
-        <action-item 
-            *ngFor="let item of underwriterActions"
-            [icon] = "item.icon"
-            [action]="item.action">
+        <action-item *ngFor="let item of underwriterActions" [icon]="item.icon" [action]="item.action">
         </action-item>
     </div>
     <div class="dashboard-item-title">
         Your Accounts
     </div>
+    <table class="task-table">
+        <thead>
+            <tr>
+                <th>Account ID</th>
+                <th>Year</th>
+                <th>PolicyID</th>
+                <th>Named Insured</th>
+                <th>Business Unit</th>
+                <th>Team</th>
+                <th>Underwriter</th>
+                <th>Broker</th>
+                <th>Company</th>
+                <th>Submission</th>
+                <th>Product</th>
+                <th>Status</th>
+                <th>Last Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let account of accounts">
+                <td>{{ account.id }}</td>
+                <td><a [routerLink]="['/account', account.id]">{{account.year}}</a></td>
+                <td>{{ account.policy_id }}</td>
+                <td>{{ account.named_insured_data.name }}</td>
+                <td>{{ account.business_unit_data.name }}</td>
+                <td>{{ account.team_data.name }}</td>
+
+
+                <td>{{ account.underwriter_data.first_name }} {{ account.underwriter_data.last_name }}</td>
+                <td>{{ account.broker_data.first_name }} {{ account.broker_data.last_name }}</td>
+                <td>{{ account.broker_company_data.name }}</td>
+                <td>{{ account.submission_type }}</td>
+                <td>{{ account.product_type }}</td>
+                <td>{{ account.account_status }}</td>
+                <td>{{ account.updated_time.slice(0,19) }}</td>
+            </tr>
+        </tbody>
+    </table>
     <div class="notifications-grid">
     </div>
     <div class="dashboard-item-title">

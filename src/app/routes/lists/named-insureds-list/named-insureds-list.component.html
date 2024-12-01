@@ -15,7 +15,6 @@
         <table class="task-table">
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Insured</th>
                     <th>Mailing Address</th>
                     <th>Province</th>
@@ -24,7 +23,6 @@
             </thead>
             <tbody>
                 <tr *ngFor="let insured of insureds">
-                    <td>{{ insured.id }}</td>
                     <td><a [routerLink]="['/insured', insured.id]">{{insured.name}}</a> </td>
                     <td>{{ insured.address }}, {{ insured.postalCode }}</td>
                     <td>{{ insured.province }}</td>

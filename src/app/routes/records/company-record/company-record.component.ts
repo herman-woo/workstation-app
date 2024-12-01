@@ -16,14 +16,14 @@ import { BrokerCompanyService } from '../../../../services/broker-company.servic
 export class CompanyRecordComponent {
 
   id: string | null = null;
-  companyId: string = "";
+  companyId: number = null;
   brokerCompanyName: string = "";
   address: string = "";
   city: string = "";
   province: string = "";
   postalCode: string = "";
-  isTopLevel: boolean = false;
-  parentCompanyId: string = "";
+  isTopLevel: string = "";
+  parentCompanyId: number = null;
   parentCompanyName: string = "";
 
   constructor(private route: ActivatedRoute,
@@ -32,15 +32,15 @@ export class CompanyRecordComponent {
     // Capture the ID from the route
     this.id = this.route.snapshot.paramMap.get('id');
     this.companyService.getBrokerCompanyById(parseInt(this.id!)).subscribe((data) => {
-      this.brokerCompanyName = data.broker_company_name
-      this.address = data.broker_company_address
-      this.city = data.broker_company_city
-      this.province = data.broker_company_province
-      this.postalCode = data.broker_company_postal_code
-      this.parentCompanyId = data.parent_company
-      this.parentCompanyName = data.parent_company_name
-      this.companyId = data.broker_company_id
-      this.isTopLevel = data.is_top_level
+      this.brokerCompanyName = data.name
+      this.address = data.address
+      this.city = data.city
+      this.province = data.province
+      this.postalCode = data.postalCode
+      this.parentCompanyId = data.parentCompanyId
+      this.parentCompanyName = data.parentCompanyName
+      this.companyId = data.companyId
+      this.isTopLevel = data.topLevel
     })
 
   }

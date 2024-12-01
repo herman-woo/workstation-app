@@ -9,7 +9,7 @@ import { PaginatedResponse } from './paginated-response.service';
   providedIn: 'root'
 })
 export class UnderwriterService {
-  private apiUrl = 'http://localhost:8000/carrier/underwriter/';
+  private apiUrl = 'http://localhost:8000/carrier/underwriter';
   //to listen for when creating, a new underwriter
   private refreshSubject = new BehaviorSubject<void>(null);
 
@@ -30,11 +30,11 @@ export class UnderwriterService {
 
 
   getUnderwriterById(id: number): Observable<any> {
-    return this.http.get<any>(this.apiUrl + id).pipe(map(json => Underwriter.mapJson(json)))
+    return this.http.get<any>(this.apiUrl+'/'+id).pipe(map(json => Underwriter.mapJson(json)))
   }
 
   searchUnderwriter(query: string): Observable<any[]> {
-    return this.http.get<any[]>(this.apiUrl + 'search/?query=' + query).pipe(map((response => response.map(json => Underwriter.mapJson(json)))))
+    return this.http.get<any[]>(this.apiUrl + '/search?query=' + query).pipe(map((response => response.map(json => Underwriter.mapJson(json)))))
   }
 
   createUnderwriter(underwriter: { first_name: string; last_name: string, business_unit: string, role: string }): Observable<any> {

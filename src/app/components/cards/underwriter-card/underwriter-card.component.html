@@ -1,8 +1,8 @@
 <div class="underwriter-card info-card">
-    <h3><a href="/dashboard">Underwriter: {{underwriter.first_name}} {{underwriter.last_name}}</a></h3>
+    <h3><a [routerLink]="['/underwriter', underwriterId]">Underwriter: {{underwriter.first_name}} {{underwriter.last_name}}</a></h3>
     <div class="underwriter-info">
-        <p>Business Unit: {{underwriter.business_unit}}</p>
-        <p>Email: {{underwriter.business_unit}}</p>
+        <p>Business Unit: {{underwriter.business_unit_name}}</p>
+        <p>Team: {{underwriter.team_name}}</p>
         <p>Role: {{underwriter.role}}</p>
     </div>
     <button class="top-button">Change Underwriter</button>

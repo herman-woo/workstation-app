@@ -242,6 +242,27 @@
             "termTwoPremiumOne": ["T2/Premium 1","$0","$0","$0"],
             "termTwoPremiumTwo": ["T2/Premium 2","$0","$0","$0"],
             "termTwoPremiumThree": ["T2/Premium 3","$0","$0","$0"]
+        },
+        {
+            "accountId": 49,
+            "quoteId": 1,
+            "revisionName": "FINAL Quote",
+            "dateQuoted": "2024-11-15",
+            "doclink": "http://localhost:4200/account/1/quote/final.pdf",
+            "options": ["Item","Option 1"],
+            "perLimit": ["Per Limit","$2,000,000"],
+            "totalLimit": ["Total Limit 1","Option 1"],
+            "sirOne": ["SIR 1","$2,000,000"],
+            "sirTwo": ["SIR 2","$25,000"],
+            "sirThree": ["SIR 3","$0"],
+            "termOne": ["Term 1","3"],
+            "termTwo": ["Term 2","0"],
+            "termOnePremiumOne": ["T1/Premium 1","$16,250"],
+            "termOnePremiumTwo": ["T1/Premium 2","$0"],
+            "termOnePremiumThree": ["T1/Premium 3","$0"],
+            "termTwoPremiumOne": ["T2/Premium 1","$0"],
+            "termTwoPremiumTwo": ["T2/Premium 2","$0"],
+            "termTwoPremiumThree": ["T2/Premium 3","$0"]
         }
     ]
 }

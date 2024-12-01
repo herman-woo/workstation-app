@@ -5,10 +5,10 @@ import { UnderwriterCardComponent } from '../underwriter-card/underwriter-card.c
 @Component({
   selector: 'named-insured-card',
   standalone: true,
-  imports: [RouterLink,UnderwriterCardComponent],
+  imports: [RouterLink, UnderwriterCardComponent],
   templateUrl: './named-insured-card.component.html',
   styleUrl: './named-insured-card.component.css'
 })
 export class NamedInsuredCardComponent {
-@Input() data: any;
+  @Input() data: any;
 }
