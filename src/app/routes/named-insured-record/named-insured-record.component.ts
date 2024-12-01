@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import * as data from '../../../../../data/models/accounts.json'
-import { RecordHeaderComponent } from "../../../components/common/record-header/record-header.component";
-import { BreadcrumbComponent } from '../../../components/common/breadcrumb/breadcrumb.component';
+import { RecordHeaderComponent } from '../../components/common/record-header/record-header.component';
+import { BreadcrumbComponent } from '../../components/common/breadcrumb/breadcrumb.component';
 import { RouterLink } from '@angular/router';
-import { NamedInsuredService } from '../../../../services/named-insured.service';
-import { NamedInsured } from '../../../../models/named-insured.model';
-import { AccountService } from '../../../../services/account.service';
-
+import { NamedInsuredService } from '../../../services/named-insured.service';
+import { NamedInsured } from '../../../models/named-insured.model';
+import { AccountService } from '../../../services/account.service';
 @Component({
   selector: 'insured-page',
   standalone: true,

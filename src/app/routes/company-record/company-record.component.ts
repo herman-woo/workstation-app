@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { RecordHeaderComponent } from '../../../components/common/record-header/record-header.component';
-import { BreadcrumbComponent } from '../../../components/common/breadcrumb/breadcrumb.component';
+import { RecordHeaderComponent } from '../../components/common/record-header/record-header.component';
+import { BreadcrumbComponent } from '../../components/common/breadcrumb/breadcrumb.component';
 import { RouterLink } from '@angular/router';
-import { BrokerCompanyService } from '../../../../services/broker-company.service';
+import { BrokerCompanyService } from '../../../services/broker-company.service';
 
 @Component({
   selector: 'company-page',
