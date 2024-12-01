@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { ReferenceBannerComponent } from '../../../components/banners/reference-banner/reference-banner.component';
+import { ReferenceBannerComponent } from '../../components/banners/reference-banner/reference-banner.component';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { UnderwriterService } from '../../../../services/underwriter.service';
+import { UnderwriterService } from '../../../services/underwriter.service';
 import { FormsModule } from '@angular/forms';
-import { Underwriter } from '../../../../models/underwriter.model';
-import { UnderwriterFormComponent } from '../../../components/forms/underwriter-form/underwriter-form.component';
+import { Underwriter } from '../../../models/underwriter.model';
+import { UnderwriterFormComponent } from '../../components/forms/underwriter-form/underwriter-form.component';
 
 @Component({
   selector: 'app-underwriter-reference-pages',

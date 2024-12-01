@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReferenceBannerComponent } from '../../../components/banners/reference-banner/reference-banner.component';
-import { BrokerService } from '../../../../services/broker.service';
+import { ReferenceBannerComponent } from '../../components/banners/reference-banner/reference-banner.component';
+import { BrokerService } from '../../../services/broker.service';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
-import { Broker } from '../../../../models/insurance-broker.model';
+import { Broker } from '../../../models/insurance-broker.model';
 
 @Component({
   selector: 'app-broker-agents-reference-page',

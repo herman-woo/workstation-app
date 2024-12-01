@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReferenceBannerComponent } from '../../../components/banners/reference-banner/reference-banner.component';
+import { ReferenceBannerComponent } from '../../components/banners/reference-banner/reference-banner.component';
 import { RouterLink } from '@angular/router';
-import { NamedInsuredService } from '../../../../services/named-insured.service';
+import { NamedInsuredService } from '../../../services/named-insured.service';
 import { FormsModule } from '@angular/forms';
-import { NamedInsured } from '../../../../models/named-insured.model';
-import { InsuredCreationFormComponent } from '../../../components/forms/insured-creation-form/insured-creation-form.component';
+import { NamedInsured } from '../../../models/named-insured.model';
+import { InsuredCreationFormComponent } from '../../components/forms/insured-creation-form/insured-creation-form.component';
 
 
 @Component({
