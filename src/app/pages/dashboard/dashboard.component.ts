@@ -10,7 +10,7 @@ import * as actions from "../../components/action-item/UnderwriterActions.json";
   standalone: true,
   imports: [CommonModule, ActionItemComponent,RouterLink],
   templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.css'
+  styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
   accounts = []

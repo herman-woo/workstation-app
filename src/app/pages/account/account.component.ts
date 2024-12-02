@@ -2,10 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BreadcrumbComponent } from '../../components/breadcrumb/breadcrumb.component';
-import { RiskSummaryTabComponent } from './account-tabs/risk-summary-tab/risk-summary-tab.component';
-import { RatingQuotingTabComponent } from './account-tabs/rating-quoting-tab/rating-quoting-tab.component';
-import { FileStructureComponent } from './account-tabs/file-structure-tab/file-structure.component';
-import { AccountNotesComponent } from './account-tabs/notes-tab/account-notes.component';
+import { RiskSummaryTabComponent } from '../../components/risk-summary-tab/risk-summary-tab.component';
+import { RatingQuotingTabComponent } from '../../components/rating-quoting-tab/rating-quoting-tab.component';
+import { FileStructureComponent } from '../../components/file-structure-tab/file-structure.component';
+import { AccountNotesComponent } from '../../components/notes-tab/account-notes.component';
 import { AccountService } from '../../../services/account.service';
 
 @Component({
@@ -19,7 +19,7 @@ import { AccountService } from '../../../services/account.service';
     BreadcrumbComponent
   ],
   templateUrl: './account.component.html',
-  styleUrl: './account.component.css'
+  styleUrl: './account.component.scss'
 })
 export class AccountComponent {
 

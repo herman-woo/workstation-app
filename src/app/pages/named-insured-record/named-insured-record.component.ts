@@ -12,7 +12,7 @@ import { AccountService } from '../../../services/account.service';
   standalone: true,
   imports: [CommonModule, BreadcrumbComponent, RecordHeaderComponent, RouterLink],
   templateUrl: './named-insured-record.component.html',
-  styleUrl: './named-insured-record.component.css'
+  styleUrl: './named-insured-record.component.scss'
 })
 
 

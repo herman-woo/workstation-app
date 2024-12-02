@@ -12,7 +12,7 @@ import { Underwriter } from '../../../models/underwriter.model';
   standalone: true,
   imports: [BreadcrumbComponent, RouterLink, CommonModule],
   templateUrl: './underwriter-record.component.html',
-  styleUrl: './underwriter-record.component.css'
+  styleUrl: './underwriter-record.component.scss'
 })
 export class UnderwriterRecordComponent {
   id: string | null = null;

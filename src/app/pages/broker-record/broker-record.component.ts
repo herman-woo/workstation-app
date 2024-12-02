@@ -9,7 +9,7 @@ import { BrokerService } from '../../../services/broker.service';
   standalone: true,
   imports: [BreadcrumbComponent,RouterLink],
   templateUrl: './broker-record.component.html',
-  styleUrl: './broker-record.component.css'
+  styleUrl: './broker-record.component.scss'
 })
 
 @Injectable()

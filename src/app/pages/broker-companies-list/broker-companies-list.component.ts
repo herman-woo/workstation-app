@@ -15,7 +15,7 @@ import { BrokerCompany } from '../../../models/broker-company.model';
             RouterLink,
             FormsModule],
   templateUrl: './broker-companies-list.component.html',
-  styleUrl: './broker-companies-list.component.css'
+  styleUrl: './broker-companies-list.component.scss'
 })
 export class BrokerCompaniesListComponent {
   title = "Broker Companies"

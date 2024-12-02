@@ -13,7 +13,7 @@ import { InsuredCreationFormComponent } from '../../components/insured-creation-
   standalone: true,
   imports: [ReferenceBannerComponent, CommonModule, RouterLink,FormsModule, InsuredCreationFormComponent],
   templateUrl: './named-insureds-list.component.html',
-  styleUrl: './named-insureds-list.component.css'
+  styleUrl: './named-insureds-list.component.scss'
 })
 export class NamedInsuredsListComponent {
   title = "Named Insureds"

@@ -11,7 +11,7 @@ import { Broker } from '../../../models/insurance-broker.model';
   standalone: true,
   imports: [CommonModule, ReferenceBannerComponent, RouterLink, FormsModule],
   templateUrl: './broker-list.component.html',
-  styleUrl: './broker-list.component.css'
+  styleUrl: './broker-list.component.scss'
 
 })
 export class BrokerListComponent {

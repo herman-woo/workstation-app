@@ -8,7 +8,7 @@ import { NamedInsuredRecordComponent } from './pages/named-insured-record/named-
 import { BrokerListComponent } from './pages/broker-list/broker-list.component';
 import { BrokerRecordComponent } from './pages/broker-record/broker-record.component';
 import { BrokerCompaniesListComponent } from './pages/broker-companies-list/broker-companies-list.component';
-import { RiskSummaryTabComponent } from './pages/account/account-tabs/risk-summary-tab/risk-summary-tab.component';
+import { RiskSummaryTabComponent } from './components/risk-summary-tab/risk-summary-tab.component';
 import { CompanyRecordComponent } from './pages/company-record/company-record.component';
 
 export const routes: Routes = [

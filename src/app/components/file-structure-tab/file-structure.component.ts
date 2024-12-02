@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FilesModuleCardComponent } from '../../../../components/files-module-card/files-module-card.component';
-import { AuditingChecklistCardComponent } from '../../../../components/auditing-checklist-card/auditing-checklist-card.component';
+import { FilesModuleCardComponent } from '../files-module-card/files-module-card.component';
+import { AuditingChecklistCardComponent } from '../auditing-checklist-card/auditing-checklist-card.component';
 
 @Component({
   selector: 'file-structure',
@@ -10,7 +10,7 @@ import { AuditingChecklistCardComponent } from '../../../../components/auditing-
             FilesModuleCardComponent,
             AuditingChecklistCardComponent],
   templateUrl: './file-structure.component.html',
-  styleUrl: './file-structure.component.css'
+  styleUrl: './file-structure.component.scss'
 })
 export class FileStructureComponent {
 

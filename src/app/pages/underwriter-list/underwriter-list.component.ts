@@ -11,7 +11,7 @@ import { UnderwriterFormComponent } from '../../components/underwriter-form/unde
   standalone: true,
   imports: [ReferenceBannerComponent, CommonModule, RouterLink, FormsModule, UnderwriterFormComponent],
   templateUrl: './underwriter-list.component.html',
-  styleUrl: './underwriter-list.component.css'
+  styleUrl: './underwriter-list.component.scss'
 })
 export class UnderwriterListComponent {
   title = "Underwriters"

@@ -10,7 +10,7 @@ import { BrokerCompanyService } from '../../../services/broker-company.service';
   standalone: true,
   imports: [RecordHeaderComponent, BreadcrumbComponent,RouterLink],
   templateUrl: './company-record.component.html',
-  styleUrl: './company-record.component.css'
+  styleUrl: './company-record.component.scss'
 })
 
 export class CompanyRecordComponent {
