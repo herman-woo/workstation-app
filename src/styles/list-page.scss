@@ -1,4 +1,4 @@
-.reference-page-container {
+.list-page-container {
     margin: 50px;
     width: 80%;
     display: flex;
@@ -7,7 +7,7 @@
     align-items: center;
 }
 
-.reference-page-header {
+.list-page-header {
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -17,7 +17,7 @@
     padding-bottom: 5px;
 }
 
-.reference-page-panel {
+.list-page-panel {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -27,18 +27,18 @@
     margin-bottom: 15px;
 }
 
-.reference-page-panel button {
+.list-page-panel button {
     width: 200px;
     margin-right: 5px;
 }
 
-.reference-page-panel searchbar {
+.list-page-panel searchbar {
     width: 400px;
     margin-left: 5px;
 }
 
 /* Edit Button Styling */
-.reference-page-panel button {
+.list-page-panel button {
     background-color: #007bff;
     color: #ffffff;
     border: none;
@@ -49,6 +49,6 @@
     margin-top: 10px;
 }
 
-.reference-page-panel button:hover {
+.list-page-panel button:hover {
     background-color: #0056b3;
 }

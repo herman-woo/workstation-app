@@ -1,20 +1,12 @@
+@import '../../../styles/account-card.scss';
 @import '../../../styles/account-page.scss';
-
-.named-insured-card {
-    width: 740px;
-    height: 330px;
-    display: flex;
-    flex-direction: column;
-}
 
 .named-insured-card h1 {
     margin: 0 0 4px 0;
 }
+
 .named-insured-card h2 {
     font-size: 1em;
-}
-.named-insured-card h2,
-.named-insured-card h3 {
     margin: 0 0 10px 0;
     color: #333;
 }
@@ -24,17 +16,4 @@
     text-decoration: none;
     font-size: 1.4em;
     font-weight: bold;
-}
-
-.Broker-info-container,
-.Broker-company-container {
-    width: 48%;
-}
-
-.broker-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 10px;
-    margin: 1vh;
 }

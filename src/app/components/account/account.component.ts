@@ -7,6 +7,8 @@ import { RatingQuotingTabComponent } from '../../components/rating-quoting-tab/r
 import { FileStructureComponent } from '../../components/file-structure-tab/file-structure.component';
 import { AccountNotesComponent } from '../../components/notes-tab/account-notes.component';
 import { AccountService } from '../../../services/account.service';
+import { AccountEntitiesComponent } from '../account-entities/account-entities.component';
+import { AccountSummaryCardComponent } from '../account-status-card/account-status-card.component';
 
 @Component({
   selector: 'app-account',
@@ -16,8 +18,9 @@ import { AccountService } from '../../../services/account.service';
     RatingQuotingTabComponent,
     FileStructureComponent,
     AccountNotesComponent,
-    BreadcrumbComponent
-  ],
+    BreadcrumbComponent,
+    AccountEntitiesComponent,
+    AccountSummaryCardComponent],
   templateUrl: './account.component.html',
   styleUrl: './account.component.scss'
 })

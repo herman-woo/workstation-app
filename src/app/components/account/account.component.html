@@ -1,6 +1,10 @@
+<!--  Insurance Account -->
 <breadcrumb [category]="'Accounts'" [id]="id"></breadcrumb>
-<risk-summary [data]="accountRecord"></risk-summary>
 <div class="account-container">
+    <div class="account-row">
+        <account-entities [data]="accountRecord"></account-entities>
+        <account-status-card [accountData]="accountRecord"></account-status-card>
+    </div>
     <div class="account-tabs">
         <button [ngClass]="{ 'active': activeTab === 1 }" (click)="setActiveTab(1)">Risk Summary</button>
         <button [ngClass]="{ 'active': activeTab === 2 }" (click)="setActiveTab(2)">Rating / Quoting</button>
@@ -9,12 +13,15 @@
     </div>
     <div class="tab-content">
         <div *ngIf="activeTab === 1">
-            <rating-quoting [data]="accountRecord"></rating-quoting>
+            <risk-summary [data]="accountRecord"></risk-summary>
         </div>
         <div *ngIf="activeTab === 2">
-            <file-structure></file-structure>
+            <rating-quoting [data]="accountRecord"></rating-quoting>
         </div>
         <div *ngIf="activeTab === 3">
+            <file-structure></file-structure>
+        </div>
+        <div *ngIf="activeTab === 4">
             <account-notes></account-notes>
         </div>
     </div>
