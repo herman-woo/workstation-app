@@ -1,0 +1,28 @@
+@import '../../../styles/account-page.scss';
+
+
+.auditing-checklist {
+    width: 300px;
+    margin-bottom: 8px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1em;
+    display: flex;
+}
+
+label.active {
+    border: 2px solid black;
+    background-color: rgb(8, 169, 126);
+    color: white;
+    box-shadow: none;
+}
+label:hover,
+input:hover {
+    cursor: pointer;
+}
+
+input:hover {
+    color: rgb(23, 67, 105);
+}

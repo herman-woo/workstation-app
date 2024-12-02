@@ -1,0 +1,53 @@
+@import '../../../styles/account-page.scss';
+@import '../rating-quoting-tab/rating-quoting-tab.component.scss';
+
+.risk-line-items-headers th{
+    width: 25%;
+    border: 2px solid rgb(226, 226, 226);
+    background-color: rgb(116, 116, 116);
+    font-size: 14px;
+    align-items: center;
+    color: white;
+}
+.risk-line-items td{
+    width: 25%;
+    font-size: 14px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.risk-line-items-subtotals th{
+    width: 25%;
+    border: 2px solid rgb(226, 226, 226);
+    background-color: rgb(226, 226, 226);
+    font-size: 14px;
+    align-items: center;
+    color: rgb(102, 102, 102);
+}
+.risk-line-items-totals th{
+    width: 25%;
+    border: 2px solid rgb(116, 116, 116);
+    background-color: rgb(116, 116, 116);
+    font-size: 14px;
+    align-items: center;
+    color: rgb(102, 102, 102);
+}
+
+.rating-table{
+    width: 90%;
+}
+
+.risk-subtotals {
+    margin-top: 20px;
+}
+.risk-totals {
+    margin-top: 0px;
+}
+
+.risk-revenue{
+    width: 90%;
+    text-align: end;
+}

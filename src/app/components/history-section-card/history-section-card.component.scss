@@ -1,0 +1,31 @@
+@import '../../../styles/account-page.scss';
+
+.history-section{
+    width: 720px;
+}
+
+.history-section h1 {
+    color: rgb(125, 125, 125);
+}
+.history-table{
+    width: 100%;
+}
+
+.history-table-user,
+.history-table-timestamp{
+    width: 25%;
+}
+.history-table-action{
+    width: 50%;
+}
+.history-table th{
+    border: 2px solid rgb(226, 226, 226);
+    background-color: rgb(116, 116, 116);
+    color: white ;
+    font-size: 1.5em;
+}
+.history-table td{
+    text-align: center;
+    font-size: 1.2em;
+    margin: 5px;
+}
