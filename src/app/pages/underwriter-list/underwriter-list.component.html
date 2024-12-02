@@ -1,11 +1,11 @@
 <underwriter-form #underwriterForm></underwriter-form>
-<div class="reference-page-container">
-    <div class="reference-page-header">
+<div class="list-page-container">
+    <div class="list-page-header">
         <app-reference-banner [title]="title"></app-reference-banner>
     </div>
     
     <div class="table-container">
-        <div class="reference-page-panel">
+        <div class="list-page-panel">
             <div class="search-container">
                 <input type="text" placeholder="Search by Underwriter Name..." [(ngModel)]="query" (keyup)="search()"
                     class="search-bar" />

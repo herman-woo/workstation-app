@@ -1,0 +1,13 @@
+@import '../../../styles/account-card.scss';
+@import '../../../styles/account-page.scss';
+
+.entities-container {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+
+.contacts-container {
+    display: flex;
+    flex-direction: row;
+}

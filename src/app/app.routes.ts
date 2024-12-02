@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { AccountComponent } from './pages/account/account.component';
+import { AccountComponent } from './components/account/account.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { UnderwriterRecordComponent } from './pages/underwriter-record/underwriter-record.component';
 import { UnderwriterListComponent } from './pages/underwriter-list/underwriter-list.component';
