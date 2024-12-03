@@ -4,6 +4,7 @@ import { MainBannerComponent } from './components/main-banner/main-banner.compon
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { CommonModule } from '@angular/common';
 import { SidebarService } from '../services/sidebar.service';
+import { HeaderComponent } from './layout/header/header.component';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,8 @@ import { SidebarService } from '../services/sidebar.service';
     CommonModule,
     RouterOutlet,
     MainBannerComponent,
-    SidebarComponent
+    SidebarComponent, 
+    HeaderComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'] // corrected from `styleUrl`

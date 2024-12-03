@@ -1,0 +1,29 @@
+<header class="header">
+    <mat-toolbar class=" header__searchbar">
+        <mat-form-field class="header__searchfield" [hideRequiredMarker]="hideRequired()" [floatLabel]="floatLabel()">
+            <input 
+                class="header__searchtext" 
+                matInput placeholder="Search for an account, policy, client or broker" 
+            required />
+        </mat-form-field>
+    </mat-toolbar>
+    <!-- <mat-card class="avatar-card">
+        <mat-card-header>
+          <mat-icon mat-card-avatar svgIcon="person"></mat-icon>
+          <mat-card-title>User Name</mat-card-title>
+          <mat-card-subtitle>User Name</mat-card-subtitle>
+        </mat-card-header>
+    </mat-card> -->
+      
+    <div class="header__user">
+        <div class="header__user-info">
+            <p class="header__username">Herman Who?</p>
+            <p class ="header__team">Environmental</p>
+            <p class="header__user-role">Underwriter</p>
+        </div>
+
+        <div class="header__profile">
+            <img class="header__avatar" src="/images/trees.jpg">
+        </div>
+    </div>
+</header>

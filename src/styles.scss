@@ -1,12 +1,39 @@
-body, html {
-    margin: 0;
-    padding: 0;
-  }
+// body, html {
+//     margin: 0;
+//     padding: 0;
+//   }
 
-body{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  font-family: Arial, sans-serif;
-  color: #333;
+// body{
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+//   font-family: Arial, sans-serif;
+//   color: #333;
+// }
+
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* You can add global styles to this file, and also import other style files */
+@import "./styles/partials/colors";
+@import "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Parkinsans:wght@300..800&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap";
+
+
+
+
+html,
+body {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Lato", "Helvetica Neue", sans-serif;
+    box-sizing: border-box;
+    border: 2px solid $dark-green;
+}
+
+textarea:focus, input:focus{
+    outline: none;
 }
