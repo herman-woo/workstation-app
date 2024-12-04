@@ -1,1 +1,133 @@
-<p>submission works!!!!</p>
+<div class="form-container">
+    <h1>Submission Form</h1>
+    <form [formGroup]="form" class="form">
+  
+      <!-- Insured Name -->
+      <div class="form-group">
+        <label for="insuredName">Insured Name</label>
+        <input
+          id="insuredName"
+          class="form-input"
+          [formControl]="insuredNameControl"
+          type="text"
+          placeholder="Search insured name"
+        />
+      </div>
+    <!-- Dropdown for insured suggestions -->
+  <ul *ngIf="isInsuredDropdownVisible && insuredNames.length > 0" class="dropdown">
+    <li
+      *ngFor="let insured of insuredNames"
+      (click)="selectInsured(insured)"
+      role="listitem"
+      tabindex="0"
+      class="dropdown-item"
+    >
+      {{ insured.name }}
+    </li>
+  </ul>
+      <!-- Broker First Name -->
+      <div class="form-group">
+        <label for="brokerFirstName">Broker First Name</label>
+        <input
+          id="brokerFirstName"
+          class="form-input"
+          [formControl]="brokerFirstNameControl"
+          type="text"
+          placeholder="Search broker first name"
+        />
+      </div>
+  
+      <!-- Broker Last Name -->
+      <div class="form-group">
+        <label for="brokerLastName">Broker Last Name</label>
+        <input
+          id="brokerLastName"
+          class="form-input"
+          [formControl]="brokerLastNameControl"
+          type="text"
+          placeholder="Search broker last name"
+        />
+      </div>
+  
+      <!-- Dropdown for broker suggestions -->
+      <ul
+        *ngIf="isDropdownVisible && brokerNames.length > 0"
+        class="dropdown"
+        role="list"
+      >
+        <li
+          *ngFor="let broker of brokerNames"
+          (click)="selectBroker(broker)"
+          role="listitem"
+          tabindex="0"
+          class="dropdown-item"
+        >
+          <div class="broker-info">
+            <strong>{{ broker.first_name }} {{ broker.last_name }}</strong>
+            <span class="broker-email">{{ broker.broker_email }}</span>
+            <span class="broker-company">{{ broker.broker_company_name }}</span>
+          </div>
+        </li>
+      </ul>
+  
+      <!-- Broker Email -->
+      <div class="form-group">
+        <label for="email">Broker Email</label>
+        <input id="email" class="form-input" formControlName="email" type="email" placeholder="Enter email" />
+      </div>
+  
+      <!-- Broker Company -->
+      <div class="form-group">
+        <label for="brokerCompany">Broker Company</label>
+        <input
+          id="brokerCompany"
+          class="form-input"
+          formControlName="brokerCompany"
+          type="text"
+          placeholder="Search broker company"
+        />
+        <!-- Dropdown for suggestions -->
+        <ul
+          *ngIf="isCompanyDropdownVisible"
+          class="dropdown"
+          role="list"
+        >
+          <li
+            *ngFor="let company of filteredCompanies"
+            (click)="selectCompany(company)"
+            role="listitem"
+            tabindex="0"
+            class="dropdown-item"
+          >
+            {{ company.name }}
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Hidden or readonly field to store selected company details -->
+      <!-- <input type="hidden" formControlName="brokerCompanyDetails" /> -->
+      
+  
+      <!-- Broker Address -->
+      <div class="form-group">
+        <label for="brokerAddress">Broker Address</label>
+        <input id="brokerAddress" class="form-input" formControlName="brokerAddress" type="text" placeholder="Enter address" />
+      </div>
+  
+      <!-- Drag and Drop -->
+      <div class="drag-drop-zone" (drop)="onDrop($event)" (dragover)="onDragOver($event)">
+        <p>Drag and drop your email file here</p>
+      </div>
+  
+      
+  
+      <!-- Add New Broker Button -->
+      <button type="button" class="btn-add-broker" (click)="addNewBroker()">
+        Add a New Broker
+      </button>
+  
+      <!-- Submit Button -->
+      <button type="button" class="btn-submit" (click)="submitForm()">Submit</button>
+    </form>
+  </div>
+  
