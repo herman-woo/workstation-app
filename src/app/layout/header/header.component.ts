@@ -6,6 +6,7 @@ import {FloatLabelType, MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import { FormBuilder, FormControl, FormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
 
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
@@ -20,7 +21,9 @@ import { map } from 'rxjs';
     MatFormFieldModule,
     MatSelectModule,
     FormsModule,
-    MatCardModule
+    MatCardModule,
+    MatIconModule
+
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './header.component.html',
