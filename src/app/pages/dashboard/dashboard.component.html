@@ -3,7 +3,7 @@
         Underwriter Actions
     </div>
     <div class="actions-grid">
-        <action-item *ngFor="let item of underwriterActions" [icon]="item.icon" [action]="item.action">
+        <action-item *ngFor="let item of underwriterActions" [icon]="item.icon" [action]="item.action" (actionClicked)="onActionClicked($event)">
         </action-item>
     </div>
     <div class="dashboard-item-title">
@@ -15,7 +15,11 @@
                 <th>Account ID</th>
                 <th>Year</th>
                 <th>PolicyID</th>
-                <th>Named Insured</th>
+                <th>
+                    <div class="search-container">
+                        <input type="text" placeholder="Named Insured" [(ngModel)]="insuredFilter" (keyup)="search()" class="search-bar" />
+                    </div>
+                </th>
                 <th>Business Unit</th>
                 <th>Team</th>
                 <th>Underwriter</th>

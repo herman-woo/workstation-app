@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
   templateUrl: './account-status-card.component.html',
   styleUrl: './account-status-card.component.scss'
 })
-export class AccountSummaryCardComponent {
+export class AccountStatusCardComponent {
 
   @Input() accountData: any;
 
