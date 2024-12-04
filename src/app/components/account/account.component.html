@@ -1,6 +1,16 @@
 <!--  Insurance Account -->
-<breadcrumb [category]="'Accounts'" [id]="id"></breadcrumb>
+<breadcrumb [category]="accountRecord.business_unit_data.name" [id]="id"></breadcrumb>
 <div class="account-container">
+    <div class="account-row account-header">
+        <tr>
+            <td>
+                <h2 class="product-name">Product: {{accountRecord.product_type}}</h2>
+            </td>
+            <td>
+                <h2 *ngIf="accountRecord.policy_id">Policy ID: {{accountRecord.policy_id}}</h2>
+            </td>
+        </tr>
+    </div>
     <div class="account-row">
         <account-entities [data]="accountRecord"></account-entities>
         <account-status-card [accountData]="accountRecord"></account-status-card>

@@ -1,0 +1,9 @@
+<div class="breadcrumb">
+    <a [routerLink]="['/']" class="breadcrumb-item">Root</a>
+    <span class="breadcrumb-separator">></span>
+    <a [routerLink]="['/', link]" class="breadcrumb-item">{{category}}</a>
+    <span class="breadcrumb-separator">></span>
+    <a [routerLink]="['/', link]" class="breadcrumb-item">{{category}}</a>
+    <span class="breadcrumb-separator">></span>
+    <span class="breadcrumb-item active">ID: {{id}}</span>
+  </div>
