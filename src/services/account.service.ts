@@ -10,8 +10,20 @@ import { map } from 'rxjs/operators'; // Correct import for `map`
 export class AccountService {
   private apiUrl = 'http://localhost:8000/insurance/account/';
   constructor(private http: HttpClient) {}
-  getAllAccounts(namedInsuredId:number): Observable<{ accounts: any[], count: number, next: string | null, previous: string | null }> {
-    return this.http.get<PaginatedResponse<any>>(this.apiUrl).pipe(
+  getAllAccounts(namedInsured:string): Observable<{ accounts: any[], count: number, next: string | null, previous: string | null }> {
+    return this.http.get<PaginatedResponse<any>>(this.apiUrl+'?insured='+namedInsured).pipe(
+      map(response => (
+        {
+          accounts: response.results.map(data => data),
+          count: response.count,
+          next: response.next,
+          previous: response.previous
+        }))
+    );
+  }
+
+  getAccountsByForeignKey(param: string, id:number): Observable<{ accounts: any[], count: number, next: string | null, previous: string | null }> {
+    return this.http.get<PaginatedResponse<any>>(this.apiUrl+'key/'+param+'/'+id).pipe(
       map(response => (
         {
           accounts: response.results.map(data => data),
@@ -25,6 +37,5 @@ export class AccountService {
   getAccountById(id:number): Observable<any> {
     return this.http.get<any>(this.apiUrl+id)
   }
-
 
 }

@@ -20,7 +20,7 @@
         <button>Edit</button>
     </div>
     <div class="page-section">
-        <h2>Insured's Accounts</h2>
+        <h2>Linked Accounts</h2>
         <div class="table-container">
             <table class="task-table">
                 <thead>
@@ -28,25 +28,29 @@
                         <th>Year</th>
                         <th>PolicyID</th>
                         <th>Underwriter</th>
+                        <th>Submission Type</th>
                         <th>Product</th>
+                        <th>Policy Start Date</th>
+                        <th>Policy End Date</th>
                         <th>Status</th>
-                        <th>Last Updated</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="let account of accounts">
                         <td>
-                            <a [routerLink]="['/account', account.id]">{{ account.created_time.slice(0, 4) }}</a>
+                            <a [routerLink]="['/account', account.id]">{{ account.year}}</a>
                         </td>
                         <td>
                             <a [routerLink]="['/account', account.id]">{{ account.policy_id }}</a>
                         </td>
                         <td>
-                            <a [routerLink]="['/underwriter', account.underwriter_id]">{{ account.underwriter_data.first_name }}</a>
+                            <a [routerLink]="['/underwriter', account.underwriter]">{{ account.underwriter_data.first_name }} {{ account.underwriter_data.last_name }}</a>
                         </td>
-                        <td>{{ account.product }}</td>
-                        <td>{{ account.status }}</td>
-                        <td>{{ account.lastUpdated }}</td>
+                        <td>{{ account.submission_type }}</td>
+                        <td>{{ account.product_type }}</td>
+                        <td>{{ account.policy_start_date }}</td>
+                        <td>{{ account.policy_end_date }}</td>
+                        <td>{{ account.account_status }}</td>
                     </tr>
                 </tbody>
             </table>
