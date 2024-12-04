@@ -1,0 +1,35 @@
+  /* Breadcrumb Container */
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 0.9em;
+    color: #555;
+    padding: 10px 0;
+  }
+  
+  /* Breadcrumb Items */
+  .breadcrumb-item {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.2s;
+  }
+  
+  .breadcrumb-item:hover {
+    color: #0056b3;
+  }
+  
+  /* Active Item Styling */
+  .breadcrumb-item.active {
+    color: #333;
+    font-weight: bold;
+    pointer-events: none;
+  }
+  
+  /* Separator Styling */
+  .breadcrumb-separator {
+    color: #888;
+    margin: 0 5px;
+  }
+  

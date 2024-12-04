@@ -8,7 +8,7 @@ import { FileStructureComponent } from '../../components/file-structure-tab/file
 import { AccountNotesComponent } from '../../components/notes-tab/account-notes.component';
 import { AccountService } from '../../../services/account.service';
 import { AccountEntitiesComponent } from '../account-entities/account-entities.component';
-import { AccountSummaryCardComponent } from '../account-status-card/account-status-card.component';
+import { AccountStatusCardComponent } from '../account-status-card/account-status-card.component';
 
 @Component({
   selector: 'app-account',
@@ -20,7 +20,7 @@ import { AccountSummaryCardComponent } from '../account-status-card/account-stat
     AccountNotesComponent,
     BreadcrumbComponent,
     AccountEntitiesComponent,
-    AccountSummaryCardComponent],
+    AccountStatusCardComponent,],
   templateUrl: './account.component.html',
   styleUrl: './account.component.scss'
 })
