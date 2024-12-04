@@ -10,7 +10,7 @@
     @include flex(space-between, center);
 
     &__searchbar{
-        width: 25%;
+        width: 25rem;
         height: 3rem;
         padding: 0;
         margin: 0;
@@ -21,6 +21,7 @@
     &__searchfield{
         width: 100%;
         margin: 0;
+        padding:0;
     }
     
     &__searchtext{
@@ -71,10 +72,9 @@
 
     &__avatar{
         background-color: $dark_blue;
-        border: 1px solid saddlebrown;
         width: 2.85rem;
         height: 2.85rem;
-        border-radius: 50%;
+        border-radius: 15%;
 
     }
 }
