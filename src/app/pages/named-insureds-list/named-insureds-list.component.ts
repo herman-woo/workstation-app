@@ -33,11 +33,13 @@ export class NamedInsuredsListComponent {
       (data) => {
         this.insureds = data; // Update the results with the API response
         this.isLoading = false; // Stop loading
-      },
-      (error) => {
-        console.error('Error fetching search results:', error);
-        this.isLoading = false; // Stop loading
+        console.log(this.query)
       }
+      // ,
+      // (error) => {
+      //   console.error('Error fetching search results:', error);
+      //   this.isLoading = false; // Stop loading
+      // }
     );
   }
 
