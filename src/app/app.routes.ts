@@ -10,6 +10,7 @@ import { BrokerRecordComponent } from './pages/broker-record/broker-record.compo
 import { BrokerCompaniesListComponent } from './pages/broker-companies-list/broker-companies-list.component';
 import { RiskSummaryTabComponent } from './components/risk-summary-tab/risk-summary-tab.component';
 import { CompanyRecordComponent } from './pages/company-record/company-record.component';
+import { SubmissionComponent } from './pages/submission/submission.component';
 
 export const routes: Routes = [
     //main page references
@@ -28,5 +29,6 @@ export const routes: Routes = [
     { path: 'brokercompany', redirectTo: '/brokercompanies', pathMatch: 'full' },
     { path: 'brokercompany/:id', component: CompanyRecordComponent},
     { path: 'account/:id', component: AccountComponent},
-    { path: 'account/risksummary/:id', component: RiskSummaryTabComponent}
+    { path: 'account/risksummary/:id', component: RiskSummaryTabComponent},
+    { path: 'submission', component: SubmissionComponent},
 ];
