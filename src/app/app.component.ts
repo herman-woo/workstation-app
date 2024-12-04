@@ -5,6 +5,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { CommonModule } from '@angular/common';
 import { SidebarService } from '../services/sidebar.service';
 import { HeaderComponent } from './layout/header/header.component';
+import { HeroSectionComponent } from './layout/hero-section/hero-section.component';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ import { HeaderComponent } from './layout/header/header.component';
     RouterOutlet,
     MainBannerComponent,
     SidebarComponent, 
-    HeaderComponent
+    HeaderComponent,
+    HeroSectionComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'] // corrected from `styleUrl`
