@@ -3,7 +3,7 @@
         Underwriter Actions
     </div>
     <div class="actions-grid">
-        <action-item *ngFor="let item of underwriterActions" [icon]="item.icon" [action]="item.action">
+        <action-item *ngFor="let item of underwriterActions" [icon]="item.icon" [action]="item.action" (actionClicked)="onActionClicked($event)">
         </action-item>
     </div>
     <div class="dashboard-item-title">

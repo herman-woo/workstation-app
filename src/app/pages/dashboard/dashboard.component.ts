@@ -5,6 +5,7 @@ import { ActivatedRoute,RouterLink } from '@angular/router';
 import { AccountService } from '../../../services/account.service';
 import * as actions from "../../components/action-item/UnderwriterActions.json";
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -20,7 +21,7 @@ export class DashboardComponent {
   insuredFilter: string; // Search query entered by the user
   isLoading: boolean = false; // Show a loading indicator during the API call
 
-  constructor(private route: ActivatedRoute,
+  constructor(private route: ActivatedRoute,  private router: Router, 
     private accountService: AccountService) { }
     search(): void {
       if (!this.insuredFilter.trim()) {
@@ -54,4 +55,23 @@ export class DashboardComponent {
         }
       })
     }
+
+    // Handle action click and route based on the action
+  onActionClicked(action: string): void {
+    if (action === 'Submission') {
+      this.router.navigate(['/submission']); // Navigate to the "submission" page
+    } else if (action === 'Renewal') {
+      this.router.navigate(['/renewal']); // these actions are not used as of now 
+    } else if (action === 'Rating') {
+      this.router.navigate(['/rating']); 
+    } else if (action === 'Quoting') {
+      this.router.navigate(['/quoting']); 
+    } else if (action === 'Binding') {
+      this.router.navigate(['/binding']); 
+    } else if (action === 'Search') {
+      this.router.navigate(['/search']); 
+    }
+  }
+
+  
 }
