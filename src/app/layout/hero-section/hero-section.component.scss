@@ -1,0 +1,17 @@
+@use "../../../styles/partials/mixin" as *;
+.hero{
+    padding: 1rem 2.5rem;
+    // @include flex(space-, center)
+}
+
+.action{
+    border: 1px solid red;
+    width: 100%;
+    height: 20rem;
+    @include flex( center, center);
+
+    &__item{
+        width: 5rem;
+
+    }
+}

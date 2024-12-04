@@ -1,0 +1,92 @@
+@use "../../../styles/partials/breakpoint" as *;
+@use "../../../styles/partials/mixin" as *;
+@use "../../../styles/partials/colors" as *;
+@use "../../../styles/partials/font_sizes" as *;
+
+.header{
+    border-bottom:1px solid $slate;
+    padding: 1rem 2.5rem;
+    box-sizing: border-box;
+    @include flex(space-between, center);
+
+    &__searchbar{
+        width: 25rem;
+        height: 3rem;
+        padding: 0;
+        margin: 0;
+        background-color: $light-blue;
+        border-radius: 0.25rem;
+        @include flex(start, center)
+    }
+
+    &__searchfield{
+        width: 100%;
+        margin: 0;
+        padding:0;
+    }
+    
+    &__searchtext{
+        border: none;
+        background-color: transparent;
+        width: 100%;   
+    }
+
+    &__user{
+        width: 17.5%;
+        @include flex(end, center);
+        gap: 1rem;
+    }
+    &__action{
+        @include flex(center, center);
+        height: 3rem;
+        gap: 0.25rem;
+        border-right: 1px solid $cloud;
+        padding-right: 1rem;
+    }
+    &__icon{
+        align-self: center;
+        color: $graphite;
+    }
+    &__user-info{
+        width: fit-content;
+        @include flex(center, start);
+        flex-direction: column;
+    }
+    &__username{
+        // border: 1px solid red;
+        padding: 0;
+        margin: 0;
+        @include font(0.875rem, 1.375rem, 700)
+  
+    }
+    &__team{
+        // border: 1px solid red;
+        padding: 0;
+        margin: 0;
+        color: $slate;
+        @include font(0.75rem, 1.375rem, 700);
+    }
+    &__user-role{
+        // border: 1px solid red;
+        padding: 0;
+        margin: 0;
+        font-style: oblique;
+
+        color: $slate;
+        @include font(0.75rem, 1.375rem, 400)
+    }
+
+    &__ profile{
+        border: 1px solid yellow;
+
+    }
+    
+
+    &__avatar{
+        background-color: $dark_blue;
+        width: 2.85rem;
+        height: 2.85rem;
+        border-radius: 15%;
+
+    }
+}
