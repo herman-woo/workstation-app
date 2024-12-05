@@ -24,3 +24,43 @@ $green: #158463;
 $opaque-green: #15846312;
 $red: #C94515;
 $opaque-red: #C9451512;
+
+@mixin pink-gradient_bg{
+    background: linear-gradient(
+		-45deg,
+		#ffffff,
+		#ffe4e9,
+		#fcc8e2,
+		#f6baed,
+		#efb0ff,
+		#d3a2ff,
+		#8eb8ff,
+		#91efff,
+		#d5f9ff
+	);
+}
+
+@mixin purple-gradient-bg{
+    background: linear-gradient(
+        109.6deg, rgb(9, 9, 121) 11.2%,
+         rgb(144, 6, 161) 53.7%, 
+         #b19cd9 100.2%
+    );
+
+
+}
+
+@mixin dark-pink-gradient-bg{
+    background: linear-gradient(
+        45deg,
+        #2e0854, /* Dark Indigo */
+        #4b0082, /* Indigo */
+        #800080, /* Purple */
+        #b19cd9, /* Light Purple */
+        #d8bfd8, /* Thistle */
+        #dda0dd, /* Plum */
+        #ffb6c1  /* Light Pink */
+    );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}

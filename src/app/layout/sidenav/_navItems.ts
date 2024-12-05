@@ -2,14 +2,13 @@ type MaterialIconName = 'home' | 'lists' | 'case' | 'text_fields' | 'widgets' | 
 
 interface NavItem {
   name: string;
-  icon?: MaterialIconName;
+  icon?: string;
   route?: string;
   children?: NavItem[];
   isActive?: boolean;
 }
 
 export const navItems: NavItem[] = [
-  { name: 'Home', icon: 'home', route: '/' },
   { 
     name: 'HOME', 
     icon: 'home', 

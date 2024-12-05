@@ -1,0 +1,17 @@
+<div class="uw-action">
+    <p class="uw-action__subheader">Underwiter Actions</p>
+    <h1>{{action}}</h1>
+
+    <ul 
+        class="uw-action__list">
+        <li 
+            *ngFor="let uwAction of uwActions "
+            class="uw-action__item"
+            (click)="setActiononClick(uwAction.name)">
+
+            <img class="uw-action__icon" [src]="uwAction.icon" alt="action.name">
+            <p class="uw-action__text">{{uwAction.name}}</p>
+        </li>
+    </ul>
+
+</div>

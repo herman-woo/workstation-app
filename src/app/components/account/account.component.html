@@ -1,6 +1,6 @@
 <!--  Insurance Account -->
 <breadcrumb [category]="accountRecord.business_unit_data.name" [id]="id"></breadcrumb>
-<div class="account-container">
+<div class="account">
     <div class="account-row account-header">
         <tr>
             <td>
@@ -11,10 +11,14 @@
             </td>
         </tr>
     </div>
-    <div class="account-row">
+    <div  class="hero">
         <account-entities [data]="accountRecord"></account-entities>
         <account-status-card [accountData]="accountRecord"></account-status-card>
     </div>
+    <!-- <div class="account-row">
+        <account-entities [data]="accountRecord"></account-entities>
+        <account-status-card [accountData]="accountRecord"></account-status-card>
+    </div> -->
     <div class="account-tabs">
         <button [ngClass]="{ 'active': activeTab === 1 }" (click)="setActiveTab(1)">Risk Summary</button>
         <button [ngClass]="{ 'active': activeTab === 2 }" (click)="setActiveTab(2)">Rating / Quoting</button>

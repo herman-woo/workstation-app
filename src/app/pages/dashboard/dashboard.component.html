@@ -1,12 +1,47 @@
 <div class="dashboard">
-    <div class="dashboard-item-title">
-        Underwriter Actions
+
+    <div class="dashboard__hero">
+        <app-welcome class="dashboard__welcome"></app-welcome>
+        <underwriter-actions class="dashboard__welcome"></underwriter-actions>
+
+        <!-- <div class="dashboard-item-title">
+            Underwriter Actions
+        </div>
+        <div class="actions-grid">
+            <action-item *ngFor="let item of underwriterActions" [icon]="item.icon" [action]="item.action"
+                (actionClicked)="onActionClicked($event)">
+            </action-item>
+    </div> -->
+
+        <!-- <div class="dashboard__action">
+            <p class="dashboard__subtitle">
+                Underwriter Actions
+            </p>
+            <div class="dashboard__actions-grid">
+                <action-item *ngFor="let item of underwriterActions" [icon]="item.icon" [action]="item.action"
+                    (actionClicked)="onActionClicked($event)">
+                </action-item>
+            </div>
+        </div> -->
+
     </div>
-    <div class="actions-grid">
-        <action-item *ngFor="let item of underwriterActions" [icon]="item.icon" [action]="item.action"
-            (actionClicked)="onActionClicked($event)">
-        </action-item>
-    </div>
+
+    <mat-tab-group class="dashboard__main">
+        <mat-tab label="Overview"> 
+            <overview-tab></overview-tab>
+        </mat-tab>
+        <mat-tab label="Renewal"> 
+            Content 2 
+        </mat-tab>
+        <mat-tab label="Bound"> 
+            Content 3 
+        </mat-tab>
+        <mat-tab label="Team"> 
+            Content 3 
+        </mat-tab>
+    </mat-tab-group>
+
+
     <div class="dashboard-item-title">
         Your Accounts
     </div>
@@ -41,7 +76,7 @@
     </table>
     <div class="notifications-grid">
     </div>
-    <div class="dashboard-item-title">
+    <!-- <div class="dashboard-item-title">
         History
     </div>
     <div class="actions-grid">
@@ -51,5 +86,5 @@
         <div class="dashboard-item">
             <div class="dashboard-item-content">Projects</div>
         </div>
-    </div>
+    </div> -->
 </div>

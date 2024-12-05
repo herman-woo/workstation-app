@@ -5,13 +5,28 @@ import { ActivatedRoute,RouterLink } from '@angular/router';
 import { AccountService } from '../../../services/account.service';
 import * as actions from "../../components/action-item/UnderwriterActions.json";
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router} from '@angular/router'
+import { WelcomeComponent } from '../../layout/welcome/welcome.component';
+import { UnderwriterActionsComponent } from "../../layout/underwriter-actions/underwriter-actions.component";
+import {MatTabsModule} from '@angular/material/tabs';
+import { OverviewTabComponent } from '../../layout/overview-tab/overview-tab.component';
+
 
 
 @Component({
   selector: 'dashboard',
   standalone: true,
-  imports: [CommonModule, ActionItemComponent,RouterLink, FormsModule],
+  imports: [
+    CommonModule, 
+    ActionItemComponent, 
+    RouterLink, 
+    FormsModule, 
+    WelcomeComponent, 
+    UnderwriterActionsComponent,
+    MatTabsModule,
+    OverviewTabComponent
+
+  ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })

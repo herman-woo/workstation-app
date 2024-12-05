@@ -1,0 +1,28 @@
+{
+    "underwriter actions" : [
+        {
+            "action" : "Submission",
+            "icon" : "/images/document-svgrepo-com.svg"
+        },
+        {
+            "action" : "Renewal",
+            "icon" : "/images/refresh-svgrepo-com.svg"
+        },
+        {
+            "action" : "Rating",
+            "icon" : "/images/edit-svgrepo-com.svg"
+        },
+        {
+            "action" : "Quoting",
+            "icon" : "/images/chat-svgrepo-com.svg"
+        },
+        {
+            "action" : "Binding",
+            "icon" : "/images/Binding.svg"
+        },
+        {
+            "action" : "Search",
+            "icon" : "/images/Search.svg"
+        }
+    ]
+}
