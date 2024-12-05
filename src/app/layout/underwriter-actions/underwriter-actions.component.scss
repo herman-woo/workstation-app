@@ -20,7 +20,7 @@
         @include subheader;
         padding: 0 ;
         width: 100%;
-        border: 1px solid red;
+        // border: 1px solid red;
     }
 
     &__list{
@@ -29,7 +29,6 @@
         margin:  0;
         @include flex(center, center);
         gap: 2rem;
-        border: 1px solid red;
     }
     &__item{
         @include flex(center, space-between);
@@ -59,10 +58,11 @@
 
     &__icon{
         height: 3rem;
-        border: 1px solid greenyellow;
     }
     &__text{
-        border: 1px solid red;
+        // border: 1px solid red;
+        @include labels-links;
+        color: $slate;
     }
 
 

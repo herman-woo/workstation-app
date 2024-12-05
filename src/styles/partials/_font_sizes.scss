@@ -54,3 +54,10 @@
     @include font(0.75rem, 1.125rem, 400)
   }
 }
+
+@mixin labels-links {
+  @include font(0.5rem, 1rem, 400);
+  @include tablet {
+    @include font(0.6125rem, 1.25rem, 400);
+  }
+}
