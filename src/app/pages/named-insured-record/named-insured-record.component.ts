@@ -35,8 +35,6 @@ export class NamedInsuredRecordComponent {
     this.insuredService.getNamedInsuredById(parseInt(this.namedInsuredId!)).subscribe((data: NamedInsured) => this.insured = data)
     this.loadData()
 
-    
-
   }
   loadData() {
     this.accountService.getAccountsByForeignKey("named_insured",parseInt(this.namedInsuredId)).subscribe({

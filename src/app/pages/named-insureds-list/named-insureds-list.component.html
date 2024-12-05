@@ -18,7 +18,6 @@
                     <th>Insured</th>
                     <th>Mailing Address</th>
                     <th>Province</th>
-                    <th># of Linked Accounts</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,7 +25,6 @@
                     <td><a [routerLink]="['/insured', insured.id]">{{insured.name}}</a> </td>
                     <td>{{ insured.address }}, {{ insured.postalCode }}</td>
                     <td>{{ insured.province }}</td>
-                    <td></td>
                 </tr>
             </tbody>
         </table>

@@ -33,6 +33,7 @@
                         <th>Policy Start Date</th>
                         <th>Policy End Date</th>
                         <th>Status</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -51,6 +52,7 @@
                         <td>{{ account.policy_start_date }}</td>
                         <td>{{ account.policy_end_date }}</td>
                         <td>{{ account.account_status }}</td>
+                        <td><button [routerLink]="['/account', account.id]">open</button></td>
                     </tr>
                 </tbody>
             </table>
