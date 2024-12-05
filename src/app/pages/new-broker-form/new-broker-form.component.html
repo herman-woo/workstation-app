@@ -1,0 +1,105 @@
+<div class="form-container">
+    <h1 class="form-title">Add a New Broker</h1>
+    <form [formGroup]="form" (ngSubmit)="submitForm()" class="form">
+  
+      <!-- Insured Name -->
+      <div class="form-group">
+        <label for="insuredName" class="form-label">Insured Name</label>
+        <input
+          id="insuredName"
+          class="form-input"
+          formControlName="insuredName"
+          type="text"
+          placeholder="Enter Insured name"
+          aria-label="Broker Insured Name"
+        />
+      </div>
+  
+      <!-- Broker First Name -->
+      <div class="form-group">
+        <label for="brokerFirstName" class="form-label">First Name</label>
+        <input
+          id="brokerFirstName"
+          class="form-input"
+          formControlName="brokerFirstName"
+          type="text"
+          placeholder="Enter first name"
+          aria-label="Broker First Name"
+        />
+      </div>
+  
+      <!-- Broker Last Name -->
+      <div class="form-group">
+        <label for="brokerLastName" class="form-label">Last Name</label>
+        <input
+          id="brokerLastName"
+          class="form-input"
+          formControlName="brokerLastName"
+          type="text"
+          placeholder="Enter last name"
+          aria-label="Broker Last Name"
+        />
+      </div>
+  
+      <!-- Broker Email -->
+      <div class="form-group">
+        <label for="email" class="form-label">Email</label>
+        <input
+          id="email"
+          class="form-input"
+          formControlName="email"
+          type="email"
+          placeholder="Enter email"
+          aria-label="Broker Email"
+        />
+      </div>
+  
+      <!-- Broker Company -->
+      <div class="form-group">
+        <label for="brokerCompany" class="form-label">Company</label>
+        <input
+          id="brokerCompany"
+          class="form-input"
+          formControlName="brokerCompany"
+          type="text"
+          placeholder="Enter company name"
+          aria-label="Broker Company"
+        />
+      </div>
+  
+      <!-- Broker Address -->
+      <div class="form-group">
+        <label for="brokerAddress" class="form-label">Address</label>
+        <input
+          id="brokerAddress"
+          class="form-input"
+          formControlName="brokerAddress"
+          type="text"
+          placeholder="Enter address"
+          aria-label="Broker Address"
+        />
+      </div>
+  
+      <!-- Drag and Drop -->
+      <div class="drag-drop-zone" (drop)="onDrop($event)" (dragover)="onDragOver($event)">
+        <p>Drag and drop your email file here</p>
+      </div>
+  
+      <!-- Attach File -->
+      <div class="form-group">
+        <label for="file" class="form-label">Attach Email File</label>
+        <input
+          id="file"
+          type="file"
+          (change)="onFileSelected($event)"
+          accept=".msg, application/vnd.ms-outlook"
+        />
+      </div>
+  
+      <!-- Submit Button -->
+      <div class="form-actions">
+        <button type="submit" class="btn-submit">Save Broker</button>
+      </div>
+    </form>
+  </div>
+  
