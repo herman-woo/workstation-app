@@ -3,7 +3,7 @@
 @use "../../../styles/partials/font_sizes" as *;
 
 .uw-action{
-    width: 45rem;
+    // width: 45rem;
     height: 12.5rem;
     border: 1px solid $slate;
     border-radius: 1.5rem;
@@ -20,7 +20,7 @@
         @include subheader;
         padding: 0 ;
         width: 100%;
-        border: 1px solid red;
+        // border: 1px solid red;
     }
 
     &__list{
@@ -28,8 +28,7 @@
         padding: 1rem;
         margin:  0;
         @include flex(center, center);
-        gap: 2rem;
-        border: 1px solid red;
+        // border: 1px solid red;
     }
     &__item{
         @include flex(center, space-between);
@@ -45,24 +44,28 @@
         color: rgba(0, 0, 0, 0.559);
         cursor: pointer;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 70%;
+        // font-family: "Roboto", sans-serif;
+        // font-weight: 400;
+        // font-style: normal;
+        // font-size: 70%;
 
         &:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            background-color: $light_blue;
+            color: $slate; 
+            // border: 1px solid $slate;
+            @include labels-link-bold;           
           }
       
     }
 
     &__icon{
         height: 3rem;
-        border: 1px solid greenyellow;
     }
     &__text{
-        border: 1px solid red;
+        // border: 1px solid red;
+        @include labels-link;
     }
 
 

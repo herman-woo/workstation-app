@@ -8,12 +8,14 @@ import { FormsModule } from '@angular/forms';
 import { Router} from '@angular/router'
 import { WelcomeComponent } from '../../layout/welcome/welcome.component';
 import { UnderwriterActionsComponent } from "../../layout/underwriter-actions/underwriter-actions.component";
+import {MatTabsModule} from '@angular/material/tabs';
+
 
 
 @Component({
   selector: 'dashboard',
   standalone: true,
-  imports: [CommonModule, ActionItemComponent, RouterLink, FormsModule, WelcomeComponent, UnderwriterActionsComponent],
+  imports: [CommonModule, ActionItemComponent, RouterLink, FormsModule, WelcomeComponent, UnderwriterActionsComponent,MatTabsModule ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
