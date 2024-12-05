@@ -1,8 +1,8 @@
 <div class="dashboard">
 
     <div class="dashboard__hero">
-        <app-welcome></app-welcome>
-        <underwriter-actions></underwriter-actions>
+        <app-welcome class="dashboard__welcome"></app-welcome>
+        <underwriter-actions class="dashboard__welcome"></underwriter-actions>
 
         <!-- <div class="dashboard-item-title">
             Underwriter Actions
@@ -25,6 +25,13 @@
         </div> -->
 
     </div>
+
+    <mat-tab-group class="dashboard__main">
+        <mat-tab label="Overview"> Content 1 </mat-tab>
+        <mat-tab label="Renewal"> Content 2 </mat-tab>
+        <mat-tab label="Bound"> Content 3 </mat-tab>
+        <mat-tab label="Team"> Content 3 </mat-tab>
+    </mat-tab-group>
 
 
     <div class="dashboard-item-title">
@@ -61,7 +68,7 @@
     </table>
     <div class="notifications-grid">
     </div>
-    <div class="dashboard-item-title">
+    <!-- <div class="dashboard-item-title">
         History
     </div>
     <div class="actions-grid">
@@ -71,5 +78,5 @@
         <div class="dashboard-item">
             <div class="dashboard-item-content">Projects</div>
         </div>
-    </div>
+    </div> -->
 </div>

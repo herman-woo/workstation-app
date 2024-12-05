@@ -27,6 +27,20 @@
   }
 }
 
+@mixin labels-link {
+  @include font(0.85rem, 1.0rem, 400);
+  @include tablet {
+    @include font(0.6125rem, 1.125rem, 400);
+  }
+}
+
+@mixin labels-link-bold {
+  @include font(0.85rem, 1.0rem, 700);
+  @include tablet {
+    @include font(0.6125rem, 1.125rem, 700);
+  }
+}
+
 @mixin table-header {
   @include font(0.6875rem, 1rem, 600);
   @include tablet {

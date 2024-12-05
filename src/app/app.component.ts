@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { SidebarService } from '../services/sidebar.service';
 import { HeaderComponent } from './layout/header/header.component';
 import { HeroSectionComponent } from './layout/hero-section/hero-section.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,8 @@ import { HeroSectionComponent } from './layout/hero-section/hero-section.compone
     MainBannerComponent,
     SidebarComponent, 
     HeaderComponent,
-    HeroSectionComponent
+    HeroSectionComponent,
+    FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'] // corrected from `styleUrl`

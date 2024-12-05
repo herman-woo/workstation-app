@@ -1,0 +1,20 @@
+@use "../../../styles/partials/breakpoint" as *;
+@use "../../../styles/partials/mixin" as *;
+@use "../../../styles/partials/colors" as *;
+@use "../../../styles/partials/font_sizes" as *;
+
+.footer{
+    @include section-padding;
+    @include flex(start, center);
+    height: 3rem;
+
+    &__copyright{
+        width: 100%;
+        @include flex( space-between, center);
+    }
+    &__copyright-text{
+        @include body-small;
+        color: $slate;
+    }
+
+}
