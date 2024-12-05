@@ -14,9 +14,9 @@
 }
 
 @mixin subheader {
-  @include font(1.25rem, 1.75rem, 600);
+  @include font(0.9375rem, 1.625rem, 600);
   @include tablet {
-    @include font(1.5rem, 2rem, 600);
+    @include font(1rem, 1.75rem, 600);
   }
 }
 
@@ -24,6 +24,20 @@
   @include font(0.8125rem, 1.25rem, 400);
   @include tablet {
     @include font(0.875rem, 1.375rem, 400);
+  }
+}
+
+@mixin labels-link {
+  @include font(0.85rem, 1.0rem, 400);
+  @include tablet {
+    @include font(0.6125rem, 1.125rem, 400);
+  }
+}
+
+@mixin labels-link-bold {
+  @include font(0.85rem, 1.0rem, 700);
+  @include tablet {
+    @include font(0.6125rem, 1.125rem, 700);
   }
 }
 
@@ -52,5 +66,12 @@
   @include font(0.6875rem, 1rem, 400);
   @include tablet {
     @include font(0.75rem, 1.125rem, 400)
+  }
+}
+
+@mixin labels-links {
+  @include font(0.5rem, 1rem, 400);
+  @include tablet {
+    @include font(0.6125rem, 1.25rem, 400);
   }
 }

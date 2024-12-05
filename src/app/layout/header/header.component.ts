@@ -10,6 +10,7 @@ import {MatIconModule} from '@angular/material/icon';
 
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
+// import { MatInputModule } from '@angular/material/input';
 
 @Component({
   selector: 'app-header',
@@ -22,8 +23,8 @@ import { map } from 'rxjs';
     MatSelectModule,
     FormsModule,
     MatCardModule,
-    MatIconModule
-
+    MatIconModule, 
+    // MatInputModule
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './header.component.html',

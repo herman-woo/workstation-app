@@ -1,3 +1,7 @@
+@use "../../../styles/partials/mixin" as *;
+.account{
+    @include section-padding;
+}
 .account-container {
     display: flex;
     flex-direction: column;
@@ -12,6 +16,11 @@
     align-items: center;
     width: 100%;
     max-width: 1600px;
+}
+.hero{
+    border: 2px solid red;
+    @include flex(space-between, center)
+
 }
 
 .account-header{

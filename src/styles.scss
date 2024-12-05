@@ -32,9 +32,12 @@ body {
     font-family: "Lato", "Helvetica Neue", sans-serif;
     box-sizing: border-box;
     border: 2px solid $dark-green;
+   
 }
 
 textarea:focus, input:focus{
     outline: none;
-    align-self: center;
+    // align-self: center;
 }
+
+

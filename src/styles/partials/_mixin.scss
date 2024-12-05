@@ -157,13 +157,30 @@
     }
 }
 
+@mixin section-padding{
+  padding: 1rem;
+
+  @include desktop{
+    padding: 1rem 1.5rem;
+  }
+}
+
 // Setting for avatar
-@mixin avatar {
-  width: 2.25rem;
-  height:2.25rem;
+@mixin avatar-circle {
+  width: 2rem;
+  height:2rem;
   border-radius: 50%;
-  @include tablet{
+  @include desktop{
       width: 2.5rem;
       height: 2.5rem;
+  }
+}
+@mixin avatar-square{
+  width: 2.25rem;
+  height:2.25rem;
+  border-radius: 2rem;
+  @include desktop{
+      width: 2.85rem;
+      height: 2.85rem;
   }
 }
