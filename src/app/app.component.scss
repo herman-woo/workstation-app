@@ -12,11 +12,11 @@
 }
 
 .main-content {
-    margin-left: 60px;
+    margin-left: 50px;
     /* Match contracted sidebar width */
     transition: margin-left 0.3s ease;
     flex: 1;
-    padding: 20px;
+    padding: 0;
     overflow-y: auto;
 }
 .main-content.shrink {

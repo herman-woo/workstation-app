@@ -21,31 +21,25 @@ export class DashboardComponent {
   insuredFilter: string; // Search query entered by the user
   isLoading: boolean = false; // Show a loading indicator during the API call
 
+  lastUpdatedField: boolean = true;
+
   constructor(private route: ActivatedRoute,  private router: Router, 
     private accountService: AccountService) { }
     search(): void {
       if (!this.insuredFilter.trim()) {
-        this.loadData()
+        this.getAccounts("")
         return;
       }
 
       this.isLoading = true; // Start loading
-      this.accountService.getAllAccounts(this.insuredFilter).subscribe({
-        next: (response) => {
-          this.accounts = response.accounts;
-        },
-        error: (error) => {
-          console.error('Error fetching underwriters:', error);
-        }
-      }
-      );
+      this.getAccounts(this.insuredFilter)
     }
     ngOnInit(): void {
-      this.loadData()
+      this.getAccounts("")
     }
   
-    loadData() {
-      this.accountService.getAllAccounts(null).subscribe({
+    getAccounts(insured: string) {
+      this.accountService.getAllAccounts(insured).subscribe({
         next: (response) => {
           console.log(response)
           this.accounts = response.accounts;

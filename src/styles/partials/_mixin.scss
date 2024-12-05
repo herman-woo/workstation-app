@@ -1,0 +1,169 @@
+@use './breakpoint' as *;
+@use './colors' as *;
+@use './font_sizes' as *;
+
+// Setting for flex
+@mixin flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flex-wrap() {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// Setting for button
+@mixin CTA-button($color, $percentage, $font-color, $border) {
+  background: color-mix(in srgb, $color $percentage, transparent);
+  color: $font-color;
+  @include labels-links-buttons;
+  height: 2.25rem;
+  width: 100%;
+  border: $border;
+  border-radius: 1.25rem;
+  cursor: pointer;
+  @include flex(center, center);
+  @include tablet {
+    height: 2.375rem;
+    width: fit-content;
+    padding: 0 1rem;
+  }
+}
+
+@mixin colored-background($color, $percentage) {
+  background: color-mix(in srgb, $color $percentage, transparent);
+}
+
+// Setting for  form input
+@mixin form-field {
+  height: 2.25rem;
+  width: 100%;
+  border: 1px solid $cloud;
+  border-radius: 1.25rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: $cloud;
+  }
+
+  &:focus {
+    outline: 1px solid $instock-indigo;
+  }
+
+  @include tablet {
+    height: 2.375rem;
+    width: 12rem;
+    padding: 0 1rem;
+  }
+  @include desktop {
+    width: 17rem;
+  }
+}
+
+// Setting for tags
+@mixin tags($color, $font-color) {
+  background-color: $color;
+  color: $font-color;
+  @include table-header;
+  height: 1.5rem;
+  width: fit-content;
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 1.25rem;
+  @include tablet {
+    height: 1.625rem;
+  }
+}
+
+// Setting for section
+
+@mixin divider {
+  border-top: 1px solid $cloud;
+}
+
+@mixin containers {
+  box-shadow: 0 0 4px $cloud;
+  border-radius: 0.25rem;
+  padding: 2rem 0 0;
+  margin: 0 1rem;
+  @include tablet {
+    padding: 2rem 0 0;
+    margin: 0 2rem;
+  }
+  @include desktop {
+    max-width: 65rem;
+    margin: 0 auto;
+  }
+}
+
+@mixin subheader-containers {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0 1.5rem 1.5rem 1rem;
+  @include tablet {
+    margin: 0 2rem;
+    padding: 0 1.5rem 1.5rem;
+  }
+  @include desktop {
+    margin: 0;
+    padding: 0 2.5rem 1.5rem;
+  }
+}
+
+@mixin modal {
+  display: flex;
+  @include tablet {
+    box-shadow: 0 0 4px $cloud;
+    border-radius: 0.25rem;
+    padding: 1rem 1.5rem 3rem 4rem;
+    margin: 0 2.5rem;
+    background-color: $white;
+  }
+  @include desktop {
+    margin: 0 auto;
+    padding: 1rem 1rem 2rem 4.5rem;
+  }
+}
+
+@mixin divider-box {
+  border-top: 1px solid $cloud;
+  border-bottom: 1px solid $cloud;
+}
+
+// Setting for padding
+
+@mixin global-padding {
+  padding: 0 1rem;
+  @include tablet {
+    padding: 0 2rem;
+  }
+  @include desktop{
+    padding:0 calc((100% - 64.5rem) * 0.5);
+  }
+}
+
+@mixin pageHeaderPadding {
+  padding: 0 1.5rem;
+    @include tablet {
+      @include flex(space-between, center);
+      padding: 0 2rem 1rem;
+    }
+    @include desktop {
+      padding: 0 2.5rem 1rem;
+    }
+}
+
+// Setting for avatar
+@mixin avatar {
+  width: 2.25rem;
+  height:2.25rem;
+  border-radius: 50%;
+  @include tablet{
+      width: 2.5rem;
+      height: 2.5rem;
+  }
+}
