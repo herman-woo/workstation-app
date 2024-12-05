@@ -103,11 +103,14 @@
     padding: 0;
     border: 1px solid yellow;
     @include avatar-circle;
+    overflow: hidden;
+
   }
 
   &__avatar {
     margin: 0;
     background-color: $dark_blue;
     @include avatar-circle;
+    object-fit: cover;
   }
 }
