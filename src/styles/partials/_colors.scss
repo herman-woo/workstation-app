@@ -24,3 +24,28 @@ $green: #158463;
 $opaque-green: #15846312;
 $red: #C94515;
 $opaque-red: #C9451512;
+
+@mixin pink-gradient_bg{
+    background: linear-gradient(
+		-45deg,
+		#ffffff,
+		#ffe4e9,
+		#fcc8e2,
+		#f6baed,
+		#efb0ff,
+		#d3a2ff,
+		#8eb8ff,
+		#91efff,
+		#d5f9ff
+	);
+}
+
+@mixin purple-gradient-bg{
+    background: linear-gradient(
+        109.6deg, rgb(9, 9, 121) 11.2%,
+         rgb(144, 6, 161) 53.7%, 
+         rgb(0, 212, 255) 100.2%
+    );
+
+
+}
