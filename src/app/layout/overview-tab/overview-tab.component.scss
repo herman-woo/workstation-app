@@ -1,0 +1,15 @@
+@use "../../../styles/partials/mixin" as *;
+table {
+    width: 100%;
+  }
+.overview{
+    width: 100%;
+    @include section-padding;
+    border: 1px solid green;
+    
+    
+    &__table{
+        width: 40rem;
+        border: 1px solid red;
+    }
+}

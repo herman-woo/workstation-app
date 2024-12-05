@@ -6,7 +6,7 @@
 @import '../../../styles/table.scss';
 
 .dashboard{
-  // border: 1px solid red;
+  border: 1px solid red;
   @include section-padding;
   @include flex(center,center);
   flex-direction: column;
@@ -45,6 +45,8 @@
     width: 100%;
     border: 1px solid $slate;
     border-radius: 1.5rem;
+    margin: 0;
+    padding:0;
   }
 
 

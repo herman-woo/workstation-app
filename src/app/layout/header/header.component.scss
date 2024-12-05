@@ -4,6 +4,9 @@
 @use "../../../styles/partials/font_sizes" as *;
 
 .header {
+  // position: fixed;
+  // top: 0;
+  height: 5rem;
   border-bottom: 1px solid $slate;
   @include section-padding;
   box-sizing: border-box;

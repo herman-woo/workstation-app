@@ -1,14 +1,14 @@
 @use "../../../styles/partials/mixin" as *;
 @use "../../../styles/partials/colors" as *;
 @use "../../../styles/partials/font_sizes" as *;
-
+@use "../../../styles/partials/breakpoint" as *;
 .uw-action{
     // width: 45rem;
     height: 12.5rem;
     border: 1px solid $slate;
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     margin: 0;
-    padding: 1rem;
+    padding: 1rem ;
     border: 1px solid $slate;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.241);
     @include flex(center, center);
@@ -28,6 +28,9 @@
         padding: 1rem;
         margin:  0;
         @include flex(center, center);
+        @include desktop{
+            gap: 1.5rem;
+        }
         // border: 1px solid red;
     }
     &__item{
