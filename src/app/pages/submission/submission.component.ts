@@ -14,7 +14,6 @@ import { combineLatest } from 'rxjs';
 
 
 
-
 @Component({
   selector: 'app-submission',
   standalone: true,
@@ -133,18 +132,17 @@ export class SubmissionComponent {
   
 
   selectInsured(insured: any): void {
-    // Update the form field using patchValue
+    console.log("Selecting Insured:", insured); 
     this.form.patchValue({
-      insuredName: insured.name,  // Set the insured name in the form field
+      insuredName: insured.name,  
     });
-    this.insuredNameControl.setValue(insured.name, {emitEvent: false});
-  
-  
-    // Optionally reset the dropdown visibility and clear the list
+    this.insuredNameControl.setValue(insured.name, { emitEvent: false });
     this.isInsuredDropdownVisible = false;
-    //this.insuredNames = [];
+    console.log("Selected Insured Name:", insured.name);
   }
   
+  
+
     
 
 
@@ -401,47 +399,9 @@ export class SubmissionComponent {
   
 
   addNewBroker() {
-    this.router.navigate(['/add-broker']);
+    this.router.navigate(['/NewBrokerFormComponent']);
   }
 
- // Updated method to search brokers by full name
-//  filterBrokersByName(query: string): void {
-//   console.log('Searching for broker:', query);  
-
-//   this.brokerService
-//     .searchBrokerNames(query)
-//     .pipe(catchError(() => of([]))) // Handle errors gracefully
-//     .subscribe((brokers: Broker[]) => {
-//       console.log('Broker search result:', brokers);
-//       this.brokerNames = brokers;
-//       this.isDropdownVisible = brokers.length > 0;
-
-//       if (brokers.length === 0) {
-//         // If no brokers are found, create a temporary broker object
-//         // for handling the scenario of no broker found with that name
-//         alert(`No brokers found with the name "${query}".`);
-
-//         // Create a temporary broker object with just the 'name' field
-//         // and some placeholder or default values
-//         const temporaryBroker = { 
-//           id: -1,  // Using -1 to indicate this is a temporary broker (can be changed)
-//           name: query 
-//         };
-
-//         this.selectBroker(temporaryBroker); // Use the temporary broker for further processing
-//       } 
-//       //else if (brokers.length > 0) {
-//       //   // Exactly one broker found, auto-select it
-//       //   this.selectBroker(brokers[0]);
-//       // } 
-//       else if (brokers.length > 0 ) {
-//         // Multiple brokers found, show dropdown for the user to select
-//         alert(
-//           `Multiple brokers found with the name "${query}". Please select the correct broker from the list.`
-//         );
-//       }
-//     });
-// }
 
 filterBrokersByName(query: string): void {
   console.log('Searching for broker:', query);
@@ -470,98 +430,42 @@ filterBrokersByName(query: string): void {
     });
 }
 
-  
 
-  //   // Ensure the form is valid
-  //   if (this.form.valid) {
-  //     // Extract data from the form fields
-  //     const formData = this.form.value;
-  //     const brokerCompany = this.companyNames.find(
-  //       (company) => company.name === formData.brokerCompany
-  //     );
-  //     console.log('Form Data:', formData); // Debug log
-
-  //     const broker = this.brokerNames.find(
-  //       (broker) => `${broker.first_name} ${broker.last_name}` === `${formData.brokerFirstName} ${formData.brokerLastName}`
-  //     );
-  
-  //     // Construct the payload for the POST request
-  //     const payload = {
-  //       underwriter: 3, // Hardcoded value
-  //       business_unit: 1, // Hardcoded value
-  //       team: 1, // Hardcoded value
-  //       name_insured: formData.insuredName, // This will be sent as a string
-  //       id: broker?.id, // Dynamic value from the broker selection
-  //       broker_company: brokerCompany?.id, // Dynamic value from the broker company selection
-  //       submission_type: "New", // Hardcoded value
-  //       year: 2024
-  //     }
-  //     console.log("Hey", payload)
-  //     // Make the POST request to submit the form data
-  //     this.http.post('http://127.0.0.1:8000/insurance/account/submission/new', payload)
-  //       .subscribe(
-  //         (response: any) => {
-  //           console.log('Form submitted successfully', response);
-  //           // Handle success (e.g., show a success message or redirect)
-  //         },
-  //         (error) => {
-  //           console.error('Error submitting form', error);
-  //           // Handle error (e.g., show an error message)
-  //         }
-  //       );
-  //   } else {
-  //     console.log('Form is invalid');
-  //   }
-  // }
-  
-  
-  
-  // Populate form with extracted data
-  
   submitForm(): void {
-    // Ensure the form is valid
     if (this.form.valid) {
-      // Extract data from the form fields
       const formData = this.form.value;
-  
-      // Debug log: check the form values
-      console.log('Form Data:', formData);
+      console.log('Form Data:', formData);  // Debug log
   
       // Log selected broker name values
       console.log('Selected broker first name:', formData.brokerFirstName);
       console.log('Selected broker last name:', formData.brokerLastName);
   
-      // Log all brokers to verify data
-      console.log('Broker Names Array:', this.brokerNames);
+      // Ensure the insuredName is properly handled (even if it's manually typed)
+      const insuredName = formData.insuredName || this.insuredNameControl.value;
+      console.log('Final Insured Name:', insuredName);
   
-      // Find the selected broker using the first and last name from the form
+      // Proceed with the rest of your form submission logic...
       const broker = this.brokerNames.find(
-        (broker) => 
+        (broker) =>
           broker.first_name.trim().toLowerCase() === formData.brokerFirstName.trim().toLowerCase() &&
           broker.last_name.trim().toLowerCase() === formData.brokerLastName.trim().toLowerCase()
       );
   
-      // Log broker found result
-      console.log('Broker found:', broker);
-  
-      // If broker is found, construct the payload
       if (broker) {
         const brokerCompany = this.companyNames.find(
           (company) => company.name === formData.brokerCompany
         );
   
-        console.log('Selected broker company:', brokerCompany);
-  
         // Construct the payload for the POST request
         const payload = {
-          underwriter: 3, // Hardcoded value
-          business_unit: 1, // Hardcoded value
-          team: 1, // Hardcoded value
-          named_insured: formData.insuredName, // This will be sent as a string
-          broker: broker.id, // Include the broker's ID from the response
-          broker_company: brokerCompany?.id, // Include the broker company's ID
-          submission_type: "New", // Hardcoded value
-          year: 2024
+          underwriter: 3,  // Hardcoded value
+          business_unit: 1,  // Hardcoded value
+          team: 1,  // Hardcoded value
+          named_insured: insuredName,  // Use the insuredName from the form
+          broker: broker.id,  // Include the broker's ID from the response
+          broker_company: brokerCompany?.id,  // Include the broker company's ID
+          submission_type: 'New',  // Hardcoded value
+          year: 2024,
         };
   
         console.log("Submission Payload:", payload); // Debug log to check the payload
@@ -571,22 +475,19 @@ filterBrokersByName(query: string): void {
           .subscribe(
             (response: any) => {
               console.log('Form submitted successfully', response);
-              // Handle success (e.g., show a success message or redirect)
             },
             (error) => {
               console.error('Error submitting form', error);
-              // Handle error (e.g., show an error message)
             }
           );
       } else {
-        console.log('Broker not found');
         alert('Please select a valid broker');
       }
     } else {
-      console.log('Form is invalid');
       alert('Please fill in all required fields');
     }
   }
+  
   
   
   populateForm(data: any): void {

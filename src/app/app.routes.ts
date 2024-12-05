@@ -11,6 +11,7 @@ import { BrokerCompaniesListComponent } from './pages/broker-companies-list/brok
 import { RiskSummaryTabComponent } from './components/risk-summary-tab/risk-summary-tab.component';
 import { CompanyRecordComponent } from './pages/company-record/company-record.component';
 import { SubmissionComponent } from './pages/submission/submission.component';
+import { NewBrokerFormComponent } from './pages/new-broker-form/new-broker-form.component';
 
 export const routes: Routes = [
     //main page references
@@ -31,4 +32,5 @@ export const routes: Routes = [
     { path: 'account/:id', component: AccountComponent},
     { path: 'account/risksummary/:id', component: RiskSummaryTabComponent},
     { path: 'submission', component: SubmissionComponent},
+    { path: 'NewBrokerFormComponent', component: NewBrokerFormComponent},
 ];
