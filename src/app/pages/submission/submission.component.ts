@@ -83,28 +83,6 @@ export class SubmissionComponent {
   // }
 
 
-
-  // Setup logic for searching brokers
-  // private setupBrokerSearch(): void {
-  //   this.brokerFirstNameControl.valueChanges
-  //     .pipe(
-  //       debounceTime(300),
-  //       switchMap((firstName: string | null) => {
-  //         const sanitizedFirstName: string = firstName || '';
-  //         const lastName: string = this.brokerLastNameControl.value || '';
-  //         return sanitizedFirstName.length > 1 || lastName.length > 1
-  //           ? this.brokerService.searchBrokerNames(sanitizedFirstName, lastName).pipe(
-  //               catchError(() => of([]))
-  //             )
-  //           : of([]);
-  //       })
-  //     )
-  //     .subscribe((brokers: Broker[]) => {
-  //       this.brokerNames = brokers;
-  //       this.isDropdownVisible = brokers.length > 0;
-  //     });
-  // }
-
   setupInsuredNameSearch(): void {
     this.insuredNameControl.valueChanges
       .pipe(
@@ -143,38 +121,29 @@ export class SubmissionComponent {
   
   
 
-    
-
-
   setupCompanySearch(): void {
     this.form.get('brokerCompany')?.valueChanges
       .pipe(
         debounceTime(300), // Wait for 300ms before triggering the search
         switchMap((searchTerm: string | null) => {
-          // Check if there is a search term and make the request to the backend
           if (searchTerm && searchTerm.length > 0) {
-            // Make a GET request to the company search endpoint with the query parameter
             return this.http.get<any[]>(`http://localhost:8000/contact/company/search?query=${searchTerm}`).pipe(
-              catchError(() => of([])) // Return an empty array if the request fails
+              catchError(() => of([])) // Return empty array on error
             );
           }
-          return of([]); // If no search term, return empty array
+          return of([]); // Return empty array if no search term
         })
       )
       .subscribe((companies) => {
-        // Update companyNames with the fetched company data
         this.companyNames = companies;
-  
-        // Filter the companies based on the search term
         const searchTerm = this.form.get('brokerCompany')?.value || '';
         this.filteredCompanies = companies.filter((company) =>
-          company.name.toLowerCase().includes(searchTerm.toLowerCase()) // Use 'name' based on your response structure
+          company.name.toLowerCase().includes(searchTerm.toLowerCase())
         );
-  
-        // Toggle visibility of dropdown
         this.isCompanyDropdownVisible = this.filteredCompanies.length > 0;
       });
   }
+  
   selectCompany(company: any): void {
     // Set the form value to the selected company's name (avoid emitting event to prevent value change triggers)
     this.form.get('brokerCompany')?.setValue(company.name, { emitEvent: false });
@@ -184,6 +153,7 @@ export class SubmissionComponent {
     this.isCompanyDropdownVisible = false;
   }
     
+  
   setupFullNameSearch(): void {
     combineLatest([
       this.brokerFirstNameControl.valueChanges,
@@ -430,7 +400,7 @@ filterBrokersByName(query: string): void {
     });
 }
 
-
+  
   submitForm(): void {
     if (this.form.valid) {
       const formData = this.form.value;
@@ -452,9 +422,8 @@ filterBrokersByName(query: string): void {
       );
   
       if (broker) {
-        const brokerCompany = this.companyNames.find(
-          (company) => company.name === formData.brokerCompany
-        );
+        // Ensure brokerCompany is passed as a string (whether selected or manually typed)
+        const brokerCompanyName = formData.brokerCompany;
   
         // Construct the payload for the POST request
         const payload = {
@@ -463,7 +432,7 @@ filterBrokersByName(query: string): void {
           team: 1,  // Hardcoded value
           named_insured: insuredName,  // Use the insuredName from the form
           broker: broker.id,  // Include the broker's ID from the response
-          broker_company: brokerCompany?.id,  // Include the broker company's ID
+          broker_company: brokerCompanyName,  // Pass the company name as a string
           submission_type: 'New',  // Hardcoded value
           year: 2024,
         };
