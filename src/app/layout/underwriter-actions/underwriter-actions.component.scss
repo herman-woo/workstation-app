@@ -1,0 +1,70 @@
+@use "../../../styles/partials/mixin" as *;
+@use "../../../styles/partials/colors" as *;
+@use "../../../styles/partials/font_sizes" as *;
+
+.uw-action{
+    width: 45rem;
+    height: 12.5rem;
+    border: 1px solid $slate;
+    border-radius: 1.5rem;
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid $slate;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.241);
+    @include flex(center, center);
+    flex-direction: column;
+    
+
+    &__subheader{
+        color: $dark-green;
+        @include subheader;
+        padding: 0 ;
+        width: 100%;
+        border: 1px solid red;
+    }
+
+    &__list{
+        width: fit-content;
+        padding: 1rem;
+        margin:  0;
+        @include flex(center, center);
+        gap: 2rem;
+        border: 1px solid red;
+    }
+    &__item{
+        @include flex(center, space-between);
+        flex-direction: column;
+        width: 3rem; /* Take full width of grid cell */
+        height: 5rem;
+        padding: 1rem;
+        gap: 1rem; /* Makes the height equal to the width, creating a square */
+        // position: relative; /* For absolute positioning of inner content */
+        background-color: #ffffff;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: rgba(0, 0, 0, 0.559);
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 70%;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+          }
+      
+    }
+
+    &__icon{
+        height: 3rem;
+        border: 1px solid greenyellow;
+    }
+    &__text{
+        border: 1px solid red;
+    }
+
+
+}
+

@@ -1,12 +1,32 @@
 <div class="dashboard">
-    <div class="dashboard-item-title">
-        Underwriter Actions
+
+    <div class="dashboard__hero">
+        <app-welcome></app-welcome>
+        <underwriter-actions></underwriter-actions>
+
+        <!-- <div class="dashboard-item-title">
+            Underwriter Actions
+        </div>
+        <div class="actions-grid">
+            <action-item *ngFor="let item of underwriterActions" [icon]="item.icon" [action]="item.action"
+                (actionClicked)="onActionClicked($event)">
+            </action-item>
+    </div> -->
+
+        <!-- <div class="dashboard__action">
+            <p class="dashboard__subtitle">
+                Underwriter Actions
+            </p>
+            <div class="dashboard__actions-grid">
+                <action-item *ngFor="let item of underwriterActions" [icon]="item.icon" [action]="item.action"
+                    (actionClicked)="onActionClicked($event)">
+                </action-item>
+            </div>
+        </div> -->
+
     </div>
-    <div class="actions-grid">
-        <action-item *ngFor="let item of underwriterActions" [icon]="item.icon" [action]="item.action"
-            (actionClicked)="onActionClicked($event)">
-        </action-item>
-    </div>
+
+
     <div class="dashboard-item-title">
         Your Accounts
     </div>

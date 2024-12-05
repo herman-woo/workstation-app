@@ -1,10 +1,52 @@
 /* Dashboard Grid */
+@use '../../../styles/partials/mixin' as *;
+@use '../../../styles/partials/font_sizes' as *;
+@use '../../../styles/partials/colors' as *;
 @import '../../../styles/table.scss';
+
 .dashboard{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  border: 1px solid red;
+  @include section-padding;
+  @include flex(center,center);
+  flex-direction: column;
+  
+  &__hero{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    @include flex (space-between, center)
+
+  }
+
+  &__action{
+    // @include flex(center, center);
+    width: 70rem;
+    height: 20rem;
+    border: 1px solid $slate;
+    border-radius: 2rem;
+    padding: 1rem 2rem ;
+
+  }
+  &__subtitle{
+    // border: 1px solid red;
+    @include subheader;
+    // font-style: oblique;
+    color: $dark-green;
+    
+
+  }
+  &__actions-grid{
+    @include flex(center, center);
+    height: 10rem;
+    // display: grid;
+    // grid-template-columns: repeat(6, 1fr);
+    // gap: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 800px; /* Cap width for large screens */
+    margin: 0 auto; /* Center the dashboard */
+
+  }
 }
 .dashboard-item-title{
     padding-top: 5vh;

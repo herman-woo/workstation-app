@@ -157,6 +157,10 @@
     }
 }
 
+@mixin section-padding{
+  padding: 1rem 2.5rem;
+}
+
 // Setting for avatar
 @mixin avatar {
   width: 2.25rem;

@@ -14,9 +14,9 @@
 }
 
 @mixin subheader {
-  @include font(1.25rem, 1.75rem, 600);
+  @include font(0.9375rem, 1.625rem, 600);
   @include tablet {
-    @include font(1.5rem, 2rem, 600);
+    @include font(1rem, 1.75rem, 600);
   }
 }
 
