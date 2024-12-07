@@ -1,9 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import { AccountService } from '../../../services/account.service';
 import { MatSort } from '@angular/material/sort';
+import { debounceTime, distinctUntilChanged, Subject } from 'rxjs';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'overview-tab',
@@ -11,19 +13,58 @@ import { MatSort } from '@angular/material/sort';
   imports: [
     CommonModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    RouterLink
   ],
   templateUrl: './overview-tab.component.html',
   styleUrl: './overview-tab.component.scss'
 })
-export class OverviewTabComponent implements AfterViewInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+export class OverviewTabComponent implements OnInit {
+  displayedColumns: string[] = [
+    'Policy Number',
+    'Name Insured',
+    'Broker',
+    'Submission',
+    'Year',
+    'Product',
+    'Status'
+  ];
+  dataSource = new MatTableDataSource<any>(); // Table data source
+  insuredFilter: string = ''; // Bound to the search input
+  isLoading: boolean = false; // Loading indicator
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
 
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
+  constructor(private accountService: AccountService) {}
+
+  ngOnInit(): void {
+    this.getAccounts(''); // Fetch all accounts initially
+  }
+
+  // Column click handler (can be used for specific column filtering)
+  onColumnClick(column: string): void {
+    this.isLoading = true;
+    this.getAccounts(column);
+  }
+
+  // Fetch accounts based on the filter (column or full filter)
+  getAccounts(filter: string): void {
+    this.isLoading = true;
+
+    // Call the service to fetch the accounts
+    this.accountService.getAllAccounts(filter).subscribe({
+      next: (response) => {
+        console.log('Service Data:', response); // Log the service data
+        this.dataSource.data = response.accounts; // Bind the data to the table
+        this.dataSource.paginator = this.paginator; // Rebind paginator to the new data
+        this.isLoading = false; // Stop loading indicator
+      },
+      error: (error) => {
+        console.error('Error fetching accounts:', error);
+        this.isLoading = false; // Stop loading indicator on error
+      }
+    });
   }
 }
 
