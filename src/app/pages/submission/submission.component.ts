@@ -57,25 +57,9 @@ export class SubmissionComponent {
   this.setupLastNameSearch();
   this.setupCompanySearch();
   this.setupInsuredNameSearch();
-   // Watch for changes in first and last name and trigger search
+
    this.setupFullNameSearch();
 
-    // this.bnameControl.valueChanges
-    // .pipe(
-    //   debounceTime(300),
-    //   switchMap((searchTerm: string | null) => {
-    //     const sanitizedSearchTerm: string = searchTerm || ''; // Explicitly set type
-    //     return sanitizedSearchTerm.length > 1
-    //       ? this.brokerService.searchBrokerNames(sanitizedSearchTerm, '').pipe(
-    //           catchError(() => of([])) // Graceful error handling
-    //         )
-    //       : of([]);
-    //   })
-    // )
-    // .subscribe((brokers: Broker[]) => {
-    //   this.brokerNames = brokers;
-    //   this.isDropdownVisible = brokers.length > 0;
-    // });
   }
 
   // ngOnInit(){
@@ -444,6 +428,8 @@ filterBrokersByName(query: string): void {
           .subscribe(
             (response: any) => {
               console.log('Form submitted successfully', response);
+              const submissionId = response.id;  
+            this.router.navigate([`/account/${submissionId}`]); 
             },
             (error) => {
               console.error('Error submitting form', error);
