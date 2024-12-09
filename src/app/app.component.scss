@@ -1,19 +1,25 @@
 .app-container {
     display: flex;
-    flex-direction: column;
-    height: 100vh;
+    // flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    // height: 100vh;
     overflow: auto;
+}
+.app-main{
+    width: 100%;
 }
 
 /* Content wrapper for sidebar and main content */
-.content-wrapper {
-    display: flex;
-    flex: 1;
-}
+// .content-wrapper {
+//     display: flex;
+//     flex: 1;
+// }
 
 .main-content {
-    margin-left: 50px;
+    // margin-left: 50px;
     /* Match contracted sidebar width */
+    margin: 0;
     transition: margin-left 0.3s ease;
     flex: 1;
     padding: 0;
