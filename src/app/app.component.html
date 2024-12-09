@@ -1,6 +1,7 @@
 <div class="app-container">
   <div class="content-wrapper">
-    <sidebar (sidebarToggled)="onSidebarToggled($event)"></sidebar>
+    <!-- <sidebar (sidebarToggled)="onSidebarToggled($event)"></sidebar> -->
+     <app-sidenav></app-sidenav>
     <div class="main-content" [ngClass]="{ 'shrink': sidebarExpanded }">
       <!-- <main-banner></main-banner> -->
       <app-header></app-header>

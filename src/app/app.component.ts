@@ -7,6 +7,7 @@ import { SidebarService } from '../services/sidebar.service';
 import { HeaderComponent } from './layout/header/header.component';
 import { HeroSectionComponent } from './layout/hero-section/hero-section.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { SidenavComponent } from './layout/sidenav/sidenav.component';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,8 @@ import { FooterComponent } from './layout/footer/footer.component';
     SidebarComponent, 
     HeaderComponent,
     HeroSectionComponent,
-    FooterComponent
+    FooterComponent,
+    SidenavComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'] // corrected from `styleUrl`
