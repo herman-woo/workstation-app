@@ -33,17 +33,21 @@
           *ngFor="let item of section.items; let i = index"
           class="sidebar__navitem"
           [class.active]="activeMenuIndex === i"
-          (click)="toggleMenu(i)"
+          
         >
+        <!-- (click)="toggleMenu(i)" --- this will go up -->
           <!-- Main item -->
-          <a [routerLink]="item.route" [title]="isSidebarActive ? item.name : ''">
+          <div class="nav-item-container">
+          <a [routerLink]="item.route" [title]="isSidebarActive ? item.name : ''" (click)="setActiveMenu(i)">
             <i class="icon" [class]="item.icon"></i>
             <span class="text" *ngIf="!isSidebarActive">{{ item.name }}</span>
-            <i *ngIf="item.subMenu" class="arrow ph-bold ph-caret-down"></i>
           </a>
+          <i *ngIf="item.subMenu" class="arrow ph-bold" [class.ph-caret-down]="activeMenuIndex !== i"
+            [class.ph-caret-up]="activeMenuIndex === i" (click)="toggleMenu(i, $event)"></i>
+          </div>
 
           <!-- Submenu -->
-          <ul class="sidebar__sub-menu">
+          <ul class="sidebar__sub-menu" *ngIf="activeMenuIndex === i">
             <li *ngFor="let subItem of item.subMenu" class="sidebar__sub-item">
               <a [routerLink]="subItem.route">
                 <span class="text">{{ subItem.name }}</span>

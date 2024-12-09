@@ -32,12 +32,22 @@ export class SidenavComponent {
   isSidebarActive: boolean = false; // Sidebar toggle state
 
   // Toggles the active menu item
-  toggleMenu(index: number): void {
+  toggleMenu(index: number,  event: Event): void {
+    event.stopPropagation();
     this.activeMenuIndex = this.activeMenuIndex === index ? null : index;
   }
 
   // Toggles the sidebar visibility
   toggleSidebar(): void {
     this.isSidebarActive = !this.isSidebarActive;
+  }
+
+  setActiveMenu(index: number): void {
+    this.activeMenuIndex = index;
+  }
+  
+  toggleSubMenu(index: number, event: Event): void {
+    event.stopPropagation();
+    this.activeMenuIndex = this.activeMenuIndex === index ? null : index;
   }
 }
