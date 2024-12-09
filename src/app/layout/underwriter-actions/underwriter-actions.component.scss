@@ -69,6 +69,8 @@
     &__text{
         // border: 1px solid red;
         @include labels-link;
+        text-transform: uppercase;
+
     }
 
 

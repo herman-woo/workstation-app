@@ -11,15 +11,13 @@
   @include section-padding;
   box-sizing: border-box;
   @include flex(space-between, center);
-  @include desktop {
-    padding: 1rem 2.5rem;
-  }
+  
 
   &__searchbar {
     width: 17.5rem;
     height: 2.5rem;
     padding: 0;
-    margin: 0;
+    margin: 1rem;
     background-color: $light-blue;
     border-radius: 0.25rem;
     @include flex(start, center);

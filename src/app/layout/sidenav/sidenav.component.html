@@ -6,8 +6,11 @@
 
   <!-- Sidebar header -->
   <div class="sidebar__head">
-    <div class="user-image">
-      <img src="/images/Mohan-muruge.jpg" alt="User Image">
+    <div class="sidebar__user-image">
+      <img 
+        class="sidebar__profile-pic"
+        src="/images/Mohan-muruge.jpg" 
+        alt="User Image">
     </div>
     <div class="sidebar__user-details" *ngIf="!isSidebarActive">
       <p class="sidebar__title">Web Developer</p>
@@ -39,13 +42,13 @@
           </a>
 
           <!-- Submenu -->
-          <ul class="sidebar__sub-menu" *ngIf="item.subMenu && activeMenuIndex === i">
+          <!-- <ul class="sidebar__sub-menu" *ngIf="item.subMenu && activeMenuIndex === i">
             <li *ngFor="let subItem of item.subMenu" class="sidebar__sub-item">
               <a [routerLink]="subItem.route">
                 <span class="text">{{ subItem.name }}</span>
               </a>
             </li>
-          </ul>
+          </ul> -->
         </li>
       </ul>
     </div>

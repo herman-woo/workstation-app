@@ -1,3 +1,5 @@
+@use "../styles/partials/mixin" as *;
+
 .app-container {
     display: flex;
     // flex-direction: column;
@@ -6,6 +8,9 @@
     // height: 100vh;
     overflow: auto;
 }
+// .app-header{
+//     @include section-padding;
+// }
 .app-main{
     width: 100%;
 }
