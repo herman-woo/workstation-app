@@ -15,21 +15,16 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1600px;
 }
 .hero{
-    border: 2px solid red;
+    // border: 2px solid red;
     @include flex(space-between, center)
 
 }
 
 .account-header{
     align-items: flex-end;
-}
-
-
-td{
-    // border: 2px solid red;
+    margin: 10px;
 }
 
 .account-header h2{

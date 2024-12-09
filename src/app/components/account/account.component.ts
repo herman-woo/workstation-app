@@ -9,6 +9,7 @@ import { AccountNotesComponent } from '../../components/notes-tab/account-notes.
 import { AccountService } from '../../../services/account.service';
 import { AccountEntitiesComponent } from '../account-entities/account-entities.component';
 import { AccountStatusCardComponent } from '../account-status-card/account-status-card.component';
+import { RiskwriteCardComponent } from '../riskwrite-card/riskwrite-card.component';
 
 @Component({
   selector: 'app-account',
@@ -20,7 +21,8 @@ import { AccountStatusCardComponent } from '../account-status-card/account-statu
     AccountNotesComponent,
     BreadcrumbComponent,
     AccountEntitiesComponent,
-    AccountStatusCardComponent,],
+    AccountStatusCardComponent,
+    RiskwriteCardComponent],
   templateUrl: './account.component.html',
   styleUrl: './account.component.scss'
 })
