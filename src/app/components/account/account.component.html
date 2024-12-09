@@ -12,7 +12,6 @@
     <div class="hero">
         <account-entities [data]="accountRecord"></account-entities>
         <account-status-card [accountData]="accountRecord"></account-status-card>
-        <riskwrite-card></riskwrite-card>
     </div>
     <div class="account-tabs">
         <button [ngClass]="{ 'active': activeTab === 1 }" (click)="setActiveTab(1)">Notes</button>
