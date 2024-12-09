@@ -1,36 +1,32 @@
 <div class="page-container">
     <breadcrumb [link]="'brokercompanies'" [category]="'Broker Companies'" [id]="id"></breadcrumb>
     <div class="page-section">
-        <record-header [title]="brokerCompanyName"></record-header>
+        <record-header [title]="company.name"></record-header>
         <div class="info-content">
             <h2>Company Info:</h2>
             <div class="info-row">
                 <span class="label">Company ID:</span>
-                <span class="value">{{companyId}}</span>
+                <span class="value">{{company.companyId}}</span>
             </div>
             <div class="info-row">
                 <span class="label">Address:</span>
-                <span class="value">{{address}}</span>
+                <span class="value">{{company.address}}</span>
             </div>
             <div class="info-row">
                 <span class="label">City :</span>
-                <span class="value">{{city}}</span>
+                <span class="value">{{company.city}}</span>
             </div>
             <div class="info-row">
                 <span class="label">Province :</span>
-                <span class="value">{{province}}</span>
+                <span class="value">{{company.province}}</span>
             </div>
             <div class="info-row">
                 <span class="label">Postal Code:</span>
-                <span class="value">{{postalCode}}</span>
+                <span class="value">{{company.postalCode}}</span>
             </div>
-            <div class="info-row">
-                <span class="label">Is Top Level Company?</span>
-                <span class="value">{{isTopLevel}}</span>
-            </div>
-            <div class="info-row">
+            <div *ngIf="!company.topLevel" class="info-row">
                 <span class="label">Parent Company:</span>
-                <span class="value"><a [routerLink]="['/brokercompany', parentCompanyId]">{{parentCompanyName}}</a></span>
+                <span class="value"><a [routerLink]="['/brokercompany', company.parentCompanyId]">{{company.parentCompanyName}}</a></span>
             </div>
         </div>
         <button>Edit</button>

@@ -34,23 +34,24 @@
                         <th>Product</th>
                         <th>Status</th>
                         <th>Last Updated</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let account of linkedAccounts">
-
+                    <tr *ngFor="let account of accounts">
                         <td>
-                            <a [routerLink]="['/account', account.id]">{{ account.dateCreated }}</a>
+                            <a [routerLink]="['/account', account.id]">{{ account.created_time }}</a>
                         </td>
                         <td>
-                            <a [routerLink]="['/account', account.id]">{{ account.policyId }}</a>
+                            <a [routerLink]="['/account', account.id]">{{ account.policy_id }}</a>
                         </td>
                         <td>
-                            <a [routerLink]="['/insured', account.insuredId]">{{ account.insured }}</a>
+                            <a [routerLink]="['/insured', account.named_insured]">{{ account.named_insured_data.name }}</a>
                         </td>
-                        <td>{{ account.product }}</td>
-                        <td>{{ account.status }}</td>
-                        <td>{{ account.lastUpdated }}</td>
+                        <td>{{ account.product_type }}</td>
+                        <td>{{ account.account_status }}</td>
+                        <td>{{ account.updated_time }}</td>
+                        <button [routerLink]="['/account', account.id]">Open Account</button>
                     </tr>
                 </tbody>
             </table>

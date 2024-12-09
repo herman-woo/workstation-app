@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { PaginatedResponse } from './paginated-response.service';
 import { map } from 'rxjs/operators'; // Correct import for `map`
 import { BrokerCompany } from '../models/broker-company.model';
+import { Broker } from '../models/insurance-broker.model';
 
 @Injectable({
   providedIn: 'root'
@@ -34,7 +35,7 @@ export class BrokerCompanyService {
 
 
   getBrokerCompanyById(id:number): Observable<BrokerCompany> {
-    return this.http.get<any>(this.apiUrl+id)
+    return this.http.get<any>(this.apiUrl+id).pipe(map(json => BrokerCompany.mapJson(json)))
   }
 
 }

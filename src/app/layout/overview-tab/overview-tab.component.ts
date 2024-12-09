@@ -53,7 +53,7 @@ export class OverviewTabComponent implements OnInit {
     this.isLoading = true;
 
     // Call the service to fetch the accounts
-    this.accountService.getAllAccounts(filter).subscribe({
+    this.accountService.getAllAccounts("","","","","","","").subscribe({
       next: (response) => {
         console.log('Service Data:', response); // Log the service data
         this.dataSource.data = response.accounts; // Bind the data to the table
