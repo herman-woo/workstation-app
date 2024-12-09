@@ -4,10 +4,12 @@
 @use '../../../styles/partials/colors' as *; 
 .welcome {
     height: 12.5rem;
-    padding: 1rem;
+    padding: 1rem 3rem;
     border-radius: 1.5rem;
     @include pink-gradient_bg;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.241);
+    @include flex (center, start);
+    flex-direction: column;
     
 
     &__message {
