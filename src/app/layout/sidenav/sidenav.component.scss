@@ -1,11 +1,14 @@
 @use"../../../styles/partials/mixin" as *;
+@use"../../../styles/partials/colors" as *;
+
 @import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
 @import 'phosphor-icons/src/css/icons.css';
 /* Sidebar Styles */
 .sidebar {
     position: relative;
-    width: 16rem; /* 256px */
+    width: 12.5rem; /* 256px */
     height: 100vh;
+    // @include flex(start,start);
     display: flex;
     flex-direction: column;
     gap: 0.625rem; /* 10px */
@@ -13,6 +16,7 @@
     padding: 1.5rem; /* 24px */
     border-radius: 1.875rem; /* 30px */
     transition: width 0.3s;
+    overflow: auto;
   
   
   &__menu-btn {
@@ -37,60 +41,71 @@
   }
   /*Sidebar header*/
   &__head {
-    // display: flex;
-    @include flex ( start, center);
-    gap: 1.25rem; /* 20px */
-    padding-bottom: 1.25rem; /* 20px */
-    border-bottom: 0.0625rem solid #f6f6f6; /* 1px */
-    border: 1px solid red;
-  }
-  
-  &__user-image {
-    // width: 2.75rem; /* 44px */
-    // height: 2.75rem; /* 44px */
-    // border-radius: 50%;
-    @include avatar-circle;
-    overflow: hidden;
-
-  }
-  
-  &__profile-pic {
-    // margin:0;
-    object-fit: cover;
-    @include avatar-circle;
-  }
-  
-  &__user-details {
-    transition: display 0.3s;
-    border: 1px solid red;
-
-  }
-  
-  .sidebar__title {
-    font-size: 0.625rem; /* 10px */
-    font-weight: 500;
-    color: #757575;
+    height: calc(5rem - 1.5rem);
     text-transform: uppercase;
-    margin-bottom: 0.625rem; /* 10px */
+
+    @include flex ( center, center);
+    // gap: 1.25rem; /* 20px */
+    // padding-bottom: 1.25rem; /* 20px */
+    border-bottom: 0.0625rem solid #f6f6f6; /* 1px */
+    border: 1px solid $cloud;
+   
   }
+  /* Work in Progress*/
+  // &__user-image {
+  //   width: 2.75rem; /* 44px */
+  //   height: 2.75rem; /* 44px */
+  //   border-radius: 50%;
+  //   @include avatar-circle;
+  //   overflow: hidden;
+
+  // }
   
-  .sidebar__username {
-    font-size: 0.875rem; /* 14px */
-    font-weight: 500;
-  }
-}
+  // &__profile-pic {
+  //   margin:0;
+  //   object-fit: cover;
+  //   @include avatar-circle;
+  // }
+  
+  // &__user-details {
+  //   transition: display 0.3s;
+  //   border: 1px solid red;
+
+  // }
+  
+  
+//   .sidebar__title {
+//     font-size: 0.625rem; /* 10px */
+//     font-weight: 500;
+//     color: #757575;
+//     text-transform: uppercase;
+//     margin-bottom: 0.625rem; /* 10px */
+//   }
+  
+//   .sidebar__username {
+//     font-size: 0.875rem; /* 14px */
+//     font-weight: 500;
+//   }
+
   /* Sidebar Menu Styles */
-  .sidebar__nav {
-      flex: 1;
-      display: flex;
+  // .sidebar__nav {
+  //     flex: 1;
+  //     display: flex;
+  //     flex-direction: column;
+  //     height: 100%; /* Ensure the flex container takes up full height */
+  //   }
+    &__nav{
+      @include flex(start, center);
       flex-direction: column;
-      height: 100%; /* Ensure the flex container takes up full height */
+      flex: 1;
+      border: 1px solid purple;
     }
-    
-    .sidebar__menu {
+    &__menu {
+      width: 100%;
       padding-bottom: 0.625rem; /* 10px */
       margin-bottom: 1.25rem; /* 20px */
       border-bottom: 2px solid lightsteelblue; /* 2px */
+      border: 1px solid green;
     }
     .sidebar__menu:nth-last-child(2) { /* Target the "Settings" menu */
       border-bottom: none;
@@ -101,7 +116,8 @@
       padding-bottom: 0;
       margin-bottom: 0;
       border-bottom: none;
-    }  
+    } 
+  
   
   .sidebar__navtitle {
     font-size: 0.625rem; /* 10px */
@@ -110,15 +126,23 @@
     text-transform: uppercase;
     margin-bottom: 0.625rem; /* 10px */
     transition: text-align 0.3s;
+    border: 1px solid rgb(206, 192, 255);
+
   }
   
   .sidebar__navlist {
     list-style: none;
+    padding: 0;
+    border: 1px solid blue;
+    @include flex(center, start);
+    flex-direction: column;
+
   }
   
   .sidebar__navitem {
     margin-bottom: 0.3125rem; /* 5px */
     position: relative;
+    border: 1px solid pink;
   }
   
   .sidebar__navitem a {
@@ -159,7 +183,7 @@
   }
   
   .sidebar__sub-menu {
-    display: none;
+    // display: none;
     margin-left: 1.25rem; /* 20px */
     padding-left: 1.25rem; /* 20px */
     padding-top: 0.3125rem; /* 5px */
@@ -207,7 +231,7 @@
     color: aliceblue;
     background-color: #000;
     opacity: 0;
-    visibility: hidden;
+    // visibility: hidden;
   }
   
   .sidebar.active .sidebar__navitem > a .text::after {
@@ -243,7 +267,7 @@
     background-color: aliceblue;
     box-shadow: 0 0.625rem 0.5rem rgba(0, 0, 0, 0.1); /* 0 10px 8px */
   }
-  
+}
   
 // /* Sidebar Styles */
 // .sidebar {

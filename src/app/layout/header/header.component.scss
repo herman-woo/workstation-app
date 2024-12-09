@@ -46,7 +46,6 @@
 
   &__user {
     width: fit-content;
-    border: 1px solid red;
     @include flex(end, center);
     gap: 0.5rem;
     @include desktop {
@@ -69,6 +68,7 @@
   }
   &__icon {
     align-self: center;
+    font-size: 1.5rem;
     color: $graphite;
   }
   &__user-info {

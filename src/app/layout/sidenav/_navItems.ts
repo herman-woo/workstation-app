@@ -10,26 +10,27 @@ export const navItems: { section: string; items: NavItem[] }[] = [
     section: 'Main',
     items: [
       { name: 'Home', icon: 'ph-bold ph-house-simple', route: '/' },
-      {
-        name: 'Dashboard',
-        icon: 'ph-bold ph-list',
-        route: '/dashboard',
-        subMenu: [
-          { name: 'Overview', route: '/' },
-          { name: 'Renewal', route: '/renewal' },
-          { name: 'Bound Tracking', route: '/bound' },
-          { name: 'Team', route: '/team' },
-        ],
-      },
+      // {
+      //   name: 'Dashboard',
+      //   icon: 'ph-bold ph-list',
+      //   route: '/dashboard',
+      //   subMenu: [
+      //     { name: 'Overview', route: '/' },
+      //     { name: 'Renewal', route: '/renewal' },
+      //     { name: 'Bound Tracking', route: '/bound' },
+      //     { name: 'Team', route: '/team' },
+      //   ],
+      // },
       {
         name: 'Information',
         icon: 'ph-bold ph-file-text',
         route: '/info',
         subMenu: [
           { name: 'Brokers', route: '/broker' },
-          { name: 'Brokerages', route: '/brokerage' },
+          { name: 'Brokerages', route: '/brokercompanies' },
           { name: 'Insured', route: '/insured' },
-          { name: 'Account', route: '/account' },
+          { name: 'Team', route: '/underwriters' },
+          // { name: 'Account', route: '/account' },
         ],
       },
       {
@@ -45,12 +46,12 @@ export const navItems: { section: string; items: NavItem[] }[] = [
       },
     ],
   },
-  {
-    section: 'Settings',
-    items: [
-      { name: 'Settings', icon: 'ph-bold ph-gear', route: '/settings' },
-    ],
-  },
+  // {
+  //   section: 'Settings',
+  //   items: [
+  //     { name: 'Settings', icon: 'ph-bold ph-gear', route: '/settings' },
+  //   ],
+  // },
   {
     section: 'Account',
     items: [
