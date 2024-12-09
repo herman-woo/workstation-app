@@ -1,9 +1,9 @@
 <footer class="footer">
     <div class="footer__container">
         <p class="footer__text">
-            Workstation Web beta v{{version}}
+            Workstation Web beta v{{version}} <span>{{ version }}</span> 
         </p>
-        <p class="footer__text">{{day}}</p>
+        <p class="footer__text">{{ currentDate | date:'fullDate' }} - {{ day }}</p>
     </div>
     
     <div class="footer__copyright">

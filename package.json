@@ -23,6 +23,7 @@
     "@angular/router": "^18.2.0",
     "@kenjiuno/msgreader": "^1.22.0",
     "cors": "^2.8.5",
+    "phosphor-icons": "^1.4.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"

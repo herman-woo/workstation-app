@@ -1,19 +1,42 @@
+@use "../styles/partials/mixin" as *;
+
 .app-container {
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+    border: 3px solid black;
     display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow: auto;
+    height: auto;
+
+
+}
+// .app-wrapper {
+//     display: flex;
+//     // flex-direction: column;
+//     width: 100%;
+//     min-height: 100vh;
+//     // height: 100vh;
+//     overflow: auto;
+//     border: 10px solid gold
+// }
+// .app-header{
+//     @include section-padding;
+// }
+.app-main{
+    width: 100%;
+    height: auto;
 }
 
 /* Content wrapper for sidebar and main content */
-.content-wrapper {
-    display: flex;
-    flex: 1;
-}
+// .content-wrapper {
+//     display: flex;
+//     flex: 1;
+// }
 
 .main-content {
-    margin-left: 50px;
+    // margin-left: 50px;
     /* Match contracted sidebar width */
+    margin: 0;
     transition: margin-left 0.3s ease;
     flex: 1;
     padding: 0;

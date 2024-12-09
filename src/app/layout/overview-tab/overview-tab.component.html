@@ -1,38 +1,67 @@
 <div class="overview">
-    <div class="overview__container">
-        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
-            aria-label="Select page of periodic elements">
-        </mat-paginator>
-        <table mat-table [dataSource]="dataSource" class="overview__table">
+  <div class="overview__container">
+    <div *ngIf="isLoading">Loading...</div>
 
-            <!-- Position Column -->
-            <ng-container matColumnDef="position">
-                <th mat-header-cell *matHeaderCellDef> No. </th>
-                <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-            </ng-container>
+    <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
 
-            <!-- Name Column -->
-            <ng-container matColumnDef="name">
-                <th mat-header-cell *matHeaderCellDef> Name </th>
-                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-            </ng-container>
 
-            <!-- Weight Column -->
-            <ng-container matColumnDef="weight">
-                <th mat-header-cell *matHeaderCellDef> Weight </th>
-                <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-            </ng-container>
+    <table mat-table [dataSource]="dataSource" class="overview__table">
+      <ng-container matColumnDef="Policy Number">
+        <th mat-header-cell *matHeaderCellDef (click)="onColumnClick('Policy Number')" class="clickable-header">
+          Policy Number
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <a [routerLink]="['/account', element.id]">{{ element.policy_id }}</a>
+        </td>
+      </ng-container>
 
-            <!-- Symbol Column -->
-            <ng-container matColumnDef="symbol">
-                <th mat-header-cell *matHeaderCellDef> Symbol </th>
-                <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-            </ng-container>
+      <ng-container matColumnDef="Name Insured">
+        <th mat-header-cell *matHeaderCellDef (click)="onColumnClick('Name Insured')" class="clickable-header">
+          Name Insured
+        </th>
+        <td mat-cell *matCellDef="let element"> {{ element.named_insured_data.name }} </td>
+      </ng-container>
 
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-        </table>
-    </div>
+      <ng-container matColumnDef="Broker">
+        <th mat-header-cell *matHeaderCellDef (click)="onColumnClick('Broker')" class="clickable-header">
+          Broker
+        </th>
+        <td mat-cell *matCellDef="let element"> {{ element.broker_data.first_name }} {{ element.broker_data.last_name }}
+        </td>
+      </ng-container>
 
+      <ng-container matColumnDef="Submission">
+        <th mat-header-cell *matHeaderCellDef (click)="onColumnClick('Submission')" class="clickable-header">
+          Submission
+        </th>
+        <td mat-cell *matCellDef="let element"> {{ element.submission_type }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Year">
+        <th mat-header-cell *matHeaderCellDef (click)="onColumnClick('Year')" class="clickable-header">
+          Year
+        </th>
+        <td mat-cell *matCellDef="let element"> {{ element.year }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Product">
+        <th mat-header-cell *matHeaderCellDef (click)="onColumnClick('Product')" class="clickable-header">
+          Product
+        </th>
+        <td mat-cell *matCellDef="let element"> {{ element.product_type }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Status">
+        <th mat-header-cell *matHeaderCellDef (click)="onColumnClick('Status')" class="clickable-header">
+          Status
+        </th>
+        <td mat-cell *matCellDef="let element"> {{ element.account_status }} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+  </div>
 
 </div>

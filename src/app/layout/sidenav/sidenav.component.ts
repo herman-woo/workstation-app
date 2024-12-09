@@ -7,6 +7,8 @@ import { navItems } from './_navItems';
 import { RouterLink } from '@angular/router';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { SidenavService } from '../../services/sidenav.service';
+
 
 @Component({
   selector: 'app-sidenav',
@@ -25,22 +27,17 @@ import { MatExpansionModule } from '@angular/material/expansion';
   styleUrl: './sidenav.component.scss'
 })
 export class SidenavComponent {
-  @ViewChild('sidenav') sidenav!: MatSidenav; // Get a reference to the sidenav
-  isExpanded = true; // Initially expanded
-  navItems= navItems;
+  navItems = navItems; // Navigation items
+  activeMenuIndex: number | null = null; // Active menu state
+  isSidebarActive: boolean = false; // Sidebar toggle state
 
-constructor() { 
-  // Set the sidenav to be open by default
-  this.sidenav.open();
+  // Toggles the active menu item
+  toggleMenu(index: number): void {
+    this.activeMenuIndex = this.activeMenuIndex === index ? null : index;
   }
-  toggleSidenav(): void {
-    this.isExpanded = !this.isExpanded;
-    this.sidenav.toggle();
-    }
 
-
-  // toggleSidenav() {
-  //   this.isExpanded = !this.isExpanded;
-  //   this.sidenav.toggle(); 
-  // }
+  // Toggles the sidebar visibility
+  toggleSidebar(): void {
+    this.isSidebarActive = !this.isSidebarActive;
+  }
 }

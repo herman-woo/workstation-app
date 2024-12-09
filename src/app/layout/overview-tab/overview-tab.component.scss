@@ -1,20 +1,29 @@
 @use "../../../styles/partials/mixin" as *;
-table {
-    width: 100%;
-  }
+@use "../../../styles/partials/colors" as *;
+
 .overview{
-    width: 100%;
-    @include section-padding;
-    border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;    
+  @include section-padding;
+  border-radius: 5px;
+  border-top: none;
+  border: 1px solid $cloud;
     
     &__container{
         width: 100%;
-        border: 1px solid rebeccapurple;
+        height: auto;
+        overflow: auto;
 
     }
     
-    &__table{
-        width: 40rem;
-        border: 1px solid red;
-    }
+    
 }
+
+
+mat-table {
+  width: 100%; /* Make the table take the full width */
+  height: 100%; /* Make the table take the full height */
+}
+

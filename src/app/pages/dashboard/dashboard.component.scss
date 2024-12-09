@@ -6,10 +6,16 @@
 @import '../../../styles/table.scss';
 
 .dashboard{
-  border: 1px solid red;
+  // border: 1px solid red;
   @include section-padding;
   @include flex(center,center);
   flex-direction: column;
+
+  &__hero,
+  &__main {
+    width: 100%;
+    height: auto; /* Let the height adjust based on content */
+  }
   
   &__hero{
     margin: 0;
@@ -21,7 +27,7 @@
 
   &__welcome{
     width: 50%;
-    padding: 1rem; /* adjust padding as needed */
+    padding: 1rem; 
     box-sizing: border-box;
   }
 
@@ -42,11 +48,19 @@
   }
 
   &__main{
-    width: 100%;
+    padding: 1rem;
+    flex-grow: 1;    
+    box-sizing: border-box; 
+  }
+  &__main-container{
+    padding: 1rem;
     border: 1px solid $slate;
-    border-radius: 1.5rem;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    }
+  &__main-nav{
+    padding: 0;
     margin: 0;
-    padding:0;
   }
 
 

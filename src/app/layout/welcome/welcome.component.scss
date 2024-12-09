@@ -4,17 +4,34 @@
 @use '../../../styles/partials/colors' as *; 
 .welcome {
     height: 12.5rem;
-    padding: 1rem;
+    padding: 1rem 3rem;
     border-radius: 1.5rem;
+    @include pink-gradient_bg;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.241);
+    @include flex (center, start);
+    flex-direction: column;
     
 
-    @include pink-gradient_bg;
-    // background-image: url('https://i.pinimg.com/originals/cc/d7/91/ccd791805259af1b14ad5fabc905d018.jpg'); /* Add your background image here */
+    &__message {
+      font-size: 3rem; // Reduce font size 
+      color: #fff; // Higher contrast color
+      font-family: sans-serif; // Add a font-family
+      
+    }
+  
+    &__text {
+      font-size: 16px;
+      color: #666; 
+      font-family: sans-serif; // Add a font-family
+    }
+  }
+
+
+
+   // background-image: url('https://i.pinimg.com/originals/cc/d7/91/ccd791805259af1b14ad5fabc905d018.jpg'); /* Add your background image here */
     // background-size: cover;
     // background-position: center;
     // position: relative;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.241);
-  }
   
   // .welcome::before {
   //   content: '';

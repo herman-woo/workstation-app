@@ -1,64 +1,57 @@
-<p>sidenav works!</p>
-<!-- <mat-nav-list>
-    <ng-container *ngFor="let item of navItems">
-      <a mat-list-item routerLink="{{ item.route }}" *ngIf="!item.children" class="nav-link">
-        <mat-icon>{{ item.icon }}</mat-icon> {{ item.name }}
-      </a>
-  
-      <mat-expansion-panel *ngIf="item.children"> 
-        <mat-expansion-panel-header>
-          <mat-icon>{{ item.icon }}</mat-icon> {{ item.name }}
-        </mat-expansion-panel-header>
-        <mat-nav-list>
-          <a mat-list-item 
-             *ngFor="let child of item.children" 
-             routerLink="{{ child.route }}" 
-             class="nav-link">
-            <mat-icon>{{ child.icon }}</mat-icon> {{ child.name }}
+<div class="sidebar" [class.active]="isSidebarActive">
+  <!-- Sidebar toggle button -->
+  <div class="sidebar__menu-btn" (click)="toggleSidebar()">
+    <i class="arrow ph-bold ph-caret-left"></i>
+  </div>
+
+  <!-- Sidebar header -->
+  <div class="sidebar__head">
+    Steamboat
+    <!-- <div class="sidebar__user-image">
+      <img 
+        class="sidebar__profile-pic"
+        src="/images/Mohan-muruge.jpg" 
+        alt="User Image">
+    </div>
+    <div class="sidebar__user-details" *ngIf="!isSidebarActive">
+      <p class="sidebar__title">Web Developer</p>
+      <p class="sidebar__username">John Doe</p>
+    </div> -->
+  </div>
+
+  <!-- Sidebar navigation -->
+  <div class="sidebar__nav">
+    <div *ngFor="let section of navItems" class="sidebar__menu">
+      <!-- Section title -->
+      <p class="sidebar__navtitle" [style.textAlign]="isSidebarActive ? 'center' : 'left'">
+        {{ section.section }}
+      </p>
+
+      <!-- Navigation items -->
+      <ul class="sidebar__navlist">
+        <li
+          *ngFor="let item of section.items; let i = index"
+          class="sidebar__navitem"
+          [class.active]="activeMenuIndex === i"
+          (click)="toggleMenu(i)"
+        >
+          <!-- Main item -->
+          <a [routerLink]="item.route" [title]="isSidebarActive ? item.name : ''">
+            <i class="icon" [class]="item.icon"></i>
+            <span class="text" *ngIf="!isSidebarActive">{{ item.name }}</span>
+            <i *ngIf="item.subMenu" class="arrow ph-bold ph-caret-down"></i>
           </a>
-        </mat-nav-list>
-      </mat-expansion-panel>
-    </ng-container>
-  </mat-nav-list> -->
 
-
-  <mat-sidenav #sidenav class="my-sidenav" mode="side" [opened]="isExpanded"> 
-    <mat-nav-list>
-      <ng-container *ngFor="let item of navItems">
-        <a mat-list-item 
-           routerLink="{{ item.route }}" 
-           *ngIf="!item.children" 
-           class="nav-link"
-           [matTooltip]="item.name" 
-           [matTooltipDisabled]="isExpanded"> 
-          <mat-icon>{{ item.icon }}</mat-icon> 
-          <span *ngIf="isExpanded">{{ item.name }}</span> 
-        </a>
-  
-        <mat-expansion-panel *ngIf="item.children" 
-                             [expanded]="isExpanded" 
-                             (opened)="isExpanded = true" 
-                             (closed)="isExpanded = false">
-          <mat-expansion-panel-header>
-            <mat-icon>{{ item.icon }}</mat-icon> 
-            <span>{{ item.name }}</span> 
-          </mat-expansion-panel-header>
-          <mat-nav-list>
-            <a mat-list-item 
-               *ngFor="let child of item.children" 
-               routerLink="{{ child.route }}" 
-               class="nav-link"
-               [matTooltip]="child.name" 
-               [matTooltipDisabled]="isExpanded">
-              <mat-icon>{{ child.icon }}</mat-icon> {{ child.name }}
-            </a>
-          </mat-nav-list>
-        </mat-expansion-panel>
-      </ng-container>
-    </mat-nav-list>
-    <button mat-icon-button (click)="toggleSidenav()"> 
-      <mat-icon>
-        {{ isExpanded ? 'chevron_left' : 'chevron_right' }}
-      </mat-icon>
-    </button>
-  <!-- </mat-sidenav> -->
+          <!-- Submenu -->
+          <ul class="sidebar__sub-menu">
+            <li *ngFor="let subItem of item.subMenu" class="sidebar__sub-item">
+              <a [routerLink]="subItem.route">
+                <span class="text">{{ subItem.name }}</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
