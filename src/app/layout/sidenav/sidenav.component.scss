@@ -98,14 +98,14 @@
       @include flex(start, center);
       flex-direction: column;
       flex: 1;
-      border: 1px solid purple;
+      // border: 1px solid purple;
     }
     &__menu {
       width: 100%;
       padding-bottom: 0.625rem; /* 10px */
       margin-bottom: 1.25rem; /* 20px */
       border-bottom: 2px solid lightsteelblue; /* 2px */
-      border: 1px solid green;
+      // border: 1px solid green;
     }
     .sidebar__menu:nth-last-child(2) { /* Target the "Settings" menu */
       border-bottom: none;
@@ -126,14 +126,14 @@
     text-transform: uppercase;
     margin-bottom: 0.625rem; /* 10px */
     transition: text-align 0.3s;
-    border: 1px solid rgb(206, 192, 255);
+    // border: 1px solid rgb(206, 192, 255);
 
   }
   
   .sidebar__navlist {
     list-style: none;
     padding: 0;
-    border: 1px solid blue;
+    // border: 1px solid blue;
     @include flex(center, start);
     flex-direction: column;
 
@@ -142,7 +142,8 @@
   .sidebar__navitem {
     margin-bottom: 0.3125rem; /* 5px */
     position: relative;
-    border: 1px solid pink;
+    list-style: none;
+
   }
   
   .sidebar__navitem a {
@@ -234,9 +235,7 @@
     // visibility: hidden;
   }
   
-  .sidebar.active .sidebar__navitem > a .text::after {
-    background-color: red;
-  }
+ 
   //   content: "";
   //   position: absolute;
   //   left: -0.3125rem; /* -5px */
