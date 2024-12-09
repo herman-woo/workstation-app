@@ -21,6 +21,7 @@ export class AccountTableComponent {
   brokerageFilter: string = "";
   submisisonSelection = '';
   statusSelection = '';
+  
 
   constructor(private accountService: AccountService) { }
   filter(): void {

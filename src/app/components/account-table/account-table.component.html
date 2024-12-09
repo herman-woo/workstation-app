@@ -4,6 +4,7 @@
             <th>ID</th>
             <th>
                 <label>Year</label>
+                <!-- TODO: un-hardcode this -->
                 <select [(ngModel)]="yearSelection" (change)="filter()">
                     <option>---</option>
                     <option>2015</option>
@@ -67,7 +68,18 @@
                     <option>Completed/Expired</option>
                 </select>
             </th>
-            <th>Business Unit</th>
+            <!-- TODO: un-hardcode this -->
+            <th>
+                <label>Business Unit</label>
+                <select [(ngModel)]="statusSelection" (change)="filter()">
+                    <option>---</option>
+                    <option>Environmental</option>
+                    <option>Construction</option>
+                    <option>Indicated</option>
+                    <option>Bound</option>
+                    <option>Completed/Expired</option>
+                </select>
+            </th>
             <th>Team</th>
             <th>Product</th>
             <th>Indicated</th>
