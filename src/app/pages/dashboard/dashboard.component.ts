@@ -54,7 +54,7 @@ export class DashboardComponent {
     }
   
     getAccounts(insured: string) {
-      this.accountService.getAllAccounts(insured).subscribe({
+      this.accountService.getAllAccounts("",insured,"","","","","").subscribe({
         next: (response) => {
           console.log(response)
           this.accounts = response.accounts;

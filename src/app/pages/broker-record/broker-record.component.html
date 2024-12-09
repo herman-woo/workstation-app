@@ -5,27 +5,27 @@
             <h2>Broker Info:</h2>
             <div class="info-row">
                 <span class="label">Broker Name:</span>
-                <span class="value">{{brokerFirstName}} {{brokerLastName}}</span>
+                <span class="value">{{broker.firstName}} {{broker.lastName}}</span>
             </div>
             <div class="info-row">
                 <span class="label">Broker Title:</span>
-                <span class="value">{{brokerTitle}}</span>
+                <span class="value">{{broker.title}}</span>
             </div>
             <div class="info-row">
                 <span class="label">Phone Number:</span>
-                <span class="value">{{brokerPhone}}</span>
+                <span class="value">{{broker.phoneNumber}}</span>
             </div>
             <div class="info-row">
                 <span class="label">Email:</span>
-                <span class="value">{{brokerEmail}}</span>
+                <span class="value">{{broker.email}}</span>
             </div>
             <div class="info-row">
                 <span class="label">Company ID:</span>
-                <span class="value">{{brokerCompanyId}}</span>
+                <span class="value">{{broker.brokerComapnyId}}</span>
             </div>
             <div class="info-row">
                 <span class="label">Parent Company:</span>
-                <span class="value"><a [routerLink]="['/brokercompany', brokerCompanyId]">{{brokerCompanyName}}</a></span>
+                <span class="value"><a [routerLink]="['/brokercompany', broker.brokerComapnyId]">{{broker.brokerCompanyName}}</a></span>
             </div>
         </div>
         <button>Edit</button>

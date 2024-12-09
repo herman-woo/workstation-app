@@ -25,10 +25,10 @@ export class BrokerService {
   }
 
   getInsuranceBrokerById(id: number): Observable<Broker> {
-    return this.http.get<any>(this.apiUrl + id)
+    return this.http.get<any>(this.apiUrl+id).pipe(map(json => Broker.mapJson(json)))
   }
 
   searchInsuranceBrokers(query: string): Observable<Broker[]> {
-    return this.http.get<any[]>(this.apiUrl + 'search/?query=' + query).pipe(map((response => response.map(json => Broker.mapJson(json)))))
+    return this.http.get<any[]>(this.apiUrl + 'search?query=' + query).pipe(map((response => response.map(json => Broker.mapJson(json)))))
   }
 }

@@ -1,0 +1,114 @@
+<table class="task-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>
+                <label>Year</label>
+                <!-- TODO: un-hardcode this -->
+                <select [(ngModel)]="yearSelection" (change)="filter()">
+                    <option>---</option>
+                    <option>2015</option>
+                    <option>2016</option>
+                    <option>2017</option>
+                    <option>2018</option>
+                    <option>2019</option>
+                    <option>2020</option>
+                    <option>2021</option>
+                    <option>2022</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                </select>
+            </th>
+            <th>
+                <div class="search-container">
+                    <input type="text" placeholder="Policy ID" [(ngModel)]="policyIdFilter" (keyup)="filter()"
+                        class="search-bar" />
+                </div>
+            </th>
+            <th>
+                <div class="search-container">
+                    <input type="text" placeholder="Named Insured" [(ngModel)]="insuredFilter" (keyup)="filter()"
+                        class="search-bar" />
+                </div>
+            </th>
+            <th>
+                <div class="search-container">
+                    <input type="text" placeholder="Underwriter" [(ngModel)]="underwriterFilter" (keyup)="filter()"
+                        class="search-bar" />
+                </div>
+            </th>
+            <th>
+                <div class="search-container">
+                    <input type="text" placeholder="Broker" [(ngModel)]="brokerFilter" (keyup)="filter()"
+                        class="search-bar" />
+                </div>
+            </th>
+            <th>
+                <div class="search-container">
+                    <input type="text" placeholder="Brokerage" [(ngModel)]="brokerageFilter" (keyup)="filter()"
+                        class="search-bar" />
+                </div>
+            </th>
+            <th>
+                <label>Submission</label>
+                <select [(ngModel)]="submisisonSelection" (change)="filter()">
+                    <option>---</option>
+                    <option>New</option>
+                    <option>Renewal</option>
+                </select>
+            </th>
+            <th>
+                <label>Status</label>
+                <select [(ngModel)]="statusSelection" (change)="filter()">
+                    <option>---</option>
+                    <option>Draft</option>
+                    <option>Submitted</option>
+                    <option>Indicated</option>
+                    <option>Bound</option>
+                    <option>Completed/Expired</option>
+                </select>
+            </th>
+            <!-- TODO: un-hardcode this -->
+            <th>
+                <label>Business Unit</label>
+                <select [(ngModel)]="statusSelection" (change)="filter()">
+                    <option>---</option>
+                    <option>Environmental</option>
+                    <option>Construction</option>
+                    <option>Indicated</option>
+                    <option>Bound</option>
+                    <option>Completed/Expired</option>
+                </select>
+            </th>
+            <th>Team</th>
+            <th>Product</th>
+            <th>Indicated</th>
+            <th>Quote Revisions</th>
+            <th>Policy Start Date</th>
+            <th>Policy End Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let account of accounts">
+            <td><a [routerLink]="['/account', account.id]">{{account.id}}</a></td>
+            <td><a [routerLink]="['/account', account.id]">{{account.year}}</a></td>
+            <td>{{ account.policy_id }}</td>
+            <td><a [routerLink]="['/insured', account.named_insured]">{{ account.named_insured_data.name }}</a></td>
+            <td><a [routerLink]="['/underwriter', account.underwriter]">{{ account.underwriter_data.first_name }} {{
+                    account.underwriter_data.last_name }}</a></td>
+            <td><a [routerLink]="['/broker', account.broker]">{{ account.broker_data.first_name }} {{
+                    account.broker_data.last_name }}</a></td>
+            <td><a [routerLink]="['/brokercompany', account.broker_company]">{{ account.broker_company_data.name }}</a>
+            </td>
+            <td>{{ account.submission_type }}</td>
+            <td>{{ account.account_status }}</td>
+            <td>{{ account.business_unit_data.name }}</td>
+            <td>{{ account.team_data.name }}</td>
+            <td>{{ account.product_type }}</td>
+            <td>{{ account.indicated }}</td>
+            <td>{{ account.quote_revisions_count }}</td>
+            <td>{{ account.policy_start_date }}</td>
+            <td>{{ account.policy_end_date }}</td>
+        </tr>
+    </tbody>
+</table>
