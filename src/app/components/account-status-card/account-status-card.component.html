@@ -1,10 +1,12 @@
 <div class="account-summary account-card">
     <table>
-    </table>
-    <table>
         <tr>
-            <td><h2>Account Status:</h2></td>
-            <td><h2>{{accountData.account_status}}</h2></td>
+            <td>
+                <h2>Account Status:</h2>
+            </td>
+            <td>
+                <h2>{{accountData.account_status}}</h2>
+            </td>
         </tr>
         <tr>
             <td>Team:</td>
@@ -33,6 +35,14 @@
         <tr>
             <td>Policy Issued</td>
             <td>{{accountData.has_policy}}</td>
+        </tr>
+        <tr>
+            <td>Created Time</td>
+            <td>{{accountData.created_time.slice(0,19)}}</td>
+        </tr>
+        <tr>
+            <td>Updated Time</td>
+            <td>{{accountData.updated_time.slice(0,19)}}</td>
         </tr>
     </table>
 </div>

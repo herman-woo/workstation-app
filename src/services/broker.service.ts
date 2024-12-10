@@ -12,8 +12,8 @@ export class BrokerService {
   private apiUrl = 'http://localhost:8000/contact/broker/';
   constructor(private http: HttpClient) { }
 
-  getAllInsuranceBrokers(): Observable<{ brokers: Broker[], count: number, next: string | null, previous: string | null }> {
-    return this.http.get<PaginatedResponse<Broker>>(this.apiUrl).pipe(
+  getAllInsuranceBrokers(parent:string): Observable<{ brokers: Broker[], count: number, next: string | null, previous: string | null }> {
+    return this.http.get<PaginatedResponse<Broker>>(this.apiUrl+"?parent="+parent).pipe(
       map(response => (
         {
           brokers: response.results.map(json => Broker.mapJson(json)),

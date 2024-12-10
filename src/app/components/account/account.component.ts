@@ -9,6 +9,7 @@ import { AccountNotesComponent } from '../../components/notes-tab/account-notes.
 import { AccountService } from '../../../services/account.service';
 import { AccountEntitiesComponent } from '../account-entities/account-entities.component';
 import { AccountStatusCardComponent } from '../account-status-card/account-status-card.component';
+import { AccountActionCardComponent } from '../account-action-card/account-action-card.component';
 
 @Component({
   selector: 'app-account',
@@ -20,14 +21,15 @@ import { AccountStatusCardComponent } from '../account-status-card/account-statu
     AccountNotesComponent,
     BreadcrumbComponent,
     AccountEntitiesComponent,
-    AccountStatusCardComponent,],
+    AccountStatusCardComponent,
+    AccountActionCardComponent],
   templateUrl: './account.component.html',
   styleUrl: './account.component.scss'
 })
 export class AccountComponent {
 
   //logic and variable for account page tabs
-  activeTab: number = 1;
+  activeTab: number = 2;
   setActiveTab(tabNumber: number) {
     this.activeTab = tabNumber
   }

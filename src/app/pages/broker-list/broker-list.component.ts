@@ -45,7 +45,7 @@ export class BrokerListComponent {
   }
 
   loadData() {
-    this.brokerService.getAllInsuranceBrokers().subscribe({
+    this.brokerService.getAllInsuranceBrokers("").subscribe({
       next: (response) => {
         this.brokers = response.brokers;
       },

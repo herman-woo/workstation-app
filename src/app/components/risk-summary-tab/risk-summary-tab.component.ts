@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { AccountTimelineCardComponent } from '../account-timeline-card/account-timeline-card.component';
+import { CommentsSectionCardComponent } from '../comments-section-card/comments-section-card.component';
 @Component({
   selector: 'risk-summary',
   standalone: true,
-  imports: [AccountTimelineCardComponent],
+  imports: [CommentsSectionCardComponent],
   templateUrl: './risk-summary-tab.component.html',
   styleUrl: './risk-summary-tab.component.scss'
 })
