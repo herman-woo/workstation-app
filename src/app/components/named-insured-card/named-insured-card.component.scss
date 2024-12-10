@@ -1,6 +1,11 @@
 @import '../../../styles/account-card.scss';
 @import '../../../styles/account-page.scss';
 
+
+.named-insured-card{
+    min-width: 350px;
+}
+
 .named-insured-card h1 {
     margin: 0 0 4px 0;
 }

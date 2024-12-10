@@ -1,15 +1,33 @@
 <div class="policy-module account-card">
-    <h1>Policy:</h1>
-    <button class="rating-quoting-button">Generate Policy</button>
+    <div class=" policy-row account-row-container">
+        <h2>Policy Summary:</h2>
+        <h2 *ngIf="accountData.has_policy">Issued</h2>
+        <button *ngIf="!accountData.has_policy" class="rating-quoting-button" (click)="updateAccount({
+            policy_start_date: policyStartDate,
+            policy_end_date: policyEndDate,
+            has_policy: true,
+            account_status: 'Bound'
+            })">Issue Policy</button>
+    </div>
+    <div *ngIf="!accountData.has_policy">
+        <div class="policy-date-setter">
+            <h3>Policy Start Date: </h3>
+            <input [(ngModel)]="policyStartDate">
+        </div>
+        <div class="policy-date-setter">
+            <h3>Policy End Date: </h3>
+            <input [(ngModel)]="policyEndDate">
+        </div>
+    </div>
     <div class="info-card">
         <table>
-            <tr>
+            <tr *ngIf="accountData.policy_start_date">
                 <td class="financial-sub-subject">Pol. Period From:</td>
-                <td class="financial-line-item">2024/10/11</td>
+                <td class="financial-line-item">{{accountData.policy_start_date}}</td>
             </tr>
-            <tr>
+            <tr *ngIf="accountData.policy_end_date">
                 <td class="financial-sub-subject">Pol. Period To:</td>
-                <td class="financial-line-item">2027/11/11</td>
+                <td class="financial-line-item">{{accountData.policy_end_date}}</td>
             </tr>
             <tr>
                 <td class="financial-sub-subject">Max Policy Term:</td>

@@ -1,9 +1,9 @@
 <div class="module-container">
-    <div class="rating-quoting-row account-row-container">
-        <rating-module-card [accountData]="data"></rating-module-card>
-    </div>
-    <div class="rating-quoting-row account-row-container">
-        <quoting-module-card></quoting-module-card>
-        <policy-module-card></policy-module-card>
+    <div class="rating-quoting-row account-row-container" *ngIf="data.product_type">
+        <div class="account-column-container">
+            <rating-module-card [accountData]="data"></rating-module-card>
+            <quoting-module-card [accountData]="data" *ngIf="data.indicated"></quoting-module-card>
+        </div>
+        <policy-module-card [accountData]="data"  *ngIf="data.final_quote"></policy-module-card>
     </div>
 </div>

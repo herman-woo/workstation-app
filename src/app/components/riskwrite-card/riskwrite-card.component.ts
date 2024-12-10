@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
   selector: 'riskwrite-card',
@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './riskwrite-card.component.scss'
 })
 export class RiskwriteCardComponent {
+  @Input() accountData: any;
 
 }

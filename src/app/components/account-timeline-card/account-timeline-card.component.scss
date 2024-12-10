@@ -2,7 +2,7 @@
 @import '../../../styles/account-page.scss';
 
 .account-timeline {
-    width: 740px;
+    width: 100%;
 }
 
 .account-timeline h2 {
@@ -12,10 +12,10 @@
 }
 
 .account-timeline table {
-    width: 100%
+    width: 100%;
 }
 
 .timeline-table{
-    width: 70%;
+    // width: 70%;
     background-color: #ffffff;
 }

@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AccountService } from '../../../services/account.service';
 
 @Component({
   selector: 'rating-module-card',
@@ -12,4 +13,10 @@ export class RatingModuleCardComponent {
 
   @Input() accountData: any;
 
+  constructor(private accountService: AccountService
+  ) { }
+
+  updateAccount(data:object) {
+    this.accountService.updateAccount(this.accountData.id, data)
+  }
 }

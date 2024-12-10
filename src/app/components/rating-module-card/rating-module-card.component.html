@@ -2,22 +2,19 @@
     <table>
         <tr>
             <td>
-                <h1 class="rater-product-name">{{accountData.product_type}}</h1>
+                <h2 class="rater-product-name">[{{accountData.business_unit_data.name}}/{{accountData.team_data.name}}]  {{accountData.product_type}}</h2>
             </td>
-            <td *ngIf="accountData.business_subunit === 'Small to Medium Business'">
-                <h1 class="rater-product-name">SME</h1>
+            <td>
             </td>
-            <td *ngIf="accountData.business_subunit != 'Small to Medium Business'">
-                <h1 class="rater-product-name">Core</h1>
+            <td>
+                <button class="rating-quoting-button" *ngIf="!accountData.indicated" (click)="updateAccount({
+                    indicated: true
+                })">Indicate Quote</button>
+                <h2 *ngIf="accountData.indicated" class="rater-product-name">Quote Indicated</h2>
             </td>
         </tr>
         <tr>
-            <td>
-                <button class="rating-quoting-button">Change Product</button>
-            </td>
-            <td>
-                <button class="rating-quoting-button">Rating Model</button>
-            </td>
+
         </tr>
     </table>
     <div *ngIf="accountData.product_type === 'Consultant Or Contractor'" class="rating-table info-card">

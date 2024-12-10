@@ -3,7 +3,7 @@
 @import '../rating-quoting-tab/rating-quoting-tab.component.scss';
 
 .policy-module{
-    width: 400px;
+    width: 500px;
 }
 
 
@@ -37,4 +37,19 @@
     font-size: 15px;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
+}
+
+.policy-row{
+    justify-content: space-between;
+}
+
+.policy-date-setter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+input{
+    margin: 0;
+    padding: 0;
 }
