@@ -33,6 +33,32 @@
     </div>
     <div class="page-section">
         <h2>Company Brokers</h2>
-        <!-- <named-insured-table></named-insured-table> -->
+        <div class="table-container">
+            <table class="task-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Title</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Company ID</th>
+                        <th>Company</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let broker of brokers">
+                        <td>{{ broker.id }}</td>
+                        <td><a [routerLink]="['/broker', broker.id]">{{ broker.firstName }} {{
+                                broker.lastName }}</a></td>
+                        <td>{{ broker.title}}</td>
+                        <td>{{ broker.phoneNumber}}</td>
+                        <td>{{ broker.email}}</td>
+                        <td>{{ broker.brokerComapnyId }}</td>
+                        <td>{{ broker.brokerCompanyName}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

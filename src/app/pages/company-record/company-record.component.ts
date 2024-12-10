@@ -6,6 +6,7 @@ import { BreadcrumbComponent } from '../../components/breadcrumb/breadcrumb.comp
 import { RouterLink } from '@angular/router';
 import { BrokerCompanyService } from '../../../services/broker-company.service';
 import { BrokerCompany } from '../../../models/broker-company.model';
+import { BrokerService } from '../../../services/broker.service';
 
 @Component({
   selector: 'company-page',
@@ -17,16 +18,34 @@ import { BrokerCompany } from '../../../models/broker-company.model';
 export class CompanyRecordComponent {
   company: BrokerCompany;
   id: string | null = null;
+  companyName: string;
+  brokers = []
 
   constructor(
     private route: ActivatedRoute,
-    private companyService: BrokerCompanyService
-  ) {}
+    private companyService: BrokerCompanyService,
+    private brokerService: BrokerService
+  ) { }
   ngOnInit(): void {
     // Capture the ID from the route
     this.id = this.route.snapshot.paramMap.get('id');
     this.companyService
       .getBrokerCompanyById(parseInt(this.id!))
-      .subscribe((data) => (this.company = data));
+      .subscribe((companyData) => {
+        this.company = companyData
+        this.getAllBrokers(companyData.name)
+      });
+  }
+
+  getAllBrokers(companyName: string) {
+    console.log("Get Brokers for: ", companyName)
+    this.brokerService.getAllInsuranceBrokers(companyName).subscribe({
+      next: (response) => {
+        this.brokers = response.brokers;
+      },
+      error: (error) => {
+        console.error('Error fetching underwriters:', error);
+      }
+    })
   }
 }
