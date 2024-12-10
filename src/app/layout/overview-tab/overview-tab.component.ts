@@ -6,6 +6,7 @@ import { AccountService } from '../../../services/account.service';
 import { MatSort } from '@angular/material/sort';
 import { debounceTime, distinctUntilChanged, Subject } from 'rxjs';
 import { RouterLink } from '@angular/router';
+import { LoadingComponent } from '../../components/loading/loading.component';
 
 @Component({
   selector: 'overview-tab',
@@ -14,7 +15,8 @@ import { RouterLink } from '@angular/router';
     CommonModule,
     MatTableModule,
     MatPaginatorModule,
-    RouterLink
+    RouterLink,
+    LoadingComponent
   ],
   templateUrl: './overview-tab.component.html',
   styleUrl: './overview-tab.component.scss'

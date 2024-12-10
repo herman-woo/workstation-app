@@ -11,6 +11,7 @@ import { UnderwriterActionsComponent } from "../../layout/underwriter-actions/un
 import {MatTabsModule} from '@angular/material/tabs';
 import { OverviewTabComponent } from '../../layout/overview-tab/overview-tab.component';
 import { DocViewerComponent } from '../../layout/doc-viewer/doc-viewer.component';
+import { LoadingComponent } from '../../components/loading/loading.component';
 
 
 
@@ -26,7 +27,8 @@ import { DocViewerComponent } from '../../layout/doc-viewer/doc-viewer.component
     UnderwriterActionsComponent,
     MatTabsModule,
     OverviewTabComponent,
-    DocViewerComponent
+    DocViewerComponent,
+    LoadingComponent
 
   ],
   templateUrl: './dashboard.component.html',

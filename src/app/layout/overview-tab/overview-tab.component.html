@@ -1,11 +1,14 @@
 <div class="overview">
   <div class="overview__container">
-    <div *ngIf="isLoading">Loading...</div>
+    <div *ngIf="isLoading" class="loading">
+      <loading></loading>
+    </div>
 
     <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
 
 
     <table mat-table [dataSource]="dataSource" class="overview__table">
+      
       <ng-container matColumnDef="Policy Number">
         <th mat-header-cell *matHeaderCellDef (click)="onColumnClick('Policy Number')" class="clickable-header">
           Policy Number

@@ -1,6 +1,8 @@
 @use "../../../styles/partials/mixin" as *;
 @use "../../../styles/partials/colors" as *;
-
+.loading{
+  @include flex(center, center)
+}
 .overview{
   display: flex;
   flex-direction: column;
