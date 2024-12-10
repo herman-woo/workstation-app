@@ -10,6 +10,7 @@ import { WelcomeComponent } from '../../layout/welcome/welcome.component';
 import { UnderwriterActionsComponent } from "../../layout/underwriter-actions/underwriter-actions.component";
 import {MatTabsModule} from '@angular/material/tabs';
 import { OverviewTabComponent } from '../../layout/overview-tab/overview-tab.component';
+import { DocViewerComponent } from '../../layout/doc-viewer/doc-viewer.component';
 
 
 
@@ -24,7 +25,8 @@ import { OverviewTabComponent } from '../../layout/overview-tab/overview-tab.com
     WelcomeComponent, 
     UnderwriterActionsComponent,
     MatTabsModule,
-    OverviewTabComponent
+    OverviewTabComponent,
+    DocViewerComponent
 
   ],
   templateUrl: './dashboard.component.html',
