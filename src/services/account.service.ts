@@ -53,4 +53,18 @@ export class AccountService {
     return this.http.get<any>(this.apiUrl + id)
   }
 
+  updateAccount(accountId,data:object) {
+    this.http.patch<any>(this.apiUrl+accountId+'/', data)
+      .subscribe({
+        next: (response) => {
+          console.log('Update successful:', response);
+          window.location.reload()
+        },
+        error: (error) => {
+          console.error('Update failed:', error);
+        },
+      });
+  }
 }
+
+

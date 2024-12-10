@@ -1,21 +1,16 @@
 <!--  Insurance Account -->
 <breadcrumb [category]="accountRecord.business_unit_data.name" [id]="id"></breadcrumb>
 <div class="account">
-    <div class="account-row hero">
-        <div>
-            <h2 *ngIf="accountRecord.product_type" class="product-name">Product: {{accountRecord.product_type}}</h2>
-        </div>
-        <div>
-            <h2 *ngIf="accountRecord.policy_id">Policy ID: {{accountRecord.policy_id}}</h2>
-        </div>
-    </div>
     <div class="hero">
         <account-entities [data]="accountRecord"></account-entities>
+        <div>
+            <account-action-card [existingPolicyId]="accountRecord.policy_id" [accountId]="accountRecord.id" [accountStatus]="accountRecord.account_status" [accountData]="accountRecord"></account-action-card>
+        </div>
         <account-status-card [accountData]="accountRecord"></account-status-card>
     </div>
     <div class="account-tabs">
-        <button [ngClass]="{ 'active': activeTab === 1 }" (click)="setActiveTab(1)">Notes</button>
         <button [ngClass]="{ 'active': activeTab === 2 }" (click)="setActiveTab(2)">Rating / Quoting</button>
+        <button [ngClass]="{ 'active': activeTab === 1 }" (click)="setActiveTab(1)">Notes</button>
         <button [ngClass]="{ 'active': activeTab === 3 }" (click)="setActiveTab(3)">Files</button>
         <button [ngClass]="{ 'active': activeTab === 4 }" (click)="setActiveTab(4)">Tasks & History</button>
     </div>

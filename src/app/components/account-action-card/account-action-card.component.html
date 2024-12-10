@@ -1,0 +1,54 @@
+<div *ngIf="!existingPolicyId" class="account-card account-action">
+    <h2>Add Policy ID</h2>
+    <input [(ngModel)]="policyId">
+    <button (click)="updateAccount({
+        policy_id: policyId
+        })">Add</button>
+</div>
+<div *ngIf="accountStatus === 'Draft' ||accountStatus === 'Submitted'" class="account-card account-action">
+    <div class=" custom-select-container">
+        <h2>Select and Rate Product</h2>
+        <select [(ngModel)]="productSelection" class="custom-select">
+            <option value="Fixed Site Environmental">Environmental: Fixed Site Policy</option>
+            <option value="Consultant Or Contractor">Environmental: Contractor/Consultant</option>
+            <option value="Pollution Protection Policy">Environmental: Project Pollution Policy</option>
+            <option value="Excess">Excess</option>
+        </select>
+        <button (click)="updateAccount({
+            product_type: productSelection,
+            account_status: accountStatusSelection.RATE
+            })">Rate</button>
+    </div>
+</div>
+<div *ngIf="accountData.policy_id && accountStatus != 'Bound'" class="account-card account-action">
+    <div class="custom-select-container">
+        <div class="policy-id">
+            <h2> Policy ID:</h2>
+            <h2>{{accountData.policy_id}}</h2>
+        </div>
+    </div>
+</div>
+<div *ngIf="accountData.product_type  && accountStatus != 'Bound'" class="account-card account-action">
+    <div class="custom-select-container">
+        <div class="product-type">
+            <h2>{{accountData.product_type}}</h2>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="accountStatus === 'Bound'" class="account-card account-action">
+    <div class="custom-select-container">
+        <div class="policy-id">
+            <h2> Policy ID:</h2>
+            <h2>{{accountData.policy_id}}</h2>
+        </div>
+        <div class="product-type">
+            <h2>{{accountData.product_type}}</h2>
+        </div>
+        <div class="info-card"><h3 class="policy-card">Policy Start Date: {{accountData.policy_start_date}}</h3></div>
+        <div class="info-card"><h3 class="policy-card">Policy End Date: {{accountData.policy_end_date}}</h3></div>
+    </div>
+</div>
+    <!-- <h1 *ngIf="accountStatus === 'Rating/Quoting'">Rating/Quoting</h1> -->
+    <!-- <h1 *ngIf="accountStatus === 'Bound'">Bound</h1>
+    <h1 *ngIf="accountStatus === 'Completed/Expired'">Completed/Expired</h1> -->

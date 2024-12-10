@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { AccountService } from '../../../services/account.service';
+
 import * as quoteData from '../../../../data/models/quotes.json'
 
 @Component({
@@ -13,10 +15,12 @@ import * as quoteData from '../../../../data/models/quotes.json'
 export class QuotingModuleCardComponent {
   accountId: number = 0;
   filteredQuotes: any[] = [];
+  finalQuote: any;
   activeQuote: string = "";
   dateQuoted: string = "";
   doclink: string = "";
-  activeQuoteObject: any;
+  activeQuoteObject: any;  
+  @Input() accountData: any;
 
   faketa =  {
     "accountId": 49,
@@ -50,10 +54,10 @@ export class QuotingModuleCardComponent {
 
   // accountQuote: any;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private accountService: AccountService) { }
   ngOnInit(): void {
     this.accountId = parseInt(this.route.snapshot.paramMap.get('id')!);
-    this.getQuotesByAccountId(this.accountId); // Example to get quotes with accountId 1
+    this.getQuotesByAccountId(1); // Example to get quotes with accountId 1
     console.log(this.filteredQuotes.length)
     if(this.filteredQuotes.length > 0 ){
       this.activeQuote = this.filteredQuotes[0].revisionName
@@ -67,5 +71,10 @@ export class QuotingModuleCardComponent {
 
   getQuotesByAccountId(accountId: number) {
     this.filteredQuotes = quoteData.quotes.filter(quote => quote.accountId === accountId);
+    this.finalQuote = this.filteredQuotes[0]
+  }
+
+  updateAccount(data:object) {
+    this.accountService.updateAccount(this.accountId, data)
   }
 }

@@ -2,11 +2,18 @@
     <table class="quote-revisions">
         <tr>
             <td>
-                <h2>Revision: FINAL</h2>
+                <h2>Revisions: {{accountData.quote_revisions_count}}</h2>
             </td>
-            <td>
-                <button class="rating-quoting-button">Revise Quote</button>
-                <button class="rating-quoting-button">Finalize Quote</button>
+            <td *ngIf="accountData.final_quote">
+                <h2>FINAL</h2>
+            </td>
+            <td *ngIf="!accountData.final_quote">
+                <button class="rating-quoting-button" (click)="updateAccount({
+                    quote_revisions_count: accountData.quote_revisions_count+1
+                    })">Revise Quote</button>
+                <button class="rating-quoting-button" (click)="updateAccount({
+                    final_quote: true
+                    })">Finalize Quote</button>
             </td>
         </tr>
         <tr>
@@ -18,9 +25,14 @@
             </td>
         </tr>
     </table>
-    <div class="quote-revisions-container" *ngIf="this.filteredQuotes.length > 0 ">
+    <div class="quote-revisions-container">
         <div class="revisions-table info-card">
-            <div *ngFor="let quote of filteredQuotes" class="revision-item"
+            <div *ngIf="accountData.final_quote" class="revision-item"
+                [ngClass]="{ 'active': activeQuote === finalQuote.revisionName }"
+                (click)="setActiveQuote(finalQuote.revisionName,finalQuote.dateQuoted,finalQuote)">
+                <div class="revision-name">{{finalQuote.revisionName}}</div>
+            </div>
+            <div *ngFor="let quote of filteredQuotes | slice:-accountData.quote_revisions_count-1" class="revision-item"
                 [ngClass]="{ 'active': activeQuote === quote.revisionName }"
                 (click)="setActiveQuote(quote.revisionName,quote.dateQuoted,quote)">
                 <div class="revision-name">{{quote.revisionName}}</div>
