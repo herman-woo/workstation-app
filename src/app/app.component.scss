@@ -1,12 +1,19 @@
 @use "../styles/partials/mixin" as *;
+@use "../styles/partials/breakpoint" as *;
 
 .app-container {
     box-sizing: border-box;
     padding: 0;
     margin:0;
     border: 3px solid black;
-    display: flex;
-    height: auto;
+    @include flex(start,center);
+    flex-direction: column;
+    height: 100vh;
+    overflow: auto;
+    @include desktop{
+        flex-direction: row;
+
+    }
 
 
 }
@@ -22,9 +29,15 @@
 // .app-header{
 //     @include section-padding;
 // }
+.app-navbar{
+    width:100%;
+}
+
 .app-main{
     width: 100%;
     height: auto;
+    padding: 0;
+    margin:0;
 }
 
 /* Content wrapper for sidebar and main content */

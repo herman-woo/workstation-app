@@ -3,24 +3,28 @@
 @use "../../../styles/partials/font_sizes" as *;
 @use "../../../styles/partials/breakpoint" as *;
 .uw-action{
-    // width: 45rem;
-    height: 12.5rem;
+    width: 100%;
+    height: 10rem;
     border: 1px solid $slate;
     border-radius: 1rem;
     margin: 0;
-    padding: 1rem ;
+    padding: 0 1rem;
     border: 1px solid $slate;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.241);
     @include flex(center, center);
     flex-direction: column;
+    @include desktop{
+        height: 12.5rem;
+    }
     
 
     &__subheader{
         color: $dark-green;
         @include subheader;
-        padding: 0 ;
+        padding: 0 1rem;
+        // margin: 0;
         width: 100%;
-        // border: 1px solid red;
+        border: 1px solid red;
     }
 
     &__list{
@@ -36,10 +40,10 @@
     &__item{
         @include flex(center, space-between);
         flex-direction: column;
-        width: 3rem; /* Take full width of grid cell */
-        height: 5rem;
+        width: 2rem; /* Take full width of grid cell */
+        height: 3rem;
         padding: 1rem;
-        gap: 1rem; /* Makes the height equal to the width, creating a square */
+        gap: 0.5rem; /* Makes the height equal to the width, creating a square */
         // position: relative; /* For absolute positioning of inner content */
         background-color: #ffffff;
         border-radius: 0.5rem;

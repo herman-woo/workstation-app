@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, Output, EventEmitter, input } from '@angular/core';
 
-import { uwActions } from '../hero-section/_uwAcions';
+import { uwActions } from '../underwriter-actions/_uwAction';
 import { RouterLink } from '@angular/router';
 import { Router} from '@angular/router';
 import { FormsModule } from '@angular/forms';

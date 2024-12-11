@@ -5,9 +5,9 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { CommonModule } from '@angular/common';
 import { SidebarService } from '../services/sidebar.service';
 import { HeaderComponent } from './layout/header/header.component';
-import { HeroSectionComponent } from './layout/hero-section/hero-section.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { SidenavComponent } from './layout/sidenav/sidenav.component';
+import { NavbarComponent } from './layout/navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
@@ -18,9 +18,9 @@ import { SidenavComponent } from './layout/sidenav/sidenav.component';
     MainBannerComponent,
     SidebarComponent, 
     HeaderComponent,
-    HeroSectionComponent,
     FooterComponent,
-    SidenavComponent
+    SidenavComponent,
+    NavbarComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'] // corrected from `styleUrl`

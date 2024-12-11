@@ -2,27 +2,31 @@
 @use '../../../styles/partials/mixin' as *;
 @use '../../../styles/partials/font_sizes' as *;
 @use '../../../styles/partials/colors' as *; 
+@use "../../../styles/partials/breakpoint" as *;
+
 .welcome {
-    height: 12.5rem;
-    padding: 1rem 3rem;
-    border-radius: 1.5rem;
+    @include hero-widget;
     @include pink-gradient_bg;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.241);
-    @include flex (center, start);
-    flex-direction: column;
+    padding: 1rem;
+    margin: 0;
+    gap: 1rem;
+
+ 
     
 
     &__message {
-      font-size: 3rem; // Reduce font size 
+      margin: 0;
+      padding:0;
+      @include page-header;
       color: #fff; // Higher contrast color
-      font-family: sans-serif; // Add a font-family
+      // font-family: sans-serif; // Add a font-family
       
     }
   
     &__text {
-      font-size: 16px;
+      @include body-large;
       color: #666; 
-      font-family: sans-serif; // Add a font-family
+      // font-family: sans-serif; // Add a font-family
     }
   }
 
