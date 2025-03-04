@@ -13,6 +13,12 @@ import { CompanyRecordComponent } from './pages/company-record/company-record.co
 import { SubmissionComponent } from './pages/submission/submission.component';
 import { AccountSearchComponent } from './components/account-search/account-search.component';
 import { NewBrokerFormComponent } from './pages/new-broker-form/new-broker-form.component';
+import { RaterSummaryComponent } from './components/rater-summary/rater-summary.component';
+import { FilesModuleCardComponent } from './components/files-module-card/files-module-card.component';
+import { RaterOptionsComponent } from './components/rater-options/rater-options.component';
+import { FileStructureComponent } from './components/file-structure-tab/file-structure.component';
+import { CommentsSectionCardComponent } from './components/comments-section-card/comments-section-card.component';
+import { RaterTableComponent } from './components/rater-table/rater-table.component';
 
 export const routes: Routes = [
     //main page references
@@ -30,9 +36,16 @@ export const routes: Routes = [
     { path: 'brokercompanies', component: BrokerCompaniesListComponent},
     { path: 'brokercompany', redirectTo: '/brokercompanies', pathMatch: 'full' },
     { path: 'brokercompany/:id', component: CompanyRecordComponent},
-    { path: 'account/:id', component: AccountComponent},
+    { path: 'account/:id', component: AccountComponent, children: [
+        { path: 'rater', component: RaterSummaryComponent },
+        { path: 'quotes', component: RaterOptionsComponent },
+        { path: 'files', component: FileStructureComponent },
+        { path: 'tasks-history', component: CommentsSectionCardComponent},
+        { path: '', redirectTo: 'rater', pathMatch: 'full' }
+    ]},
     { path: 'account/risksummary/:id', component: RiskSummaryTabComponent},
     { path: 'submission', component: SubmissionComponent},
+    { path: 'raters', component: RaterTableComponent},
     { path: 'search', component: AccountSearchComponent},
     { path: 'NewBrokerFormComponent', component: NewBrokerFormComponent},
 ];

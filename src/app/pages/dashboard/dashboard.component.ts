@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActionItemComponent } from '../../components/action-item/action-item.component';
 import { ActivatedRoute,RouterLink } from '@angular/router';
+import { Router} from '@angular/router'
 import { AccountService } from '../../../services/account.service';
 import * as actions from "../../components/action-item/UnderwriterActions.json";
 import { FormsModule } from '@angular/forms';
-import { Router} from '@angular/router'
 import { WelcomeComponent } from '../../layout/welcome/welcome.component';
 import { UnderwriterActionsComponent } from "../../layout/underwriter-actions/underwriter-actions.component";
 import {MatTabsModule} from '@angular/material/tabs';

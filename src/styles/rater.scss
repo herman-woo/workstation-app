@@ -1,0 +1,288 @@
+// Variables
+$primary-color: #333;
+$secondary-color: #666;
+$highlight-color: #d32f2f;
+$card-bg: #ffffff;
+$border-color: #ddd;
+
+.rater{
+//   font-family: Arial, sans-serif;
+//   background-color: #f8f9fa;
+//   margin: 0;
+//   padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.rater-card {
+    max-width: 1600px;
+    margin-top: 30px;
+    padding: 16px;
+    background: $card-bg;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  
+    .rater-header {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      padding-bottom: 12px;
+      border-bottom: 1px solid $border-color;
+    }
+  
+    .rater-body {
+      padding: 12px 0;
+  
+      .rater-grid {
+        display: grid;
+        grid-template-columns: 80px 120px 1.5fr 80px 1fr 120px;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 12px;
+        border-bottom: 1px solid lighten($border-color, 10%);
+  
+        &:hover {
+          background: lighten($border-color, 30%);
+          transform: scale(1.02);
+          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+      }
+  
+      .rater-header {
+        font-size: 20px;
+        font-weight: bold;
+        padding-bottom: 12px;
+        border-bottom: 2px solid $border-color;
+        text-align: center;
+        background: lighten($border-color, 20%);
+      }
+  
+      .remove-item-btn {
+        background: red;
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 4px;
+  
+        &:hover {
+          background: darken(red, 10%);
+        }
+      }
+  
+      .item-details {
+        h3 {
+          font-size: 16px;
+          color: $primary-color;
+          transition: color 0.3s;
+        }
+  
+        p {
+          font-size: 14px;
+          color: $secondary-color;
+        }
+      }
+  
+      .item-total {
+        p {
+          font-size: 16px;
+          font-weight: bold;
+          color: darken($primary-color, 10%);
+        }
+      }
+    }
+  
+    .card-footer {
+      padding-top: 12px;
+      border-top: 1px solid $border-color;
+  
+      .summary {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+        padding-right: 12px;
+  
+        p {
+          font-size: 16px;
+          transition: color 0.3s;
+  
+          &.total {
+            font-size: 18px;
+            color: $highlight-color;
+            font-weight: bold;
+            transition: color 0.3s;
+  
+            &:hover {
+              color: darken($highlight-color, 10%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+//   color: $primary-color;
+}
+
+p {
+  margin: 4px 0;
+//   color: $secondary-color;
+}
+
+// Utility classes
+.text-bold {
+  font-weight: bold;
+}
+
+.text-highlight {
+  color: $highlight-color;
+}
+
+// Card styles
+.card {
+  background: $card-bg;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+}
+
+.border {
+  border: 1px solid $border-color;
+}
+
+// Table styles
+table {
+  width: 100%;
+  table-layout: fixed; // Ensures even column widths
+  border-collapse: collapse;
+
+  th, td {
+    text-align: center; // Keeps all columns aligned
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    font-weight: bold;
+    background-color: #f8f9fa; // Slight background to distinguish header
+  }
+
+  td:first-child {
+    width: 50px; // Ensure remove button column is small
+  }
+}
+
+// Remove button styles
+.remove-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+.options-table {
+    overflow-x: auto;
+    max-width: 100%;
+    border: 1px solid #ddd;
+  
+    table {
+      width: auto;
+      table-layout: fixed;
+      border-collapse: collapse;
+  
+      th, td {
+        text-align: center;
+        padding: 12px;
+        border-top: 1px solid #ddd;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        max-width: 100px;
+        min-width: 100px;
+      }
+  
+      th {
+        font-weight: bold;
+        background-color: #f8f9fa;
+      }
+  
+      td:first-child {
+        width: 500px;
+      }
+    }
+  }
+  
+  .create-cart-btn {
+    display: block;
+    margin: 16px auto;
+    padding: 10px 16px;
+    background: lighten($secondary-color, 10%);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  
+    &:hover {
+      background: darken($secondary-color, 10%);
+      transform: scale(1.05);
+    }
+  
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+  
+  .add-item-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 40px;
+    height: 40px;
+    background: lighten($secondary-color, 10%);
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin: 16px auto 0;
+  
+    &:hover {
+      background: darken($secondary-color, 10%);
+      transform: scale(1.1);
+      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+    }
+  
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  

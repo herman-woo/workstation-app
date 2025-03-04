@@ -32,7 +32,7 @@ export class UnderwriterActionsComponent {
       } else if (this.action === 'Renewal') {
         this.router.navigate(['/renewal']); // these actions are not used as of now 
       } else if (this.action === 'Rating') {
-        this.router.navigate(['/rating']); 
+        this.router.navigate(['/raters']); 
       } else if (this.action === 'Quoting') {
         this.router.navigate(['/quoting']); 
       } else if (this.action === 'Binding') {

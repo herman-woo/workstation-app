@@ -1,13 +1,48 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { PaginatedResponse } from './paginated-response.service';
 import { map } from 'rxjs/operators'; // Correct import for `map`
 
 @Injectable({
   providedIn: 'root'
 })
+
+
+
 export class AccountService {
+
+  activeRoute: string;
+  // ✅ Setter methods to store data
+  setActiveRoute(route: string) {
+    console.log("Set Route to:", route)
+    this.activeRoute = route;
+    console.log("Active Route -", this.activeRoute)
+
+  }
+
+  // ✅ Getter methods (for synchronous retrieval)
+  getActiveRoute(): any {
+    return this.activeRoute;
+  }
+
+  private _accountRecord = new BehaviorSubject<any>(null);
+  // ✅ Expose data as Observables
+  get accountRecord$(): Observable<any> {
+    return this._accountRecord.asObservable();
+  }
+
+  // ✅ Setter methods to store data
+  setAccountData(data: any) {
+    console.log('Setting Account Data:', data);
+    this._accountRecord.next(data);
+  }
+
+  // ✅ Getter methods (for synchronous retrieval)
+  getAccountData(): any {
+    return this._accountRecord.value;
+  }
+
   private apiUrl = 'http://localhost:8000/insurance/account/';
   constructor(private http: HttpClient) { }
   getAllAccounts(
@@ -53,8 +88,8 @@ export class AccountService {
     return this.http.get<any>(this.apiUrl + id)
   }
 
-  updateAccount(accountId,data:object) {
-    this.http.patch<any>(this.apiUrl+accountId+'/', data)
+  updateAccount(accountId, data: object) {
+    this.http.patch<any>(this.apiUrl + accountId + '/', data)
       .subscribe({
         next: (response) => {
           console.log('Update successful:', response);
